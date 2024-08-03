@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Onyebuchi's Portfolio</title>
+    <title>Contact - Onyebuchi's Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" href="assets/imgs/favicon.ico" type="image/x-icon">
@@ -24,17 +24,40 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
-                    <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
-                    <li><a href="#projects"><i class="fas fa-briefcase"></i> Projects</a></li>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="index.html#about"><i class="fas fa-user"></i> About</a></li>
+                    <li><a href="index.html#projects"><i class="fas fa-briefcase"></i> Projects</a></li>
                     <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
                 </ul>
             </nav>
         </div>
-        <div class="right-section" id="home">
+        <div class="right-section">
             <main>
-                <h1>Onyebuchi Anizoba-Nwota</h1>
-                <p>I am a front-end developer...</p>
+                           <h1>Contact form</h1>
+            <form action="#" method="post">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <div>
+                    <button type="submit">Send</button>
+                </div>
+            </form>
+            <div class="address">
+                <h3>Address</h3>
+                <p>Birmingham</p>
+                <p>United Kingdom</p>
+                <p>Email: buchi-n@msn.com</p>
+                <p>Phone: 07405 508523</p>
+            </div>
             </main>
         </div>
     </div>
