@@ -13,8 +13,8 @@
         <div class="left-section">
             <div class="profile">
                 <img src="assets/imgs/my-profile-img.jpg" alt="Profile Picture">
-                <div class="breathing-glow">
-                    <h2 class="name">O. Anizoba-Nwota</h2>
+                <div>
+                   <div class="breathing-glow"> <h2 class="name">O. Anizoba-Nwota</h2></div>
                 <div class="social-media">
                     <a href="https://twitter.com/oanizobanwota" target="_blank"><i class="fab fa-twitter"></i></a>
                     <a href="https://linkedin.com//in/onyebuchi-anizoba-nwota" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -26,36 +26,57 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-                    <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
-                    <li><a href="projects.html"><i class="fas fa-briefcase"></i> Projects</a></li>
-                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                    <li><a href="index.html" id="home-link"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="about.html" id="about-link"><i class="fas fa-user"></i> About</a></li>
+                    <li><a href="projects.html" id="projects-link"><i class="fas fa-briefcase"></i> Projects</a></li>
+                    <li><a href="contact.html" id="contact-link"><i class="fas fa-envelope"></i> Contact</a></li>
                 </ul>
             </nav>
         </div>
+      
         <div class="right-section">
             <main>
-            <div class="projects-grid">
-                <div class="project-square">
-                    <img src="assets/imgs/project1.jpeg" alt="Project 1">
-                    <div class="caption">Project 1 Description</div>
+                <div class="projects-grid">
+                    <div class="project-square" data-project="1">
+                        <img src="assets/imgs/project1.jpeg" alt="Project 1">
+                        <div class="caption">Project 1 Description</div>
+                        <div class="project-details">
+                            <p>Detailed information about Project 1.</p>
+                        </div>
+                    </div>
+                    <div class="project-square" data-project="2">
+                        <img src="assets/imgs/project2.jpg" alt="Project 2">
+                        <div class="caption">Project 2 Description</div>
+                        <div class="project-details">
+                            <p>Detailed information about Project 2.</p>
+                        </div>
+                    </div>
+                    <div class="project-square" data-project="3">
+                        <img src="assets/imgs/my-profile-img.jpg" alt="Project 3">
+                        <div class="caption">Project 3 Description</div>
+                        <div class="project-details">
+                            <p>Detailed information about Project 3.</p>
+                        </div>
+                    </div>
+                    <div class="project-square" data-project="4">
+                        <img src="assets/imgs/project3.jpg" alt="Project 4">
+                        <div class="caption">Project 4 Description</div>
+                        <div class="project-details">
+                            <p>Detailed information about Project 4.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="project-square">
-                    <img src="assets/imgs/project2.jpg" alt="Project 2">
-                    <div class="caption">Project 2 Description</div>
-                </div>
-                <div class="project-square">
-                    <img src="assets/imgs/project3.jpg" alt="Project 3">
-                    <div class="caption">Project 3 Description</div>
-                </div>
-                <div class="project-square">
-                    <img src="assets/imgs/project4.jpg" alt="Project 4">
-                    <div class="caption">Project 4 Description</div>
-                </div>
-            </div>
             </main>
         </div>
     </div>
+     <!-- Modal Structure -->
+     <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
