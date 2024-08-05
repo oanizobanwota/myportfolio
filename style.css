@@ -47,7 +47,7 @@ body {
     max-height: 700px;
     opacity: 0;
     transform: translateY(20px);
-    animation: fadeIn 0s forwards, glow 2s infinite alternate;
+    animation: fadeIn 0s forwards, steadyGlow 2s infinite alternate;
 }
 @keyframes fadeIn {
     to {
@@ -55,12 +55,90 @@ body {
         transform: translateY(0);
     }
 }
+@keyframes steadyGlow {
+    0%, 100% {
+        box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 25px rgba(0, 255, 255, 0.8);
+    }
+}
+
+.left-section {
+    width: 30%;
+    padding-right: 20px;
+}
+
+.right-section {
+    width: 70%;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.project-square {
+    position: relative;
+    width: 100%;
+    padding-top: 100%; /* 1:1 Aspect Ratio */
+    overflow: hidden;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s; /* Add transition for smooth hover effect */
+    box-shadow: 0 0 15px rgba(213, 194, 17, 0.5); /* Neon glow effect */
+}
+
+.project-square:hover {
+    transform: scale(1.05); /* Scale up slightly */
+    box-shadow: 0 0 25px rgba(167, 45, 243, 0.408); /* Enhance glow on hover */
+}
+
+.project-square img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.caption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 0 0 8px 8px;
+}
+
 .contact-form {
     background-color: rgb(255, 251, 251); /* Make the form background transparent */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.99);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); /* Neon glow effect */
+    transition: box-shadow 0.3s; /* Add transition for smooth hover effect */
 }
+
+.contact-form:hover {
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.8); /* Enhance glow on hover */
+}
+
+.address {
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); /* Neon glow effect */
+    transition: box-shadow 0.3s; /* Add transition for smooth hover effect */
+}
+
+.address:hover {
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.8); /* Enhance glow on hover */
+}
+
+
 
 .contact-form input,
 .contact-form textarea {
@@ -87,8 +165,8 @@ body {
     margin-bottom: 20px;
 }
 .profile img {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
 }
 .profile .name {
@@ -96,10 +174,10 @@ body {
     margin-top: 10px;
 }
 .profile .social-media {
-    margin-top: 10px;
+    margin-top: 15px;
 }
 .profile .social-media a {
-    margin: 0 5px;
+    margin: 0 10px;
     text-decoration: none;
     color: #fff; /* Set social media icon color to white */
     display: inline-block; /* Ensure the element is inline-block for transform to work */
@@ -130,13 +208,8 @@ nav ul li a:hover {
     transform: scale(1.1); /* Slightly enlarge the link on hover */
 }
 nav ul li a i {
-    margin-right: 8px;
-}
-nav ul li a.active {
-    color: #f25f4c; /* Set active link color to red */
-}
-nav ul li a.active i {
-    color: #f25f4c; /* Set active icon color to red */
+    margin-right: 15px;
+
 }
 /* <uniquifier>: Use a unique and descriptive class name
     // <extrusion depth>: Use a value from 0 to 200
@@ -156,7 +229,7 @@ nav ul li a.active i {
         display: inline-block;
         opacity: 0;
         transform: translateY(-100px);
-        animation: drop 0.5s forwards, bounce 3s infinite; /* Apply drop and then bounce animation */
+        animation: drop 0.3s forwards, bounce 3s infinite; /* Apply drop and then bounce animation */
     }
     
     @keyframes drop {
@@ -171,7 +244,7 @@ nav ul li a.active i {
             transform: translateY(0);
         }
         50% {
-            transform: translateY(-5px);
+            transform: translateY(-2px);
         }
     }
 
@@ -182,6 +255,10 @@ nav ul li a.active i {
         background-size: cover;
         background-position: center;
         animation: fadeInBackground 4s forwards, moveBackground 10s linear infinite; /* Add moveBackground animation */
+        display: flex;
+       justify-content: center; /* Center horizontally */
+       align-items: center; /* Center vertically */
+        text-align: center; /* Center text inside */
     }
     
     @keyframes fadeInBackground {
@@ -259,4 +336,29 @@ main {
     }
     .address p {
         margin: 5px 0;
+    }
+      /* New styles for breathing and glowing effect */
+    .profile .breathing-glow {
+        animation: breathing 3s ease-in-out infinite, glow 2s infinite alternate;
+        color: #fff; /* Set text color to white */
+        text-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Initial glow effect */
+        
+    }
+    
+    @keyframes breathing {
+        0%, 100% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.1);
+        }
+    }
+    
+    @keyframes glow {
+        0%, 100% {
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+        }
+        50% {
+            text-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+        }
     }

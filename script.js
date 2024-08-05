@@ -13,3 +13,19 @@ document.addEventListener("DOMContentLoaded", function() {
         heading.appendChild(span);
     });
 });
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Collect form data
+    const formData = new FormData(this);
+
+    // Create an email body from the form data
+    let emailBody = '';
+    formData.forEach((value, key) => {
+        emailBody += `${key}: ${value}\n`;
+    });
+
+    // Create a mailto link and simulate a click to open the email client
+    const mailtoLink = `mailto:buchi-n@msn.com?subject=Contact Form Submission&body=${encodeURIComponent(emailBody)}`;
+    window.location.href = mailtoLink;
+});
