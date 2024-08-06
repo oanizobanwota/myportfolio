@@ -49,3 +49,22 @@ document.addEventListener("DOMContentLoaded", function() {
      loadPage(page);
  });
 });
+function toggleDetails(element) {
+    const allProjects = document.querySelectorAll('.project-square');
+    const isExpanded = element.classList.contains('expanded');
+
+    allProjects.forEach(project => {
+        if (project !== element) {
+            project.classList.remove('expanded');
+            project.classList.toggle('hidden', !isExpanded);
+        } else {
+            project.classList.remove('hidden');
+        }
+    });
+
+    if (!isExpanded) {
+        element.classList.add('expanded');
+    } else {
+        element.classList.remove('expanded');
+    }
+}
