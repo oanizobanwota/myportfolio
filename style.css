@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
-   
 body {
     display: flex;
     justify-content: center;
@@ -24,29 +22,44 @@ body, html {
     }
     .explorer button {
         height: 60px;
-        width: 220px; /* Adjust the width as needed */
+        width: 240px; /* Adjust the width as needed */
         background-color: #000202; /* Set background color to black */
-        padding: 10px 30px; /* Add padding for better appearance */
         border: none; /* Remove default border */
         box-sizing: border-box; /* Ensure the padding is included in the width */
         border-radius: 10px; /* Adjust the border-radius for rounded edges */
         box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); /* Neon glow effect */
         transition: box-shadow 0.3s, background-color 0.3s ease, transform 0.3s ease; /* Add transition for smooth effect */
-        animation: steadyGlow 2s infinite alternate;
-        display: flex; /* Use flexbox */
+        animation: steadyGlow 2s infinite alternate, fadeIn 1s ease-in-out 23s forwards; /* Add fadeIn animation */
+        display: flex;
         justify-content: center; /* Center horizontally */
         align-items: center; /* Center vertically */
+        padding-top: 20px; /* Adjust the value as needed */
+        opacity: 0; /* Hide the button initially */
         
     }
-   
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
     .explorer {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 20px; /* Adjust the value as needed */
+        margin-top: 10px; /* Adjust the value as needed */
                 
     }
-
+    .explorer a {
+    text-decoration: none; /* Remove underline */
+    color: #fff; /* Set text color to white */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 100%; /* Ensure the link takes the full width of the button */
+    height: 100%; /* Ensure the link takes the full height of the button */
+    }
 .explorer button:hover {
     background-color: #047a7c; /* Change background color on hover */
     transform: scale(1.1); /* Slightly enlarge the button on hover */
@@ -88,6 +101,16 @@ body, html {
     font-weight: bold;
     padding-bottom: 30px;
   }
+  .welcome-subtext2{
+    white-space: nowrap; /* keep text in one line */
+    overflow: hidden; /* hide text behind the cursor */
+    margin: 0.5rem auto;
+    font-family: monospace;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-bottom: 30px;
+    color: #fff;
+  }
   .welcome-text {
     border-right: 2px solid rgba(17, 17, 17, 0.9);
   }
@@ -97,12 +120,15 @@ body, html {
   .welcome-subtext1{
     border-right: 2px solid rgba(17, 17, 17, 0.9);
   }
+  .welcome-subtext2{
+    border-right: 2px solid rgba(17, 17, 17, 0.9);
+  }
   @keyframes typewriter_1 {
     from {
       width: 0;
     }
     to {
-      width: 37rem;
+      width: 40rem;
     }
   }
   @keyframes typewriter_2 {
@@ -110,7 +136,7 @@ body, html {
       width: 0;
     }
     to {
-      width: 34rem;
+      width: 45rem;
     }
     
   }
@@ -119,24 +145,38 @@ body, html {
       width: 0;
     }
     to {
-      width: 44rem;
+      width: 49rem;
+    }
+    
+  }
+  @keyframes typewriter_4 {
+    from {
+      width: 0;
+    }
+    to {
+      width: 12rem;
     }
     
   }
   .welcome-text {
     border-right: 2px solid rgba(17, 17, 17, 0.9);
     /* define animation types for firstline  */
-    animation: typewriter_1 5s steps(40) 1s 1 normal both;
+    animation: typewriter_1 5s steps(30) 1s 1 normal both;
   }
   .welcome-subtext  {
     border-right: 2px solid rgba(17, 17, 17, 0.9);
-    /* define animation types for econd_line  */
-    animation: typewriter_2 5s steps(40) 1s 1 normal both;
+    /* define animation types for second_line  */
+    animation: typewriter_2 5s steps(30) 1s 1 normal both;
   }
   .welcome-subtext1  {
     border-right: 2px solid rgba(17, 17, 17, 0.9);
     /* define animation types for econd_line  */
-    animation: typewriter_3 5s steps(40) 1s 1 normal both;
+    animation: typewriter_3 5s steps(30) 1s 1 normal both;
+  }
+    .welcome-subtext2 {
+        border-right: 2px solid rgba(17, 17, 17, 0.9);
+        /* define animation types for econd_line  */
+        animation: typewriter_4 5s steps(30) 1s 1 normal both;
   }
   @keyframes first_cursor {
     from {
@@ -162,27 +202,44 @@ body, html {
       border-right-color: rgba(255, 255, 255, 0.8);
     }
   }
+  @keyframes fourth_cursor{
+    from {
+      border-right-color: rgba(17, 17, 17, 0.9);
+    }
+    to {
+      border-right-color: rgba(255, 255, 255, 0.8);
+    }
+  }
   .welcome-text {
     border-right: 2px solid rgba(17, 17, 17, 0.9);
     /* define animation types for text + cursor */
-    animation: typewriter_1 6s steps(30) 1s 1 normal both,
-      first_cursor 900ms steps(30) 8;
+    animation: typewriter_1 5s steps(33) 1s 1 normal both,
+      first_cursor 900ms steps(33) 8;
     }
       .welcome-subtext {
         border-right: 2px solid rgba(17, 17, 17, 0.9);
         /* define animation types for text + cursor */
-        animation: typewriter_2 6s steps(30) 1s 1 normal both,
-          second_cursor 900ms steps(30) 8;
-          -webkit-animation-delay: 7s;
-          animation-delay: 7s;
+        animation: typewriter_2 5s steps(31) 1s 1 normal both,
+          second_cursor 900ms steps(31) 7;
+          -webkit-animation-delay: 10s;
+          animation-delay: 10s;
   }
   .welcome-subtext1 {
     border-right: 2px solid rgba(17, 17, 17, 0.9);
     /* define animation types for text + cursor */
-    animation: typewriter_3 5s steps(30) 1s 1 normal both,
-      third_cursor 900ms steps(30) infinite;
-    -webkit-animation-delay: 13s;
-    animation-delay: 13s;
+    animation: typewriter_3 5s steps(29) 1s 1 normal both,
+      third_cursor 900ms steps(29) 5;
+    -webkit-animation-delay: 17s;
+    animation-delay: 17s;
+  }
+
+  .welcome-subtext2 {
+    border-right: 2px solid rgba(17, 17, 17, 0.9);
+    /* define animation types for text + cursor */
+    animation: typewriter_4 5s steps(27) 1s 1 normal both,
+      fourth_cursor 900ms steps(27) infinite;
+    -webkit-animation-delay: 23s;
+    animation-delay: 23s;
   }
 .container {
     background-color: #d8f7fc8c;
