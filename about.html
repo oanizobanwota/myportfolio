@@ -1,197 +1,369 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About - Onyebuchi's Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="icon" href="assets/imgs/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="icon" href="assets/imgs/favicon.ico" type="image/x-icon" />
     <!-- Add Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Creepster&family=Nabla:EDPT,EHLT@0..200,0..24&display=swap" rel="stylesheet">
-</head>
-<body>
-   <!--Galaxy particles from https://codepen.io/iangonza/pen/PvYvLv-->
-  <div class="space">
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-  </div>
-  <!-- Add a hyperlink to the welcome page -->
-  <div class="welcome">
-    <a href="index.html"
-    title="Welcome page" class="no-underline">
-    <span class="letter">W</span>
-    <span class="letter">e</span>
-    <span class="letter">l</span>
-    <span class="letter">c</span>
-    <span class="letter">o</span>
-    <span class="letter">m</span>
-    <span class="letter">e</span>
-  </a>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Creepster&family=Nabla:EDPT,EHLT@0..200,0..24&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Galaxy particles from https://codepen.io/iangonza/pen/PvYvLv ian gonza @iangonza -->
+    <div class="space">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </div>
+    <!-- Add a hyperlink to the welcome page -->
+    <div class="welcome">
+      <a href="index.html" title="Welcome page" class="no-underline">
+        <span class="letter">W</span>
+        <span class="letter">e</span>
+        <span class="letter">l</span>
+        <span class="letter">c</span>
+        <span class="letter">o</span>
+        <span class="letter">m</span>
+        <span class="letter">e</span>
+      </a>
     </div>
     <div class="container">
-          <!--Progress clock from https://speckyboy.com/progress-bars-css-javascript/ -->
-            
-          <div id="clock" class="progress-clock">
-            <button class="progress-clock__time-date" data-group="d" type="button">
-              <small data-unit="w">Sunday</small><br>
-              <span data-unit="mo">January</span>
-              <span data-unit="d">1</span>
-            </button>
-            <button class="progress-clock__time-digit" data-unit="h" data-group="h" type="button">12</button><span class="progress-clock__time-colon">:</span><button class="progress-clock__time-digit" data-unit="m" data-group="m" type="button">00</button><span class="progress-clock__time-colon">:</span><button class="progress-clock__time-digit" data-unit="s" data-group="s" type="button">00</button>
-            <span class="progress-clock__time-ampm" data-unit="ap">AM</span>
-            <svg class="progress-clock__rings" width="256" height="256" viewBox="0 0 256 256">
-              <defs>
-                <linearGradient id="pc-red" x1="1" y1="0.5" x2="0" y2="0.5">
-                  <stop offset="0%" stop-color="hsl(343,90%,55%)" />
-                  <stop offset="100%" stop-color="hsl(323,90%,55%)" />
-                </linearGradient>
-                <linearGradient id="pc-yellow" x1="1" y1="0.5" x2="0" y2="0.5">
-                  <stop offset="0%" stop-color="hsl(43,90%,55%)" />
-                  <stop offset="100%" stop-color="hsl(23,90%,55%)" />
-                </linearGradient>
-                <linearGradient id="pc-blue" x1="1" y1="0.5" x2="0" y2="0.5">
-                  <stop offset="0%" stop-color="hsl(223,90%,55%)" />
-                  <stop offset="100%" stop-color="hsl(203,90%,55%)" />
-                </linearGradient>
-                <linearGradient id="pc-purple" x1="1" y1="0.5" x2="0" y2="0.5">
-                  <stop offset="0%" stop-color="hsl(283,90%,55%)" />
-                  <stop offset="100%" stop-color="hsl(263,90%,55%)" />
-                </linearGradient>
-              </defs>
-              <!-- Days of Month -->
-              <g data-units="d">
-                <circle class="progress-clock__ring" cx="128" cy="128" r="74" fill="none" opacity="0.1" stroke="url(#pc-red)" stroke-width="12" />
-                <circle class="progress-clock__ring-fill" data-ring="mo" cx="128" cy="128" r="74" fill="none" stroke="url(#pc-red)" stroke-width="12" stroke-dasharray="465 465" stroke-dashoffset="465" stroke-linecap="round" transform="rotate(-90,128,128)" />
-              </g>
-              <!-- Hours of Day -->
-              <g data-units="h">
-                <circle class="progress-clock__ring" cx="128" cy="128" r="90" fill="none" opacity="0.1" stroke="url(#pc-yellow)" stroke-width="12" />
-                <circle class="progress-clock__ring-fill" data-ring="d" cx="128" cy="128" r="90" fill="none" stroke="url(#pc-yellow)" stroke-width="12" stroke-dasharray="565.5 565.5" stroke-dashoffset="565.5" stroke-linecap="round" transform="rotate(-90,128,128)" />
-              </g>
-              <!-- Minutes of Hour -->
-              <g data-units="m">
-                <circle class="progress-clock__ring" cx="128" cy="128" r="106" fill="none" opacity="0.1" stroke="url(#pc-blue)" stroke-width="12" />
-                <circle class="progress-clock__ring-fill" data-ring="h" cx="128" cy="128" r="106" fill="none" stroke="url(#pc-blue)" stroke-width="12" stroke-dasharray="666 666" stroke-dashoffset="666" stroke-linecap="round" transform="rotate(-90,128,128)" />
-              </g>
-              <!-- Seconds of Minute -->
-              <g data-units="s">
-                <circle class="progress-clock__ring" cx="128" cy="128" r="122" fill="none" opacity="0.1" stroke="url(#pc-purple)" stroke-width="12" />
-                <circle class="progress-clock__ring-fill" data-ring="m" cx="128" cy="128" r="122" fill="none" stroke="url(#pc-purple)" stroke-width="12" stroke-dasharray="766.5 766.5" stroke-dashoffset="766.5" stroke-linecap="round" transform="rotate(-90,128,128)" />
-              </g>
-            </svg>
-          </div>
-        <div class="left-section">
-            <div class="profile">
-                <img src="assets/imgs/my-profile-img.jpg" alt="Profile Picture">
-                <div>
-                    <div class="breathing-glow"> <h2 class="name">O. Anizoba-Nwota</h2></div>
-                <div class="social-media">
-                    <a href="https://twitter.com/oanizobanwota" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="https://linkedin.com//in/onyebuchi-anizoba-nwota" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://facebook.com/oanizobanwota" target="_blank"><i class="fab fa-facebook"></i></a>
-                    <a href="https://instagram.com/anizobanwota" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://github.com/oanizobanwota" target="_blank"><i class="fab fa-github"></i></a>
-                </div>
-                </div>
+      <!--Progress clock from https://speckyboy.com/progress-bars-css-javascript/ by Jon Kantner -->
+
+      <div id="clock" class="progress-clock">
+        <button class="progress-clock__time-date" data-group="d" type="button">
+          <small data-unit="w">Sunday</small><br />
+          <span data-unit="mo">January</span>
+          <span data-unit="d">1</span>
+        </button>
+        <button
+          class="progress-clock__time-digit"
+          data-unit="h"
+          data-group="h"
+          type="button"
+        >
+          12</button
+        ><span class="progress-clock__time-colon">:</span
+        ><button
+          class="progress-clock__time-digit"
+          data-unit="m"
+          data-group="m"
+          type="button"
+        >
+          00</button
+        ><span class="progress-clock__time-colon">:</span
+        ><button
+          class="progress-clock__time-digit"
+          data-unit="s"
+          data-group="s"
+          type="button"
+        >
+          00
+        </button>
+        <span class="progress-clock__time-ampm" data-unit="ap">AM</span>
+        <svg
+          class="progress-clock__rings"
+          width="256"
+          height="256"
+          viewBox="0 0 256 256"
+        >
+          <defs>
+            <linearGradient id="pc-red" x1="1" y1="0.5" x2="0" y2="0.5">
+              <stop offset="0%" stop-color="hsl(343,90%,55%)" />
+              <stop offset="100%" stop-color="hsl(323,90%,55%)" />
+            </linearGradient>
+            <linearGradient id="pc-yellow" x1="1" y1="0.5" x2="0" y2="0.5">
+              <stop offset="0%" stop-color="hsl(43,90%,55%)" />
+              <stop offset="100%" stop-color="hsl(23,90%,55%)" />
+            </linearGradient>
+            <linearGradient id="pc-blue" x1="1" y1="0.5" x2="0" y2="0.5">
+              <stop offset="0%" stop-color="hsl(223,90%,55%)" />
+              <stop offset="100%" stop-color="hsl(203,90%,55%)" />
+            </linearGradient>
+            <linearGradient id="pc-purple" x1="1" y1="0.5" x2="0" y2="0.5">
+              <stop offset="0%" stop-color="hsl(283,90%,55%)" />
+              <stop offset="100%" stop-color="hsl(263,90%,55%)" />
+            </linearGradient>
+          </defs>
+          <!-- Days of Month -->
+          <g data-units="d">
+            <circle
+              class="progress-clock__ring"
+              cx="128"
+              cy="128"
+              r="74"
+              fill="none"
+              opacity="0.1"
+              stroke="url(#pc-red)"
+              stroke-width="12"
+            />
+            <circle
+              class="progress-clock__ring-fill"
+              data-ring="mo"
+              cx="128"
+              cy="128"
+              r="74"
+              fill="none"
+              stroke="url(#pc-red)"
+              stroke-width="12"
+              stroke-dasharray="465 465"
+              stroke-dashoffset="465"
+              stroke-linecap="round"
+              transform="rotate(-90,128,128)"
+            />
+          </g>
+          <!-- Hours of Day -->
+          <g data-units="h">
+            <circle
+              class="progress-clock__ring"
+              cx="128"
+              cy="128"
+              r="90"
+              fill="none"
+              opacity="0.1"
+              stroke="url(#pc-yellow)"
+              stroke-width="12"
+            />
+            <circle
+              class="progress-clock__ring-fill"
+              data-ring="d"
+              cx="128"
+              cy="128"
+              r="90"
+              fill="none"
+              stroke="url(#pc-yellow)"
+              stroke-width="12"
+              stroke-dasharray="565.5 565.5"
+              stroke-dashoffset="565.5"
+              stroke-linecap="round"
+              transform="rotate(-90,128,128)"
+            />
+          </g>
+          <!-- Minutes of Hour -->
+          <g data-units="m">
+            <circle
+              class="progress-clock__ring"
+              cx="128"
+              cy="128"
+              r="106"
+              fill="none"
+              opacity="0.1"
+              stroke="url(#pc-blue)"
+              stroke-width="12"
+            />
+            <circle
+              class="progress-clock__ring-fill"
+              data-ring="h"
+              cx="128"
+              cy="128"
+              r="106"
+              fill="none"
+              stroke="url(#pc-blue)"
+              stroke-width="12"
+              stroke-dasharray="666 666"
+              stroke-dashoffset="666"
+              stroke-linecap="round"
+              transform="rotate(-90,128,128)"
+            />
+          </g>
+          <!-- Seconds of Minute -->
+          <g data-units="s">
+            <circle
+              class="progress-clock__ring"
+              cx="128"
+              cy="128"
+              r="122"
+              fill="none"
+              opacity="0.1"
+              stroke="url(#pc-purple)"
+              stroke-width="12"
+            />
+            <circle
+              class="progress-clock__ring-fill"
+              data-ring="m"
+              cx="128"
+              cy="128"
+              r="122"
+              fill="none"
+              stroke="url(#pc-purple)"
+              stroke-width="12"
+              stroke-dasharray="766.5 766.5"
+              stroke-dashoffset="766.5"
+              stroke-linecap="round"
+              transform="rotate(-90,128,128)"
+            />
+          </g>
+        </svg>
+      </div>
+      <div class="left-section">
+        <div class="profile">
+          <img src="assets/imgs/my-profile-img.jpg" alt="Profile Picture" />
+          <div>
+            <div class="breathing-glow">
+              <h2 class="name">O. Anizoba-Nwota</h2>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
-                    <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
-                    <li><a href="projects.html"><i class="fas fa-briefcase"></i> Projects</a></li>
-                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
-                </ul>
-            </nav>
+            <div class="social-media">
+              <a href="https://twitter.com/oanizobanwota" target="_blank"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                href="https://linkedin.com//in/onyebuchi-anizoba-nwota"
+                target="_blank"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="https://facebook.com/oanizobanwota" target="_blank"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a href="https://instagram.com/anizobanwota" target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="https://github.com/oanizobanwota" target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+            </div>
+          </div>
         </div>
-                <div class="right-section" id="home">
-         <main>
-                <h1 id="animated-heading">Meet Onyebuchi</h1>
-                <p>Hi!, I am Onyebuchi Anizoba-Nwota, my acquintances call me e-fresh! <br>
-                  am from family of Mr. & Mrs. Reuben Anizoba Nwota of Umuokpu Awka Anambra state.<br>
-                A graduated of Nnamdi Azikiwe University (NAU) Awka, with a Bachelor's Degree in <br>
-                Educational Management, I passionately aspire to be a full stack developer as part <br>
-                of my efforts in contributing creative solutions to humanity through programming...<br>
-                Presently, I am the managing Director of FreshSHOP Supermaket, a retail outlet for <br>
-                groceries and other household needs, I enrolled into front-end developer program with
-                Learning People Global and have acquired some outstanding skills in programming and now a member
-                of the British Computer Society (BCS), I am a very adventurous, creative and also a team player,
-                eager to learn new things and open to new ideas and challenges. </p><br>
-                <h2> WebDev, Tools, Languages & Skills </h2>
-                <div class="skills-logos">
-                    <div class="skill">
-                        <img src="assets/imgs/javascript_logo.png" alt="JavaScript Logo">
-                        <p>JavaScript</p>
-                    </div>
-                    <div class="skill">
-                        <img src="assets/imgs/html_logo.png" alt="HTML Logo">
-                        <p>HTML</p>
-                    </div>
-                    <div class="skill">
-                        <img src="assets/imgs/react_logo.webp" alt="React Logo">
-                        <p>React</p>
-                    </div>
-                    <div class="skill">
-                        <img src="assets/imgs/redux_logo.png" alt="Redux Logo">
-                        <p>Redux</p>
-                    </div>
-                    <div class="skill">
-                        <img src="assets/imgs/css_logo.webp" alt="CSS Logo">
-                        <p>CSS</p>
-                    </div>
-                    <div class="skill">
-                        <img src="assets/imgs/python_logo.webp" alt="Python Logo">
-                        <p>Python</p>
-                    </div>
-                    <div class="skill">
-                      <img src="assets/imgs/kotlin_logo.png" alt="Python Logo">
-                      <p>Kotlin</p>
-                  </div>
-                  <div class="skill">
-                    <img src="assets/imgs/typescript_logo.png" alt="Python Logo">
-                    <p>Typescript</p>
-                </div>
-                <div class="skill">
-                  <img src="assets/imgs/sql_logo.png" alt="Python Logo">
-                  <p>SQL</p>
-              </div>
-              <div class="skill">
-                <img src="assets/imgs/java_logo.webp" alt="Python Logo">
-                <p>Java</p>
+        <nav>
+          <ul>
+            <li>
+              <a href="home.html"><i class="fas fa-home"></i> Home</a>
+            </li>
+            <li>
+              <a href="about.html"><i class="fas fa-user"></i> About</a>
+            </li>
+            <li>
+              <a href="projects.html"
+                ><i class="fas fa-briefcase"></i> Projects</a
+              >
+            </li>
+            <li>
+              <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="right-section" id="home">
+        <main>
+          <h1 id="animated-heading">Meet Onyebuchi</h1>
+          <p>
+            Hi!, I am Onyebuchi Anizoba-Nwota, my acquaintances call me e-fresh!
+            <br />
+            am from family of Mr. & Mrs. Reuben Anizoba Nwota of Umuokpu Awka
+            Anambra state.<br />
+            A graduate of Nnamdi Azikiwe University (NAU) Awka, with a
+            Bachelor's Degree in <br />
+            Educational Management, I passionately aspire to be a full stack
+            developer as part <br />
+            of my efforts in contributing creative solutions to humanity through
+            programming...<br />
+            Presently, I am the managing Director of FreshSHOP Supermaket, a
+            retail outlet for <br />
+            groceries and other household needs, I enrolled into front-end
+            developer program with Learning People Global and have acquired some
+            outstanding skills in fornt-end development and now a member of the British
+            Computer Society (BCS), I am a very adventurous, creative and also a
+            team player, eager to learn new things and open to new ideas and
+            challenges.
+          </p>
+          <br />
+          <h2>WebDev, Tools, Languages & Skills</h2>
+          <div class="skills-logos">
+            <div class="skill">
+              <img
+                src="assets/imgs/javascript_logo.png"
+                alt="JavaScript Logo"
+              />
+              <p>JavaScript</p>
             </div>
             <div class="skill">
-              <img src="assets/imgs/android_studio_logo.webp" alt="Python Logo">
+              <img src="assets/imgs/html_logo.png" alt="HTML Logo" />
+              <p>HTML</p>
+            </div>
+            <div class="skill">
+              <img src="assets/imgs/react_logo.webp" alt="React Logo" />
+              <p>React</p>
+            </div>
+            <div class="skill">
+              <img src="assets/imgs/redux_logo.png" alt="Redux Logo" />
+              <p>Redux</p>
+            </div>
+            <div class="skill">
+              <img src="assets/imgs/css_logo.webp" alt="CSS Logo" />
+              <p>CSS</p>
+            </div>
+            <div class="skill">
+              <img src="assets/imgs/python_logo.webp" alt="Python Logo" />
+              <p>Python</p>
+            </div>
+            <div class="skill">
+              <img src="assets/imgs/kotlin_logo.png" alt="Python Logo" />
+              <p>Kotlin</p>
+            </div>
+            <div class="skill">
+              <img src="assets/imgs/typescript_logo.png" alt="Python Logo" />
+              <p>Typescript</p>
+            </div>
+            <div class="skill">
+              <img src="assets/imgs/sql_logo.png" alt="Python Logo" />
+              <p>SQL</p>
+            </div>
+            <div class="skill">
+              <img src="assets/imgs/java_logo.webp" alt="Python Logo" />
+              <p>Java</p>
+            </div>
+            <div class="skill">
+              <img
+                src="assets/imgs/android_studio_logo.webp"
+                alt="Python Logo"
+              />
               <p>Android Studio</p>
+            </div>
+            <div class="skill">
+              <img src="assets/imgs/github_logo.jpg" alt="Python Logo" />
+              <p>GitHub</p>
+            </div>
+            <div class="skill">
+              <img src="assets/imgs/Bootstrap_logo.svg" alt="Python Logo" />
+              <p>Bootstrap</p>
+            </div>
+            <div class="skill">
+              <img src="assets/imgs/cpp_logo.png" alt="Python Logo" />
+              <p>C++</p>
+            </div>
+            <div class="skill">
+              <img src="assets/imgs/microsoft_azure.png" alt="Python Logo" />
+              <p>Microsoft Azure</p>
+            </div>
+            <div class="skill">
+              <img src="assets/imgs/aws_logo.jpg" alt="Python Logo" />
+              <p>AWS</p>
+            </div>
           </div>
-          <div class="skill">
-            <img src="assets/imgs/github_logo.jpg" alt="Python Logo">
-            <p>GitHub</p>
-        </div>
-        <div class="skill">
-          <img src="assets/imgs/Bootstrap_logo.svg" alt="Python Logo">
-          <p>Bootstrap</p>
+        </main>
       </div>
-      <div class="skill">
-        <img src="assets/imgs/cpp_logo.png" alt="Python Logo">
-        <p>C++</p>
     </div>
-    <div class="skill">
-      <img src="assets/imgs/microsoft_azure.png" alt="Python Logo">
-      <p>Microsoft Azure</p>
-  </div>
-  <div class="skill">
-    <img src="assets/imgs/aws_logo.jpg" alt="Python Logo">
-    <p>AWS</p>
-</div>
-                </div>
-                
-            </main>
+     <!-- Footer Section -->
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2024 OtaWIZ & GeoCE<br> All rights reserved.</p>
         </div>
+    </footer>
+     <!-- Visitors Count Section -->
+    <div class="visitor-count">
+      <p>Click Count: <span id="visitor-count">0</span></p>
     </div>
-        <script src="script.js"></script> <!-- Link to the JavaScript file -->
-</body>
+    <script src="script.js"></script>
+    <!-- Link to the JavaScript file -->
+  </body>
 </html>

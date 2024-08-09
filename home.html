@@ -1,126 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Onyebuchi's Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="icon" href="assets/imgs/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="icon" href="assets/imgs/favicon.ico" type="image/x-icon" />
     <!-- Add Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Creepster&family=Nabla:EDPT,EHLT@0..200,0..24&display=swap" rel="stylesheet">
-</head>
-<body>
-  <!--Galaxy particles from https://codepen.io/iangonza/pen/PvYvLv-->
-  <div class="space">
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-  </div>
-       <!-- Add a hyperlink to the welcome page -->
-  <div class="welcome">
-    <a href="index.html"
-    title="Welcome page" class="no-underline">
-    <span class="letter">W</span>
-    <span class="letter">e</span>
-    <span class="letter">l</span>
-    <span class="letter">c</span>
-    <span class="letter">o</span>
-    <span class="letter">m</span>
-    <span class="letter">e</span>
-  </a>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Creepster&family=Nabla:EDPT,EHLT@0..200,0..24&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Galaxy particles from https://codepen.io/iangonza/pen/PvYvLv ian gonza @iangonza -->
+    <div class="space">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </div>
+    <!-- Add a hyperlink to the welcome page -->
+    <div class="welcome">
+      <a href="index.html" title="Welcome page" class="no-underline">
+        <span class="letter">W</span>
+        <span class="letter">e</span>
+        <span class="letter">l</span>
+        <span class="letter">c</span>
+        <span class="letter">o</span>
+        <span class="letter">m</span>
+        <span class="letter">e</span>
+      </a>
     </div>
 
     <div class="container">
-          <!--Progress clock from https://speckyboy.com/progress-bars-css-javascript/ -->
-            
-          <div id="clock" class="progress-clock">
-            <button class="progress-clock__time-date" data-group="d" type="button">
-              <small data-unit="w">Sunday</small><br>
-              <span data-unit="mo">January</span>
-              <span data-unit="d">1</span>
-            </button>
-            <button class="progress-clock__time-digit" data-unit="h" data-group="h" type="button">12</button><span class="progress-clock__time-colon">:</span><button class="progress-clock__time-digit" data-unit="m" data-group="m" type="button">00</button><span class="progress-clock__time-colon">:</span><button class="progress-clock__time-digit" data-unit="s" data-group="s" type="button">00</button>
-            <span class="progress-clock__time-ampm" data-unit="ap">AM</span>
-            <svg class="progress-clock__rings" width="256" height="256" viewBox="0 0 256 256">
-              <defs>
-                <linearGradient id="pc-red" x1="1" y1="0.5" x2="0" y2="0.5">
-                  <stop offset="0%" stop-color="hsl(343,90%,55%)" />
-                  <stop offset="100%" stop-color="hsl(323,90%,55%)" />
-                </linearGradient>
-                <linearGradient id="pc-yellow" x1="1" y1="0.5" x2="0" y2="0.5">
-                  <stop offset="0%" stop-color="hsl(43,90%,55%)" />
-                  <stop offset="100%" stop-color="hsl(23,90%,55%)" />
-                </linearGradient>
-                <linearGradient id="pc-blue" x1="1" y1="0.5" x2="0" y2="0.5">
-                  <stop offset="0%" stop-color="hsl(223,90%,55%)" />
-                  <stop offset="100%" stop-color="hsl(203,90%,55%)" />
-                </linearGradient>
-                <linearGradient id="pc-purple" x1="1" y1="0.5" x2="0" y2="0.5">
-                  <stop offset="0%" stop-color="hsl(283,90%,55%)" />
-                  <stop offset="100%" stop-color="hsl(263,90%,55%)" />
-                </linearGradient>
-              </defs>
-              <!-- Days of Month -->
-              <g data-units="d">
-                <circle class="progress-clock__ring" cx="128" cy="128" r="74" fill="none" opacity="0.1" stroke="url(#pc-red)" stroke-width="12" />
-                <circle class="progress-clock__ring-fill" data-ring="mo" cx="128" cy="128" r="74" fill="none" stroke="url(#pc-red)" stroke-width="12" stroke-dasharray="465 465" stroke-dashoffset="465" stroke-linecap="round" transform="rotate(-90,128,128)" />
-              </g>
-              <!-- Hours of Day -->
-              <g data-units="h">
-                <circle class="progress-clock__ring" cx="128" cy="128" r="90" fill="none" opacity="0.1" stroke="url(#pc-yellow)" stroke-width="12" />
-                <circle class="progress-clock__ring-fill" data-ring="d" cx="128" cy="128" r="90" fill="none" stroke="url(#pc-yellow)" stroke-width="12" stroke-dasharray="565.5 565.5" stroke-dashoffset="565.5" stroke-linecap="round" transform="rotate(-90,128,128)" />
-              </g>
-              <!-- Minutes of Hour -->
-              <g data-units="m">
-                <circle class="progress-clock__ring" cx="128" cy="128" r="106" fill="none" opacity="0.1" stroke="url(#pc-blue)" stroke-width="12" />
-                <circle class="progress-clock__ring-fill" data-ring="h" cx="128" cy="128" r="106" fill="none" stroke="url(#pc-blue)" stroke-width="12" stroke-dasharray="666 666" stroke-dashoffset="666" stroke-linecap="round" transform="rotate(-90,128,128)" />
-              </g>
-              <!-- Seconds of Minute -->
-              <g data-units="s">
-                <circle class="progress-clock__ring" cx="128" cy="128" r="122" fill="none" opacity="0.1" stroke="url(#pc-purple)" stroke-width="12" />
-                <circle class="progress-clock__ring-fill" data-ring="m" cx="128" cy="128" r="122" fill="none" stroke="url(#pc-purple)" stroke-width="12" stroke-dasharray="766.5 766.5" stroke-dashoffset="766.5" stroke-linecap="round" transform="rotate(-90,128,128)" />
-              </g>
-            </svg>
+      <!--Progress clock from https://speckyboy.com/progress-bars-css-javascript/ by Jon Kantner -->
+
+      <div id="clock" class="progress-clock">
+        <button class="progress-clock__time-date" data-group="d" type="button">
+          <small data-unit="w">Sunday</small><br />
+          <span data-unit="mo">January</span>
+          <span data-unit="d">1</span>
+        </button>
+        <button
+          class="progress-clock__time-digit"
+          data-unit="h"
+          data-group="h"
+          type="button"
+        >
+          12</button
+        ><span class="progress-clock__time-colon">:</span
+        ><button
+          class="progress-clock__time-digit"
+          data-unit="m"
+          data-group="m"
+          type="button"
+        >
+          00</button
+        ><span class="progress-clock__time-colon">:</span
+        ><button
+          class="progress-clock__time-digit"
+          data-unit="s"
+          data-group="s"
+          type="button"
+        >
+          00
+        </button>
+        <span class="progress-clock__time-ampm" data-unit="ap">AM</span>
+        <svg
+          class="progress-clock__rings"
+          width="256"
+          height="256"
+          viewBox="0 0 256 256"
+        >
+          <defs>
+            <linearGradient id="pc-red" x1="1" y1="0.5" x2="0" y2="0.5">
+              <stop offset="0%" stop-color="hsl(343,90%,55%)" />
+              <stop offset="100%" stop-color="hsl(323,90%,55%)" />
+            </linearGradient>
+            <linearGradient id="pc-yellow" x1="1" y1="0.5" x2="0" y2="0.5">
+              <stop offset="0%" stop-color="hsl(43,90%,55%)" />
+              <stop offset="100%" stop-color="hsl(23,90%,55%)" />
+            </linearGradient>
+            <linearGradient id="pc-blue" x1="1" y1="0.5" x2="0" y2="0.5">
+              <stop offset="0%" stop-color="hsl(223,90%,55%)" />
+              <stop offset="100%" stop-color="hsl(203,90%,55%)" />
+            </linearGradient>
+            <linearGradient id="pc-purple" x1="1" y1="0.5" x2="0" y2="0.5">
+              <stop offset="0%" stop-color="hsl(283,90%,55%)" />
+              <stop offset="100%" stop-color="hsl(263,90%,55%)" />
+            </linearGradient>
+          </defs>
+          <!-- Days of Month -->
+          <g data-units="d">
+            <circle
+              class="progress-clock__ring"
+              cx="128"
+              cy="128"
+              r="74"
+              fill="none"
+              opacity="0.1"
+              stroke="url(#pc-red)"
+              stroke-width="12"
+            />
+            <circle
+              class="progress-clock__ring-fill"
+              data-ring="mo"
+              cx="128"
+              cy="128"
+              r="74"
+              fill="none"
+              stroke="url(#pc-red)"
+              stroke-width="12"
+              stroke-dasharray="465 465"
+              stroke-dashoffset="465"
+              stroke-linecap="round"
+              transform="rotate(-90,128,128)"
+            />
+          </g>
+          <!-- Hours of Day -->
+          <g data-units="h">
+            <circle
+              class="progress-clock__ring"
+              cx="128"
+              cy="128"
+              r="90"
+              fill="none"
+              opacity="0.1"
+              stroke="url(#pc-yellow)"
+              stroke-width="12"
+            />
+            <circle
+              class="progress-clock__ring-fill"
+              data-ring="d"
+              cx="128"
+              cy="128"
+              r="90"
+              fill="none"
+              stroke="url(#pc-yellow)"
+              stroke-width="12"
+              stroke-dasharray="565.5 565.5"
+              stroke-dashoffset="565.5"
+              stroke-linecap="round"
+              transform="rotate(-90,128,128)"
+            />
+          </g>
+          <!-- Minutes of Hour -->
+          <g data-units="m">
+            <circle
+              class="progress-clock__ring"
+              cx="128"
+              cy="128"
+              r="106"
+              fill="none"
+              opacity="0.1"
+              stroke="url(#pc-blue)"
+              stroke-width="12"
+            />
+            <circle
+              class="progress-clock__ring-fill"
+              data-ring="h"
+              cx="128"
+              cy="128"
+              r="106"
+              fill="none"
+              stroke="url(#pc-blue)"
+              stroke-width="12"
+              stroke-dasharray="666 666"
+              stroke-dashoffset="666"
+              stroke-linecap="round"
+              transform="rotate(-90,128,128)"
+            />
+          </g>
+          <!-- Seconds of Minute -->
+          <g data-units="s">
+            <circle
+              class="progress-clock__ring"
+              cx="128"
+              cy="128"
+              r="122"
+              fill="none"
+              opacity="0.1"
+              stroke="url(#pc-purple)"
+              stroke-width="12"
+            />
+            <circle
+              class="progress-clock__ring-fill"
+              data-ring="m"
+              cx="128"
+              cy="128"
+              r="122"
+              fill="none"
+              stroke="url(#pc-purple)"
+              stroke-width="12"
+              stroke-dasharray="766.5 766.5"
+              stroke-dashoffset="766.5"
+              stroke-linecap="round"
+              transform="rotate(-90,128,128)"
+            />
+          </g>
+        </svg>
+      </div>
+      <div class="left-section">
+        <div class="profile">
+          <img src="assets/imgs/my-profile-img.jpg" alt="Profile Picture" />
+          <div>
+            <div class="breathing-glow">
+              <h2 class="name">O. Anizoba-Nwota</h2>
+            </div>
+            <div class="social-media">
+              <a href="https://twitter.com/oanizobanwota" target="_blank"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                href="https://linkedin.com//in/onyebuchi-anizoba-nwota"
+                target="_blank"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="https://facebook.com/oanizobanwota" target="_blank"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a href="https://instagram.com/anizobanwota" target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="https://github.com/oanizobanwota" target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+            </div>
           </div>
-        <div class="left-section">
-            <div class="profile">
-                <img src="assets/imgs/my-profile-img.jpg" alt="Profile Picture">
-                <div>
-                <div class="breathing-glow"> <h2 class="name">O. Anizoba-Nwota</h2></div>
-                <div class="social-media">
-                    <a href="https://twitter.com/oanizobanwota" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="https://linkedin.com//in/onyebuchi-anizoba-nwota" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://facebook.com/oanizobanwota" target="_blank"><i class="fab fa-facebook"></i></a>
-                    <a href="https://instagram.com/anizobanwota" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://github.com/oanizobanwota" target="_blank"><i class="fab fa-github"></i></a>
-                </div>
-            </div>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
-                    <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
-                    <li><a href="projects.html"><i class="fas fa-briefcase"></i> Projects</a></li>
-                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
-                </ul>
-            </nav>
         </div>
-            <div class="right-section" id="home">
-               
-            <main>
-                <h1 id="animated-heading">Onyebuchi Anizoba-Nwota</h1>
-                <p></p>
-                <h2>Innovative solutions through creativity... </h2>
-            </main>
-   
-        </div>
+        <nav>
+          <ul>
+            <li>
+              <a href="home.html"><i class="fas fa-home"></i> Home</a>
+            </li>
+            <li>
+              <a href="about.html"><i class="fas fa-user"></i> About</a>
+            </li>
+            <li>
+              <a href="projects.html"
+                ><i class="fas fa-briefcase"></i> Projects</a
+              >
+            </li>
+            <li>
+              <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="right-section" id="home">
+        <main>
+          <h1 id="animated-heading">Onyebuchi Anizoba-Nwota</h1>
+          <p></p>
+          <p>Thank you for taking out time out of your busy schedules to visit my website today, 
+            it is an honor and a privildege which i welcome wholeheartedly, while assuring you,
+            that every moment you spent exploring and navigating through my website will provide you with 
+            the much needed sense of satisfaction and fulfillment that will encourage your decisions to partner 
+            with us in your projects. I can assure you in all honesty of total dedication, clear communication, 
+            creativity, innovations, team work, proper time management and functional applications. 
+            I am vast in most front end development languages, tools and skills ranging from HTML, 
+            CSS, JavaScript, SQL, NoSQL, the frameworks and libraries, testing, debugging and responsive 
+            designs. i am always ready to work beyond your expectations in order to achieve your company set goals,
+            also bear in mind that we are work in progress and we are always ready to learn new things and adapt to
+            your company's culture and values. I have the confidence that your visit to my website today is a
+            right step in right directions that will reproduce many solutions to improve your products and services... 
+            Once again, you are most welcomed here and I look forward hearing from you ...</p>
+        </main>
+      </div>
     </div>
+     <!-- Footer Section -->
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2024 OtaWIZ & GeoCE<br> All rights reserved.</p>
+         </div>
+    </footer>
+     <!--  Count Section -->
+    <div class="visitor-count">
+      <p>Click Count: <span id="visitor-count">0</span></p>
     </div>
-    <script src="script.js"></script> <!-- Link to the JavaScript file -->
-  
-</body>
+
+       <!-- Link to the JavaScript file -->
+         <script src="script.js"></script>
+  </body>
 </html>
