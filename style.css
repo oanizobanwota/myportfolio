@@ -159,10 +159,6 @@ button {
   color: #000;
 }
 
-.glow-on-hover:active:after {
-  background: transparent;
-}
-
 .glow-on-hover:hover:before {
   opacity: 1;
 }
@@ -264,12 +260,15 @@ button {
 }
 
 .email-me button:hover {
-  background-color: #035e5f; /* Change background color on hover */
   transform: scale(1.1); /* Slightly enlarge the button on hover */
 }
 
 .email-me {
   margin-bottom: 20px; /* Adjust the value as needed */
+}
+.email-me a {
+  text-decoration: none; /* Remove underline */
+  color: #fff; /* Set text color to white */
 }
 
 .quote-container {
@@ -606,7 +605,7 @@ button {
   grid-row: 1 / -1; /* Span all columns */
   position: fixed;
   width: 55%;
-  height: 55%;
+  height: 54%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1;
   border-radius: 10px;
