@@ -2,52 +2,528 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Onyebuchi's Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-    <title>Welcome Page</title>
+    <link rel="icon" href="assets/imgs/favicon.ico" type="image/x-icon" />
+    <!-- Add Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Creepster&family=Nabla:EDPT,EHLT@0..200,0..24&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <!-- Typewriter effect from https://blog.logrocket.com/creating-typewriter-animation-css -->
   <body>
-    <!-- Galaxy particles from https://codepen.io/iangonza/pen/PvYvLv ian gonza @iangonza -->
-    <div class="space">
-      <div class="particle"></div>
-      <div class="particle"></div>
-      <div class="particle"></div>
-      <div class="particle"></div>
-      <div class="quote-container">
-        <p class="quote-text">
-          <q
-            >We should be glad of an opportunity to serve others by any
-            invention of ours; and this we should do freely and generously.</q
+    <section id="welcome-page">
+      <div id="space">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+
+        <div class="profile">
+          <img
+            class="profile-pic"
+            src="assets/imgs/my-profile-img.jpg"
+            alt="Profile Picture"
+          />
+          <h2 class="name" id="breathing-glow">O. Anizoba-Nwota</h2>
+        </div>
+
+        <div class="social">
+          <a href="https://twitter.com/oanizobanwota" target="_blank"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a
+            href="https://linkedin.com//in/onyebuchi-anizoba-nwota"
+            target="_blank"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a href="https://facebook.com/oanizobanwota" target="_blank"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a href="https://instagram.com/anizobanwota" target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://github.com/oanizobanwota" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+        </div>
+        <nav>
+          <ul>
+            <li>
+              <a href="#about" class="selected"
+                ><i class="fas fa-user"></i> About</a
+              >
+            </li>
+            <li>
+              <a href="#projects" class="selected"
+                ><i class="fas fa-briefcase"></i> Projects</a
+              >
+            </li>
+            <li>
+              <a href="#contact" class="selected"
+                ><i class="fas fa-envelope"></i> Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Add a hyperlink to the welcome page -->
+        <div class="welcome">
+          <a href="index.html" title="Welcome page" class="no-underline">
+            <span class="letter">W</span>
+            <span class="letter">e</span>
+            <span class="letter">l</span>
+            <span class="letter">c</span>
+            <span class="letter">o</span>
+            <span class="letter">m</span>
+            <span class="letter">e</span>
+          </a>
+        </div>
+        <!-- Typewriter effect from https://blog.logrocket.com/creating-typewriter-animation-css -->
+
+        <!-- Galaxy particles from https://codepen.io/iangonza/pen/PvYvLv ian gonza @iangonza -->
+
+        <!--Progress clock from https://speckyboy.com/progress-bars-css-javascript/ by Jon Kantner -->
+
+        <div id="clock" class="progress-clock">
+          <button
+            class="progress-clock__time-date"
+            data-group="d"
+            type="button"
           >
-        </p>
-        <p class="cite-text"><cite>- Benjamin Franklin</cite></p>
-      </div>
-      <div class="text-container">
-        <p class="welcome-text">
-          I'm Onyebuchi, a front-end developer with passion❤️🥰
-        </p>
-        <p class="welcome-subtext">
-          ...you are welcome to my portfolio website,
-        </p>
-        <p class="welcome-subtext1">
-          we create, we innovate and embrace functionality...
-        </p>
-        <div class="explorer">
-          <button class="glow-on-hover">
-            <span class="welcome-subtext2"
-              ><a href="home.html">Explore 👉</a></span
-            >
+            <small data-unit="w">Sunday</small><br />
+            <span data-unit="mo">January</span>
+            <span data-unit="d">1</span>
           </button>
+          <button
+            class="progress-clock__time-digit"
+            data-unit="h"
+            data-group="h"
+            type="button"
+          >
+            12</button
+          ><span class="progress-clock__time-colon">:</span
+          ><button
+            class="progress-clock__time-digit"
+            data-unit="m"
+            data-group="m"
+            type="button"
+          >
+            00</button
+          ><span class="progress-clock__time-colon">:</span
+          ><button
+            class="progress-clock__time-digit"
+            data-unit="s"
+            data-group="s"
+            type="button"
+          >
+            00
+          </button>
+          <span class="progress-clock__time-ampm" data-unit="ap">AM</span>
+          <svg
+            class="progress-clock__rings"
+            width="256"
+            height="256"
+            viewBox="0 0 256 256"
+          >
+            <defs>
+              <linearGradient id="pc-red" x1="1" y1="0.5" x2="0" y2="0.5">
+                <stop offset="0%" stop-color="hsl(343,90%,55%)" />
+                <stop offset="100%" stop-color="hsl(323,90%,55%)" />
+              </linearGradient>
+              <linearGradient id="pc-yellow" x1="1" y1="0.5" x2="0" y2="0.5">
+                <stop offset="0%" stop-color="hsl(43,90%,55%)" />
+                <stop offset="100%" stop-color="hsl(23,90%,55%)" />
+              </linearGradient>
+              <linearGradient id="pc-blue" x1="1" y1="0.5" x2="0" y2="0.5">
+                <stop offset="0%" stop-color="hsl(223,90%,55%)" />
+                <stop offset="100%" stop-color="hsl(203,90%,55%)" />
+              </linearGradient>
+              <linearGradient id="pc-purple" x1="1" y1="0.5" x2="0" y2="0.5">
+                <stop offset="0%" stop-color="hsl(283,90%,55%)" />
+                <stop offset="100%" stop-color="hsl(263,90%,55%)" />
+              </linearGradient>
+            </defs>
+            <!-- Days of Month -->
+            <g data-units="d">
+              <circle
+                class="progress-clock__ring"
+                cx="128"
+                cy="128"
+                r="74"
+                fill="none"
+                opacity="0.1"
+                stroke="url(#pc-red)"
+                stroke-width="12"
+              />
+              <circle
+                class="progress-clock__ring-fill"
+                data-ring="mo"
+                cx="128"
+                cy="128"
+                r="74"
+                fill="none"
+                stroke="url(#pc-red)"
+                stroke-width="12"
+                stroke-dasharray="465 465"
+                stroke-dashoffset="465"
+                stroke-linecap="round"
+                transform="rotate(-90,128,128)"
+              />
+            </g>
+            <!-- Hours of Day -->
+            <g data-units="h">
+              <circle
+                class="progress-clock__ring"
+                cx="128"
+                cy="128"
+                r="90"
+                fill="none"
+                opacity="0.1"
+                stroke="url(#pc-yellow)"
+                stroke-width="12"
+              />
+              <circle
+                class="progress-clock__ring-fill"
+                data-ring="d"
+                cx="128"
+                cy="128"
+                r="90"
+                fill="none"
+                stroke="url(#pc-yellow)"
+                stroke-width="12"
+                stroke-dasharray="565.5 565.5"
+                stroke-dashoffset="565.5"
+                stroke-linecap="round"
+                transform="rotate(-90,128,128)"
+              />
+            </g>
+            <!-- Minutes of Hour -->
+            <g data-units="m">
+              <circle
+                class="progress-clock__ring"
+                cx="128"
+                cy="128"
+                r="106"
+                fill="none"
+                opacity="0.1"
+                stroke="url(#pc-blue)"
+                stroke-width="12"
+              />
+              <circle
+                class="progress-clock__ring-fill"
+                data-ring="h"
+                cx="128"
+                cy="128"
+                r="106"
+                fill="none"
+                stroke="url(#pc-blue)"
+                stroke-width="12"
+                stroke-dasharray="666 666"
+                stroke-dashoffset="666"
+                stroke-linecap="round"
+                transform="rotate(-90,128,128)"
+              />
+            </g>
+            <!-- Seconds of Minute -->
+            <g data-units="s">
+              <circle
+                class="progress-clock__ring"
+                cx="128"
+                cy="128"
+                r="122"
+                fill="none"
+                opacity="0.1"
+                stroke="url(#pc-purple)"
+                stroke-width="12"
+              />
+              <circle
+                class="progress-clock__ring-fill"
+                data-ring="m"
+                cx="128"
+                cy="128"
+                r="122"
+                fill="none"
+                stroke="url(#pc-purple)"
+                stroke-width="12"
+                stroke-dasharray="766.5 766.5"
+                stroke-dashoffset="766.5"
+                stroke-linecap="round"
+                transform="rotate(-90,128,128)"
+              />
+            </g>
+          </svg>
         </div>
       </div>
+    </section>
+     <header>
+        <div class="text-container">
+          <p class="welcome-text">
+            I'm Onyebuchi, a front-end developer with passion❤️🥰
+          </p>
+          <p class="welcome-subtext">
+            ...you are welcome to my portfolio website,
+          </p>
+          <p class="welcome-subtext1">
+            here creativity & innovations embrace functionality.
+          </p>
+        </div>
+        <div class="quote-container">
+          <p class="quote-text">
+            <q
+              >We should be glad of an opportunity to serve others by any
+              invention of ours; and this we should do freely and generously.</q
+            >
+          </p>
+          <p class="cite-text"><cite>- Benjamin Franklin</cite></p>
+        </div>
+      </header>
+
+    <div class="container">
+           <!-- About Section -->
+      <section id="about">
+        <div>
+          <h1>Onyebuchi Anizoba-Nwota</h1>
+          <p>
+            Thank you for taking out time out of your busy schedules to visit my
+            website today, it is an honor and a privilege which i welcome
+            wholeheartedly, while assuring you, that every moment you spent
+            exploring and navigating through my website will provide you with
+            the much needed sense of satisfaction and fulfillment that will
+            encourage your decisions to partner with us in your projects. I can
+            assure you in all honesty of total dedication, clear communication,
+            creativity, innovations, team work, proper time management and
+            functional applications. I am vast in most front end development
+            languages, tools and skills ranging from HTML, CSS, JavaScript, SQL,
+            NoSQL, the frameworks and libraries, testing, debugging and
+            responsive designs. i am always ready to work beyond your
+            expectations in order to achieve your company set goals, also bear
+            in mind that we are work in progress and we are always ready to
+            learn new things and adapt to your company's culture and values. I
+            have the confidence that your visit to my website today is a right
+            step in right directions that will reproduce many solutions to
+            improve your products and services... Once again, you are most
+            welcomed here and I look forward hearing from you ... Hi!, I am
+            Onyebuchi Anizoba-Nwota, my acquaintances call me e-fresh!
+            <br />
+            am from family of Mr. & Mrs. Reuben Anizoba Nwota of Umuokpu Awka
+            Anambra state.<br />
+            A graduate of Nnamdi Azikiwe University (NAU) Awka, with a
+            Bachelor's Degree in <br />
+            Educational Management, I passionately aspire to be a full stack
+            developer as part <br />
+            of my efforts in contributing creative solutions to humanity through
+            programming...<br />
+            Presently, I am the managing Director of FreshSHOP Supermaket, a
+            retail outlet for <br />
+            groceries and other household needs, I enrolled into front-end
+            developer program with Learning People Global and have acquired some
+            outstanding skills in fornt-end development and now a member of the
+            British Computer Society (BCS), I am a very adventurous, creative
+            and also a team player, eager to learn new things and open to new
+            ideas and challenges.
+          </p>
+          <br />
+          <h2>WebDev, Tools, Languages & Skills</h2>
+          <div class="skills-logos">
+            <div class="skill">
+              <img
+                src="assets/imgs/javascript_logo.png"
+                alt="JavaScript Logo"
+              />
+              <p>JavaScript</p>
+            </div>
+            <div class="skill">
+              <img src="assets/imgs/html_logo.png" alt="HTML Logo" />
+              <p>HTML</p>
+            </div>
+            <div class="skill">
+              <img src="assets/imgs/react_logo.webp" alt="React Logo" />
+              <p>React</p>
+            </div>
+            <div class="skill">
+              <img src="assets/imgs/redux_logo.png" alt="Redux Logo" />
+              <p>Redux</p>
+            </div>
+            <div class="skill">
+              <img src="assets/imgs/css_logo.webp" alt="CSS Logo" />
+              <p>CSS</p>
+            </div>
+            <div class="skill">
+              <img src="assets/imgs/python_logo.webp" alt="Python Logo" />
+              <p>Python</p>
+            </div>
+            <div class="skill">
+              <img src="assets/imgs/kotlin_logo.png" alt="Python Logo" />
+              <p>Kotlin</p>
+            </div>
+            <div class="skill">
+              <img src="assets/imgs/typescript_logo.png" alt="Python Logo" />
+              <p>Typescript</p>
+            </div>
+            <div class="skill">
+              <img src="assets/imgs/sql_logo.png" alt="Python Logo" />
+              <p>SQL</p>
+            </div>
+            <div class="skill">
+              <img src="assets/imgs/java_logo.webp" alt="Python Logo" />
+              <p>Java</p>
+            </div>
+            <div class="skill">
+              <img
+                src="assets/imgs/android_studio_logo.webp"
+                alt="Python Logo"
+              />
+              <p>Android Studio</p>
+            </div>
+            <div class="skill">
+              <img src="assets/imgs/github_logo.jpg" alt="Python Logo" />
+              <p>GitHub</p>
+            </div>
+            <div class="skill">
+              <img src="assets/imgs/Bootstrap_logo.svg" alt="Python Logo" />
+              <p>Bootstrap</p>
+            </div>
+            <div class="skill">
+              <img src="assets/imgs/cpp_logo.png" alt="Python Logo" />
+              <p>C++</p>
+            </div>
+            <div class="skill">
+              <img src="assets/imgs/microsoft_azure.png" alt="Python Logo" />
+              <p>Microsoft Azure</p>
+            </div>
+            <div class="skill">
+              <img src="assets/imgs/aws_logo.jpg" alt="Python Logo" />
+              <p>AWS</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h1>Projects</h1>
+        <div class="projects-grid">
+          <div class="project-square" onclick="toggleDetails(this)">
+            <img src="assets/imgs/project1.jpeg" alt="Project 1" />
+            <div class="caption">
+              <p>GoCom Taxi e-hailing Taxi app</p>
+              <p></p>
+              <p>
+                An e-hailing taxi application for android and ios platform,
+                which is currently on its testing stage.
+              </p>
+            </div>
+          </div>
+
+          <div class="project-square" onclick="toggleDetails(this)">
+            <img src="assets/imgs/project2.png" alt="Project 2" />
+            <div class="caption">
+              <p>FreshSHOP Supermarket website</p>
+              <p>
+                A website providing information about the retail shop, and will
+                launch its online shopping platform in a shrt time
+              </p>
+            </div>
+          </div>
+          <div class="project-square" onclick="toggleDetails(this)">
+            <img src="assets/imgs/my-profile-img.jpg" alt="Project 3" />
+            <div class="caption">
+              <p>My Portfolio website</p>
+              <p>
+                My personal website that showcase my personality, skills,
+                contact and projects.
+              </p>
+            </div>
+          </div>
+          <div class="project-square" onclick="toggleDetails(this)">
+            <img src="assets/imgs/project3.jpg" alt="Project 4" />
+            <div class="caption">
+              <p>And so many more under development...</p>
+              <p>
+                Yea, I have so upcoming innovative projects and i will unveil
+                them at the appropriate time.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div>
+          <h1>Contact</h1>
+          <div class="email-me">
+            <button class="glow-on-hover" type="submit">
+              <a href="mailto:buchi-n@msn.com">Send me Email</a>
+            </button>
+            <div class="social-media">
+              <a
+                href="https://twitter.com/oanizobanwota"
+                target="_blank"
+                class="twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                href="https://linkedin.com//in/onyebuchi-anizoba-nwota"
+                target="_blank"
+                class="linkedin"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a
+                href="https://facebook.com/oanizobanwota"
+                target="_blank"
+                class="facebook"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a
+                href="https://instagram.com/anizobanwota"
+                target="_blank"
+                class="instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="https://github.com/oanizobanwota"
+                target="_blank"
+                class="github"
+                ><i class="fab fa-github"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="address">
+            <h3>Address</h3>
+            <p>Birmingham, West Midlands United Kingdom</p>
+            <p>
+              Email:
+              <a href="mailto:buchi-n@msn.com" class="no-underline">
+                buchi-n@msn.com</a
+              >
+            </p>
+            <p>
+              Call:
+              <a href="tel:+447405508523" class="no-underline"> 07405508523</a>
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
+    <!-- Footer Section -->
+    <footer>
+      <div class="footer-content">
+        <p>
+          &copy; 2024 OtaWIZ & GeoCE<br />
+          All rights reserved.
+        </p>
+      </div>
+    </footer>
+
     <!-- Link to the JavaScript file -->
-         <script src="script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

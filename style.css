@@ -1,35 +1,167 @@
 body {
-  display: grid;
-  justify-content: center;
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    line-height: 1.5;
+    background: #000;  
+}
+/* Add a background color to the body */
+
+
+.header {
+  justify-content: space-between;
   align-items: center;
-  height: 100vh;
-  margin: 10px;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  background-color: var(--bg);
-  place-items: center;
+  width: 100%;
+  z-index: 1000;
+  position: fixed;
 }
 
-body,
-html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+
+section {
+    display: block;
+    padding: 4em;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
 }
+
+
 body,
 button {
   color: var(--fg);
   font: 0.5em/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Helvetica, Arial, sans-serif;
+}
+
+
+#projects {
+  padding: 2em;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#contact {
+  margin-top: 25%;
+  padding: 2em;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20%;
+}
+#about {
+  padding: 2em;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20%;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  margin: 0 auto;
+  border-radius: 10px;
+  animation: steadyGlow 5s linear infinite;
+  transition: transform 0.3s, box-shadow 0.3s, all 0.3s ease; /* Add transition for smooth hover effect */
+  box-shadow: 0 0 15px rgba(213, 194, 17, 0.5); /* Neon glow effect */
+}
+
+nav {
+    color: #fff;
+    padding: 1em;
+    z-index: 1000;
+    top: 450px;
+    left: 30px;
+    position: fixed;
+}
+.profile-pic {
+    border-radius: 50%;
+    height: 20%;
+    width: 13%;
+    left: 50px;
+    top: 200px;
+    position: fixed;
+    animation: steadyGlow 5s linear infinite;
+  transition: transform 0.3s, box-shadow 0.3s, all 0.3s ease; /* Add transition for smooth hover effect */
+  box-shadow: 0 0 15px rgba(213, 194, 17, 0.5); /* Neon glow effect */
+   
+   
+}
+nav ul {
+    list-style: none;
+   
+
+}
+nav ul li {
+    margin: 0 1em;
+    padding: 0 0 20 0;
+    left: 50%;
+
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.7em;
+}
+.name {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0;
+    position: fixed;
+    top: 390px;
+    left: 70px;
+
+}
+.content {
+    padding: 2em;
+}
+section {
+    margin-bottom: 2em;
+}
+.social-media a {
+  margin-right: 15px; /* Adjust the value as needed */
+  margin: 0 15px;
+  font-size: 24px; /* Increase the size of the icons */
+  transition: transform 0.3s; /* Smooth transition for hover effect */
+  color: inherit; /* Ensure the icons inherit the color */
+}
+
+.social-media a:last-child {
+  margin-right: 0; /* Remove margin from the last item */
+}
+.social-media i:hover {
+  transform: scale(1.4); /* Enlarge the icon on hover */
+}
+.social-media i {
+  transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+/* Specific colors for different platforms */
+.social-media a.facebook {
+  color: #4c659a;
+}
+.social-media a.twitter {
+  color: #1da1f2;
+}
+.social-media a.linkedin {
+  color: #0077b5;
+}
+.social-media a.instagram {
+  color: #e4405f;
+}
+.social-media a.github {
+  color: #797777;
+}
+.social {
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* Add some space above the icons */
+  top: 400px;
+  left: 70px;
+  padding-inline: 10px;
 }
 
 * {
@@ -38,6 +170,7 @@ button {
   margin: 0;
   padding: 0;
 }
+
 
 :root {
   --hue: 223;
@@ -187,20 +320,7 @@ button {
   }
 }
 
-.explorer button {
-  height: 50px;
-  width: 200px; /* Adjust the width as needed */
-  border: none; /* Remove default border */
-  box-sizing: border-box; /* Ensure the padding is included in the width */
-  border-radius: 10px; /* Adjust the border-radius for rounded edges */
-  transition: background-color 0.3s ease, transform 0.3s ease; /* Add transition for smooth effect */
-  animation: steadyGlow 7s linear infinite, fadeIn 1s ease-in-out 24s forwards; /* Add fadeIn animation */
-  display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  padding-top: 20px; /* Adjust the value as needed */
-  opacity: 0; /* Hide the button initially */
-}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -227,23 +347,7 @@ button {
     box-shadow: 0 0 15px rgba(2, 214, 238, 0.5);
   }
 }
-.explorer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px; /* Adjust the value as needed */
-}
-.explorer a {
-  text-decoration: none; /* Remove underline */
-  color: #fff; /* Set text color to white */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  width: 100%; /* Ensure the link takes the full width of the button */
-  height: 100%; /* Ensure the link takes the full height of the button */
-}
-.explorer button:hover {
-  transform: scale(1.1); /* Slightly enlarge the button on hover */
-}
+
 
 .email-me button {
   width: 200px; /* Adjust the width as needed */
@@ -273,16 +377,16 @@ button {
 
 .quote-container {
   color: #fff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
   padding: 10px;
   z-index: 2; /* Ensure it stays on top */
-  display: flex;
+  display: block;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  justify-items: center;
+  margin-bottom: 20%; /* Adjust the value as needed */
+
 }
 .quote-text {
   overflow: hidden; /* Hide text behind the cursor */
@@ -290,9 +394,9 @@ button {
   font-size: 0.7rem;
   white-space: nowrap; /* Keep text in one line */
   font: arial narrow;
-  width: 100%;
+  width: 50%;
   display: flex;
-  justify-content: space-between;
+ 
 }
 .quote-text q {
   flex: 1;
@@ -301,21 +405,25 @@ button {
 
 .cite-text {
   text-align: right;
-  overflow: hidden; /* Hide text behind the cursor */
   font-size: 0.5rem; /* Adjust as needed */
   white-space: nowrap; /* Keep text in one line */
   align-self: flex-end;
+
+  
+
 }
 
 .text-container {
-  padding-top: 25%;
-  margin-top: 10%;
+  padding-top: 10%;
+  margin-bottom: 10%;
   text-align: center;
   color: #fff;
   justify-items: center;
   align-items: center;
   display: block;
   font-family: monospace;
+  top: 50%;
+  left: 50%;
 }
 
 .welcome-text {
@@ -340,31 +448,22 @@ button {
   font-size: 0.7rem;
   font-weight: bold;
 }
-.welcome-subtext2 {
-  white-space: nowrap; /* keep text in one line */
-  overflow: hidden; /* hide text behind the cursor */
-  margin: 0.2rem auto;
-  font-size: 1rem;
-  font-weight: bold;
-  font-family: monospace;
-  padding-bottom: 10%;
+
+
+
+.welcome-text {
+  border-right: 2px solid rgba(17, 17, 17, 0.9);
 }
-.cite-text {
+.welcome-subtext {
+  border-right: 2px solid rgba(17, 17, 17, 0.9);
+}
+.welcome-subtext1 {
   border-right: 2px solid rgba(17, 17, 17, 0.9);
 }
 .quote-text {
   border-right: 2px solid rgba(17, 17, 17, 0.9);
 }
-.welcome-text {
-  border-right: 2px solid rgba(17, 17, 17, 0.9);
-}
-.welcome-subtext {
-  border-right: 2px solid rgba(17, 17, 17, 0.9);
-}
-.welcome-subtext1 {
-  border-right: 2px solid rgba(17, 17, 17, 0.9);
-}
-.welcome-subtext2 {
+.cite-text {
   border-right: 2px solid rgba(17, 17, 17, 0.9);
 }
 @keyframes typewriter {
@@ -409,44 +508,33 @@ button {
     width: 20rem;
   }
 }
-@keyframes typewriter_4 {
-  from {
-    width: 0;
-  }
-  to {
-    width: 10rem;
-  }
-}
-.quote-text {
+
+ .welcome-text {
   border-right: 2px solid rgba(17, 17, 17, 0.9);
   /* define animation types for firstline  */
   animation: typewriter 5s steps(20) 1s 1 normal both;
 }
-.cite-text {
+.welcome-subtext {
   border-right: 2px solid rgba(17, 17, 17, 0.9);
   /* define animation types for firstline  */
   animation: typewriter_0 5s steps(20) 1s 1 normal both;
 }
-.welcome-text {
+.welcome-subtext1  {
   border-right: 2px solid rgba(17, 17, 17, 0.9);
   /* define animation types for firstline  */
   animation: typewriter_1 5s steps(20) 1s 1 normal both;
 }
-.welcome-subtext {
+.quote-text  {
   border-right: 2px solid rgba(17, 17, 17, 0.9);
   /* define animation types for second_line  */
   animation: typewriter_2 5s steps(20) 1s 1 normal both;
 }
-.welcome-subtext1 {
+.cite-text  {
   border-right: 2px solid rgba(17, 17, 17, 0.9);
   /* define animation types for econd_line  */
   animation: typewriter_3 5s steps(20) 1s 1 normal both;
 }
-.welcome-subtext2 {
-  border-right: 2px solid rgba(17, 17, 17, 0.9);
-  /* define animation types for econd_line  */
-  animation: typewriter_4 5s steps(20) 1s 1 normal both;
-}
+
 @keyframes cursor_one {
   from {
     border-right-color: rgba(17, 17, 17, 0.9);
@@ -455,15 +543,6 @@ button {
     border-right-color: rgba(255, 255, 255, 0.8);
   }
 }
-@keyframes cursor_cite {
-  from {
-    border-right-color: rgba(17, 17, 17, 0.9);
-  }
-  to {
-    border-right-color: rgba(255, 255, 255, 0.8);
-  }
-}
-
 @keyframes first_cursor {
   from {
     border-right-color: rgba(17, 17, 17, 0.9);
@@ -488,7 +567,7 @@ button {
     border-right-color: rgba(255, 255, 255, 0.8);
   }
 }
-@keyframes fourth_cursor {
+@keyframes cursor_cite {
   from {
     border-right-color: rgba(17, 17, 17, 0.9);
   }
@@ -496,84 +575,69 @@ button {
     border-right-color: rgba(255, 255, 255, 0.8);
   }
 }
-.quote-text {
+
+.welcome-text {
   border-right: 2px solid rgba(17, 17, 17, 0.9);
   /* define animation types for text + cursor */
   animation: typewriter 5s steps(25) 1s 1 normal both,
     cursor_one 900ms steps(25) 7;
 }
-.cite-text {
+ .welcome-subtext {
   border-right: 2px solid rgba(17, 17, 17, 0.9);
   /* define animation types for text + cursor */
   animation: typewriter_0 5s steps(25) 1s 1 normal both,
-    cursor_cite 900ms steps(25) 7;
+    cursor_cite 900ms steps(25) 2;
   -webkit-animation-delay: 7s;
   animation-delay: 7s;
 }
 
-.welcome-text {
-  border-right: 2px solid rgba(17, 17, 17, 0.9);
-  /* define animation types for text + cursor */
-  animation: typewriter_1 5s steps(25) 1s 1 normal both,
-    first_cursor 900ms steps(25) 7;
-  -webkit-animation-delay: 9s;
-  animation-delay: 9s;
-}
-.welcome-subtext {
-  border-right: 2px solid rgba(17, 17, 17, 0.9);
-  /* define animation types for text + cursor */
-  animation: typewriter_2 5s steps(25) 1s 1 normal both,
-    second_cursor 900ms steps(25) 7;
-  -webkit-animation-delay: 14s;
-  animation-delay: 14s;
-}
 .welcome-subtext1 {
   border-right: 2px solid rgba(17, 17, 17, 0.9);
   /* define animation types for text + cursor */
+  animation: typewriter_1 5s steps(25) 1s 1 normal both,
+    first_cursor 900ms steps(25) 6;
+  -webkit-animation-delay: 9s;
+  animation-delay: 9s;
+}
+.quote-text  {
+  border-right: 2px solid rgba(17, 17, 17, 0.9);
+  /* define animation types for text + cursor */
+  animation: typewriter_2 5s steps(25) 1s 1 normal both,
+    second_cursor 900ms steps(25) 6;
+  -webkit-animation-delay: 14s;
+  animation-delay: 14s;
+}
+.cite-text {
+  border-right: 2px solid rgba(17, 17, 17, 0.9);
+  /* define animation types for text + cursor */
   animation: typewriter_3 5s steps(25) 1s 1 normal both,
-    third_cursor 900ms steps(25) 7;
+    third_cursor 900ms steps(25) 6;
   -webkit-animation-delay: 19s;
   animation-delay: 19s;
 }
 
-.welcome-subtext2 {
-  border-right: 2px solid rgba(17, 17, 17, 0.9);
-  /* define animation types for text + cursor */
-  animation: typewriter_4 5s steps(31) 1s 1 normal both,
-    fourth_cursor 900ms steps(31) 6;
-  -webkit-animation-delay: 24s;
-  animation-delay: 24s;
-}
 
-.container {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  max-width: 1000px;
-  max-height: 1000px;
-  opacity: 0;
-  padding: 5px;
-  transform: translateY(0);
-  animation: fadeIn 2s ease-in-out 20ms forwards;
-  transition: transform 0.3s, box-shadow 0.3s, all 0.3s ease;
-}
+
 
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding-right: 20px;
-  padding-left: 40px;
   gap: 20px;
-  position: relative;
   z-index: 1;
+  width: 100%;
+  margin: 0 auto;
+
+
 }
+
+
+
+
 
 .project-square {
   position: relative;
-  width: 250px;
-  padding-top: 80%; /* 1:1 Aspect Ratio */
-  padding-right: 20px;
+  width: 50%;
+  padding-top: 30%; /* 1:1 Aspect Ratio */
   background-color: #f0f0f0;
   border-radius: 10px;
   cursor: pointer;
@@ -620,154 +684,6 @@ button {
   pointer-events: none;
   transition: opacity 0.3s ease, pointer-events 0.3s ease;
 }
-.caption {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  padding: 10px;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border-radius: 0 0 8px 8px;
-}
-
-.social-media a {
-  margin-right: 15px; /* Adjust the value as needed */
-  margin: 0 15px;
-  font-size: 24px; /* Increase the size of the icons */
-  transition: transform 0.3s; /* Smooth transition for hover effect */
-  color: inherit; /* Ensure the icons inherit the color */
-}
-
-.social-media a:last-child {
-  margin-right: 0; /* Remove margin from the last item */
-}
-.social-media i:hover {
-  transform: scale(1.4); /* Enlarge the icon on hover */
-}
-.social-media i {
-  transition: transform 0.3s; /* Smooth transition for hover effect */
-}
-/* Specific colors for different platforms */
-.social-media a.facebook {
-  color: #4c659a;
-}
-.social-media a.twitter {
-  color: #1da1f2;
-}
-.social-media a.linkedin {
-  color: #0077b5;
-}
-.social-media a.instagram {
-  color: #e4405f;
-}
-.social-media a.github {
-  color: #797777;
-}
-
-.social-media {
-  margin-top: 20px; /* Adjust the value as needed */
-}
-
-.right-section {
-  width: 70%;
-  display: flex;
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  text-align: center; /* Center text inside */
-}
-.left-section {
-  width: 30%;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center the navigation element */
-  justify-content: center; /* Center the navigation element */
-  animation: steadyGlow 5s linear infinite, glow 5s infinite alternate;
-}
-.profile {
-  text-align: center;
-  margin-bottom: 20px;
-}
-.profile img {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  animation: steadyGlow 5s linear infinite, glow 5s infinite alternate;
-}
-.profile .name {
-  font-weight: bold;
-  margin-top: 10px;
-  font-family: cursive;
-}
-.profile .social-media {
-  margin-top: 15px;
-}
-.profile .social-media a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: #fff; /* Set social media icon color to white */
-  display: inline-block; /* Ensure the element is inline-block for transform to work */
-}
-.profile .social-media a:hover {
-  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); /* Emboss effect on hover */
-  transform: scale(1.1); /* Slightly enlarge the icon on hover */
-}
-nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-nav ul li {
-  margin: 20px 0; /* Increase spacing between navigation items */
-}
-nav ul li a {
-  font-family: cursive;
-  text-decoration: none;
-  color: #fff; /* Set navigation link color to white */
-  font-weight: bold;
-  font-size: 0.7rem;
-  display: flex;
-  align-items: center;
-  transition: text-shadow 0.3s ease, transform 0.3s ease; /* Add transition for smooth effect */
-}
-nav ul li a:hover {
-  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); /* Emboss effect on hover */
-  transform: scale(1.1); /* Slightly enlarge the link on hover */
-}
-nav ul li a i {
-  margin-right: 15px;
-}
-/* <uniquifier>: Use a unique and descriptive class name
-    // <extrusion depth>: Use a value from 0 to 200
-     <edge highlight>: Use a value from 0 to 24 */
-
-.right-section h1 {
-  font-family: "Creepster", system-ui;
-  font-weight: 400;
-  font-style: normal;
-  display: inline-block; /* Ensure the element is inline-block for transform to work */
-  font-size: 2.5em; /* Increase the font size */
-}
-.right-section p {
-  font-size: 1.1em; /* Increase the font size */
-}
-.right-section h2 {
-  font-size: 1em; /* Increase the font size */
-  font-weight: bold;
-  margin-top: 10px; /* Add some space above the heading */
-  text-align: left;
-}
-
-.right-section h1 span {
-  display: inline-block;
-  opacity: 0;
-  transform: translateY(-100px);
-  animation: drop 0.3s forwards, bounce 3s infinite; /* Apply drop and then bounce animation */
-}
 
 @keyframes drop {
   to {
@@ -786,26 +702,16 @@ nav ul li a i {
   }
 }
 
-main {
-  flex-grow: 1; /* Adjust the value as needed */
-  padding: 35px; /* Add padding for better spacing */
-  align-items: center;
-  justify-content: center;
-  /* Add a white background with some transparency */
-  border-radius: 10px; /* Add rounded corners */
-  transition: box-shadow 0.1s, background-color 0.1s ease, transform 0.1s ease; /* Add transition for smooth effect */
-  animation: steadyGlow 5s linear infinite, glow 5s infinite alternate;
-}
 
 .address:hover {
   box-shadow: 0 0 25px rgba(0, 255, 255, 0.8); /* Enhance glow on hover */
 }
 .address {
-  margin-top: 5%;
-  margin-left: 30%;
+  margin-top: 15%;
+  margin-left: 5%;
   width: 250px; /* Adjust the width as needed */
   height: 250px; /* Adjust the height as needed */
-  color: #fff; /* Set text color to white for better contrast */
+  color: #ffffff; /* Set text color to white for better contrast */
   padding: 20px; /* Add padding for better spacing */
   border-radius: 50%; /* Keep the border radius */
   transition: box-shadow 0.3s; /* Add transition for smooth hover effect */
@@ -819,7 +725,7 @@ main {
   margin: 5px 0;
 }
 /* New styles for breathing and glowing effect */
-.profile .breathing-glow {
+.profile #breathing-glow {
   animation: breathing 3s ease-in-out infinite, glow 2s infinite alternate;
   color: #fff; /* Set text color to white */
   text-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Initial glow effect */
@@ -846,7 +752,7 @@ main {
 }
 .skills-logos {
   display: grid;
-  grid-template-columns: repeat(8, 1fr); /* Create two equal columns */
+  grid-template-columns: repeat(4, 1fr); /* Create two equal columns */
   gap: 10px; /* Adjust the gap between logos as needed */
   margin-top: 20px; /* Add some space above the logos */
   justify-items: center; /* Center the logos within each column */
@@ -884,8 +790,8 @@ main {
   justify-content: center;
   align-content: center;
   position: fixed;
-  top: 10px;
-  right: 10px;
+  top: 30px;
+  right: 70px;
   text-align: center;
   width: 10em;
   height: 10em;
@@ -990,15 +896,21 @@ main {
 }
 /* Styles for Galaxy particles from https://codepen.io/iangonza/pen/PvYvLv ian gonza @iangonza */
 
-.space {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: black;
-  overflow: hidden; /* Hide overflow to prevent scrollbars */
-}
+#space {
+  background: #000102;
+    /* fallback for old browsers */
+    background: black;
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: black;
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    vertical-align: bottom;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #000;
+    position: relative;
+  }
 
 .particle,
 .particle::after {
@@ -1466,27 +1378,16 @@ main {
 /* Footer Styles */
 
 footer {
-  color: #fff;
+  color: white;
   text-decoration: none;
-  z-index: 1000;
   position: fixed;
+  z-index: 1000;
   bottom: 20px;
-  right: 20px;
+  right: 50px;
   padding: 10px 20px;
   border-radius: 10px 0 0 0;
   text-align: right;
 }
-/* Visitors Count Styles */
-.visitor-count {
-  position: fixed;
-  bottom: 50px;
-  left: 50px;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 0 10px 0 0;
-  z-index: 1000;
-}
-
 
 /* Dark theme */
 @media (prefers-color-scheme: dark) {
