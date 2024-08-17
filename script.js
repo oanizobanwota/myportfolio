@@ -1,3 +1,5 @@
+ /* Progress clock from https://speckyboy.com/progress-bars-css-javascript/ by Jon Kantner */
+
 window.addEventListener("DOMContentLoaded", () => {
   const clock = new ProgressClock("#clock");
 });

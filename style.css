@@ -1,10 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Covered+By+Your+Grace&family=Fjalla+One&family=Lilita+One&family=Rubik+Maze&display=swap');
-
 body {
   display: flex;
-  margin: 0; 
+  margin: 0;
   font-family: "Bebas Neue", sans-serif;
-  }
+}
 
 .sidebar {
   width: 300px;
@@ -54,7 +52,6 @@ body {
   transition: color 0.3s ease, padding-left 0.3s ease; /* Smooth transition for color and padding */
 }
 
-
 .sidebar ul li.clicked::before {
   width: 100px; /* New length of the horizontal line on click */
   left: -60px; /* Adjust the position as needed */
@@ -73,7 +70,7 @@ body {
 }
 section {
   width: 100%;
-  height: 100vh; 
+  height: 100vh;
 }
 html {
   scroll-behavior: smooth;
@@ -94,20 +91,18 @@ p.welcome-subtext1 {
   border-right: 1px solid #fff;
   transform: rotate(45deg);
   animation: move 1.3s infinite;
- 
 }
 .container {
   display: block;
   justify-content: center;
-  align-items: center; 
-  padding-left: 50%;
+  align-items: center;
+  padding-left: 40%;
   padding-top: 10%;
 }
 .arrow:nth-child(2),
 .arrow:nth-child(3) {
   animation-delay: 0.15s;
 }
- 
 
 @keyframes move {
   0% {
@@ -128,18 +123,15 @@ p.welcome-subtext1 {
 }
 
 .header-container {
-
   z-index: 1000;
   text-align: center;
   padding-right: 15%;
-  padding-top: 20%;
-}
-.text-container {
-  padding-top: 70px;
+  padding-top: 22%;
 }
 
+
 .social-media {
-   margin-bottom: 10px; /* Add some space above the icons */
+  margin-bottom: 10px; /* Add some space above the icons */
 }
 .social-media a {
   margin-right: 15px; /* Adjust the value as needed */
@@ -176,17 +168,16 @@ p.welcome-subtext1 {
   color: #ffffff;
 }
 .profile-pic {
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
-    left: 50px;
-    top: 200px;
-    box-shadow: 0 0 15px #0105f0; /* Neon glow effect */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for background color and transform */
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  left: 50px;
+  top: 200px;
+  box-shadow: 0 0 15px #0105f0; /* Neon glow effect */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for background color and transform */
 }
 .sub-headings {
   text-align: left;
-   
 }
 h1 {
   font-family: "Rubik Maze", system-ui;
@@ -194,22 +185,21 @@ h1 {
   font-style: normal;
   font-size: 80px;
 }
- p {
-    font-size: 15px;
-    color: #fff;
-   font-family: "Manrope", sans-serif;
-  font-optical-sizing: auto;
+p {
+  font-size: 15px;
+  color: #fff;
+  font-family: "Manrope", sans-serif;
   font-weight: normal;
   font-style: normal;
- }
- h2 {
+}
+h2 {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
-    font-size: 2rem;
-    color: #fff;
- }
- @keyframes dissolveIn {
+  font-size: 2rem;
+  color: #fff;
+}
+@keyframes dissolveIn {
   0% {
     opacity: 0;
     transform: scale(0.85);
@@ -233,16 +223,17 @@ h1 {
 }
 :root {
   --hue: 223;
-  --bg: hsl(var(--hue),10%,90%);
-  --fg: hsl(var(--hue),10%,10%);
+  --bg: hsl(var(--hue), 10%, 90%);
+  --fg: hsl(var(--hue), 10%, 10%);
   font-size: calc(16px + (24 - 16) * (100vw - 320px) / (1280 - 320));
 }
-body, button {
+body,
+button {
   color: var(--fg);
-  font: 1em/1.1 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font: 1em/1.1 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
 }
 body {
-  
   height: 100vh;
   display: grid;
   place-items: center;
@@ -257,9 +248,7 @@ body {
   width: 5em;
   height: 5em;
   top: 40px;
-  left: 60px;
-
-  
+  left: 80px;
 }
 .progress-clock__time-date,
 .progress-clock__time-digit,
@@ -308,9 +297,7 @@ body {
   opacity: 0.1;
 }
 .progress-clock__ring-fill {
-  transition:
-    opacity 0s 0.3s linear,
-    stroke-dashoffset 0.3s ease-in-out;
+  transition: opacity 0s 0.3s linear, stroke-dashoffset 0.3s ease-in-out;
 }
 .progress-clock__ring-fill--360 {
   opacity: 0;
@@ -325,19 +312,19 @@ body {
 }
 [data-group="d"]:focus,
 [data-group="d"]:hover {
-  color: hsl(333,90%,55%);
+  color: hsl(333, 90%, 55%);
 }
 [data-group="h"]:focus,
 [data-group="h"]:hover {
-  color: hsl(33,90%,55%);
+  color: hsl(33, 90%, 55%);
 }
 [data-group="m"]:focus,
 [data-group="m"]:hover {
-  color: hsl(213,90%,55%);
+  color: hsl(213, 90%, 55%);
 }
 [data-group="s"]:focus,
 [data-group="s"]:hover {
-  color: hsl(273,90%,55%);
+  color: hsl(273, 90%, 55%);
 }
 [data-group]:focus ~ .progress-clock__rings [data-units],
 [data-group]:hover ~ .progress-clock__rings [data-units] {
@@ -357,8 +344,8 @@ body {
 /* Dark theme */
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: hsl(var(--hue),10%,10%);
-    --fg: hsl(var(--hue),10%,90%);
+    --bg: hsl(var(--hue), 10%, 10%);
+    --fg: hsl(var(--hue), 10%, 90%);
   }
   .progress-clock__ring {
     opacity: 0.01;
@@ -368,32 +355,29 @@ body {
 #contact {
   justify-content: center;
   align-items: center;
-  text-align: center; 
-  
+  text-align: center;
 }
 #about {
   padding: 2em;
   justify-content: center;
   align-items: center;
   text-align: center;
- 
 }
-
+/* CSS for the welcome link */
 .welcome {
   position: fixed;
-  top: 50px;
+  top: 70px;
   right: 80px;
   z-index: 1;
   font-size: 0.8em;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
-    animation: dissolveIn 1s ease-in-out forwards;
+  animation: dissolveIn 1s ease-in-out forwards;
 }
 .no-underline {
   text-decoration: none;
   color: #fff;
-  
 }
 
 .letter {
@@ -448,6 +432,8 @@ body {
     color: #ff00c8;
   }
 }
+
+/* CSS for the skills section */
 .skills-logos {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* Create two equal columns */
@@ -474,26 +460,25 @@ body {
   transform: scale(1.2); /* Slightly enlarge the logo on hover */
 }
 
-/* Existing styles */
 .skill p {
   margin-top: 10px; /* Add some space between the logo and the text */
   font-size: 14px; /* Adjust the font size as needed */
   color: #ffffff; /* Adjust the text color as needed */
 }
+
+/* CSS for the projects section */
 #projects {
-    display: flex;
-    flex-direction: column;
-    padding: 2em;
-    padding-top: 40px;
-    padding-bottom: 100px;
-    justify-content: center;
-    
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  padding-top: 40px;
+  padding-bottom: 100px;
+  justify-content: center;
 }
 .user-projects {
   display: flex;
   align-items: center;
   width: 100%;
- 
 }
 
 .project-left {
@@ -508,13 +493,11 @@ body {
   flex: 1;
   padding: 10px;
 }
-.images-right
-{
+.images-right {
   padding-left: 70px;
-  
- 
 }
-.images-left img, .images-right img {
+.images-left img,
+.images-right img {
   width: 200px; /* Set a fixed width */
   height: 150px; /* Set a fixed height to make it a square */
   object-fit: cover; /* Ensure the image covers the entire area */
@@ -523,27 +506,26 @@ body {
   transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for background color and transform */
 }
 
-img:hover {  
+img:hover {
   transform: scale(1.1); /* Slightly enlarge the button on hover */
 }
-
-
-
-.contents-right, .contents-left {
+.contents-right,
+.contents-left {
   flex: 2;
   padding: 10px;
 }
 
-.contents-right h3, .contents-left h3 {
+.contents-right h3,
+.contents-left h3 {
   margin-top: 0;
 }
 
-.contents-right p, .contents-left p {
+.contents-right p,
+.contents-left p {
   margin: 0;
 }
 
-
-
+/* CSS for the contact form */
 .hero {
   display: flex;
   flex-direction: column;
@@ -559,127 +541,119 @@ img:hover {
 
 form {
   padding: 20px;
-  width: 500px; 
- border-radius: 10px;
-  font-size: 18px;  
+  width: 500px;
+  border-radius: 10px;
+  font-size: 18px;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
   box-shadow: 0 0 15px #0105f0; /* Neon glow effect */
-  
 }
 .message-icon {
- display: flex;
- flex-direction: row-reverse;
- align-items: flex-end;
- margin-bottom: 10px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  margin-bottom: 10px;
 }
 
 .message-icon i {
   font-size: 20px;
-  
 }
 
-
- .message-icon span {
+.message-icon span {
   font-size: 20px;
   font-weight: bold;
   margin-right: 10px;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
- 
- }
- form input, textarea {
+}
+form input,
+textarea {
   width: 100%;
- border-top: none;
+  border-top: none;
   border-right: none;
-   border-left: none;
-    border-bottom: 1px solid #000;
-    outline: none;
-    color: #fff;
-    background: transparent;
-    box-shadow: 0 0 15px #0105f0; /* Neon glow effect */
-    font-family: "Bebas Neue", sans-serif;
+  border-left: none;
+  border-bottom: 1px solid #000;
+  outline: none;
+  color: #fff;
+  background: transparent;
+  box-shadow: 0 0 15px #0105f0; /* Neon glow effect */
+  font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
- }
- .input-field {
- position: relative;
+}
+.input-field {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin-bottom: 20px;
- }
-  .input-field i {
-     font-size: 17px;
-    margin-bottom: 10px;
-    
-  }
-  .input-field input {
-      font-size: 12px; /* Increase font size */
+}
+.input-field i {
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+.input-field input {
+  font-size: 12px; /* Increase font size */
   padding: 12px; /* Increase padding */
   height: 30px; /* Set a specific height */
-  }
-  .input-field input, 
-   .input-field textarea {
-    padding-left: 10px;
-    width: 100%;
-    box-sizing: border-box;
-   
 }
- .send-btn {
-    background: #000;
-    color: #fff;
-    border: none;
-    font-size: 16px;
-    padding: 6px 0;
-    width: 100px;
-    border-radius: 50px;
-    box-shadow: 0 0 15px #0105f0; /* Neon glow effect */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for background color and transform */
+.input-field input,
+.input-field textarea {
+  padding-left: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.send-btn {
+  background: #000;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  padding: 6px 0;
+  width: 100px;
+  border-radius: 50px;
+  box-shadow: 0 0 15px #0105f0; /* Neon glow effect */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for background color and transform */
 }
 
-.send-btn:hover {  
+.send-btn:hover {
   transform: scale(1.1); /* Slightly enlarge the button on hover */
 }
 
+.details {
+  margin-bottom: 80px;
+  padding: 10px;
+}
+h3 {
+  margin-bottom: 20px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+h4 {
+  margin-bottom: 20px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.other-pages {
+  margin-left: 65px;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  padding: 20px;
+  padding-top: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #0105f0; /* Neon glow effect */
+}
+.address {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 100px;
+}
 
-  .details {
-      margin-bottom: 80px;
-      padding: 10px;
-  }
-  h3 {
-    margin-bottom: 20px;
-    font-family: "Bebas Neue", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  }
-  h4 {
-    margin-bottom: 20px;
-    font-family: "Bebas Neue", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  }
-  .other-pages {
-    margin-left: 65px;
-   justify-content: center;
-    align-items: center;
-    width: 80%;
-    padding: 20px;
-    padding-top: 10px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px #0105f0; /* Neon glow effect */
-     
-  }
-  .address {
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding-top: 100px;
-   
-  }
-  
 /* Footer Styles */
 footer {
   margin-left: 100px;
@@ -699,6 +673,11 @@ footer p {
   font-style: normal;
   font-size: 12px;
 }
+#css-validator {
+  position: relative;
+  bottom: 0;
+  left: 600px;
+ }
 /* Media query for screens with a width of 600px or less */
 @media only screen and (max-width: 600px) {
   .header-container {
@@ -732,80 +711,8 @@ footer p {
   }
 
   .arrow {
-    width: 30px;
-    height: 30px;
-    margin: 10px auto;
-    background-color: #333; /* Example color */
-    border-radius: 50%;
-    display: inline-block;
-  }
-
-  .sidebar ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .sidebar ul li {
-    width: 100%;
-    text-align: center;
-    margin: 5px 0;
-  }
-
-  .sidebar ul li a {
-    display: block;
-    padding: 10px;
-    color: #fff; /* Example color */
-    text-decoration: none;
-  }
-
-  .sidebar ul li.clicked {
-    background-color: yellow; /* Example highlight color */
-  }
-
-  .main-content {
-    padding: 20px;
-  }
-
-  .other-pages {
-    padding: 20px;
-  }
-}
-/* Media query for screens with a width of 600px or less */
-@media only screen and (max-width: 600px) {
-  .header-container {
-    padding-right: 0;
-    padding-top: 20%;
-    text-align: center;
-  }
-
-  .text-container {
-    padding-top: 20px;
-    text-align: center;
-  }
-
-  .social-media {
-    margin-bottom: 10px; /* Add some space above the icons */
-    text-align: center;
-  }
-
-  .social-media a {
-    margin: 0 10px; /* Adjust the value as needed */
-    font-size: 24px; /* Increase the size of the icons */
-    transition: transform 0.3s; /* Smooth transition for hover effect */
-    color: inherit; /* Ensure the icons inherit the color */
-    text-decoration: none; /* Remove underline from the icons */
-  }
-
-  .container {
-    width: 100%;
-    padding: 10px;
-    text-align: center;
-  }
-
-  .arrow {
-    width: 30px;
-    height: 30px;
+    width: 10px;
+    height: 10px;
     margin: 10px auto;
     background-color: #333; /* Example color */
     border-radius: 50%;

@@ -3,497 +3,567 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Author: Onyebuchi Anizoba-Nwota's Portfolio Website, front-end developer, 
+    <meta
+      name="description"
+      content="Author: Onyebuchi Anizoba-Nwota's Portfolio Website, front-end developer, 
     back-end developer, web applications, full stack developer, software development, programming, object-oriented,
-     java, Python, big data" />
-      <title>Onyebuchi Anizoba-Nwota</title>
+     java, Python, big data"
+    />
+    <title>Onyebuchi Anizoba-Nwota</title>
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Covered+By+Your+Grace&family=Fjalla+One&family=Lilita+One&family=Manrope:wght@200..800&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rubik+Maze&display=swap"
+      rel="stylesheet"
+    />
 
-    
     <link rel="icon" href="assets/imgs/favicon.ico" type="image/x-icon" />
     <!-- Add Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  
   </head>
   <body>
     <div class="sidebar">
-     <nav class="links">
-          <ul>
-            <li>
-              <a href="#about" aria-label="navigate to about me page" > About</a>
-            </li>
-            <li>
-              <a href="#projects" aria-label="navigate to my project page" > Projects</a>
-            </li>
-            <li>
-              <a href="#contact" aria-label="navigate to my contact page"> Contact</a>
-            </li>
-          </ul>
-        </nav>
-         <div id="clock" class="progress-clock">
-          <button
-            class="progress-clock__time-date"
-            data-group="d"
-            type="button"
-          >
-            <small data-unit="w">Sunday</small><br />
-            <span data-unit="mo">January</span>
-            <span data-unit="d">1</span>
-          </button>
-          <button
-            class="progress-clock__time-digit"
-            data-unit="h"
-            data-group="h"
-            type="button"
-          >
-            12</button
-          ><span class="progress-clock__time-colon">:</span
-          ><button
-            class="progress-clock__time-digit"
-            data-unit="m"
-            data-group="m"
-            type="button"
-          >
-            00</button
-          ><span class="progress-clock__time-colon">:</span
-          ><button
-            class="progress-clock__time-digit"
-            data-unit="s"
-            data-group="s"
-            type="button"
-          >
-            00
-          </button>
-          <span class="progress-clock__time-ampm" data-unit="ap">AM</span>
-          <svg
-            class="progress-clock__rings"
-            width="256"
-            height="256"
-            viewBox="0 0 256 256"
-          >
-            <defs>
-              <linearGradient id="pc-red" x1="1" y1="0.5" x2="0" y2="0.5">
-                <stop offset="0%" stop-color="hsl(343,90%,55%)" />
-                <stop offset="100%" stop-color="hsl(323,90%,55%)" />
-              </linearGradient>
-              <linearGradient id="pc-yellow" x1="1" y1="0.5" x2="0" y2="0.5">
-                <stop offset="0%" stop-color="hsl(43,90%,55%)" />
-                <stop offset="100%" stop-color="hsl(23,90%,55%)" />
-              </linearGradient>
-              <linearGradient id="pc-blue" x1="1" y1="0.5" x2="0" y2="0.5">
-                <stop offset="0%" stop-color="hsl(223,90%,55%)" />
-                <stop offset="100%" stop-color="hsl(203,90%,55%)" />
-              </linearGradient>
-              <linearGradient id="pc-purple" x1="1" y1="0.5" x2="0" y2="0.5">
-                <stop offset="0%" stop-color="hsl(283,90%,55%)" />
-                <stop offset="100%" stop-color="hsl(263,90%,55%)" />
-              </linearGradient>
-            </defs>
-            <!-- Days of Month -->
-            <g data-units="d">
-              <circle
-                class="progress-clock__ring"
-                cx="128"
-                cy="128"
-                r="74"
-                fill="none"
-                opacity="0.1"
-                stroke="url(#pc-red)"
-                stroke-width="12"
-              />
-              <circle
-                class="progress-clock__ring-fill"
-                data-ring="mo"
-                cx="128"
-                cy="128"
-                r="74"
-                fill="none"
-                stroke="url(#pc-red)"
-                stroke-width="12"
-                stroke-dasharray="465 465"
-                stroke-dashoffset="465"
-                stroke-linecap="round"
-                transform="rotate(-90,128,128)"
-              />
-            </g>
-            <!-- Hours of Day -->
-            <g data-units="h">
-              <circle
-                class="progress-clock__ring"
-                cx="128"
-                cy="128"
-                r="90"
-                fill="none"
-                opacity="0.1"
-                stroke="url(#pc-yellow)"
-                stroke-width="12"
-              />
-              <circle
-                class="progress-clock__ring-fill"
-                data-ring="d"
-                cx="128"
-                cy="128"
-                r="90"
-                fill="none"
-                stroke="url(#pc-yellow)"
-                stroke-width="12"
-                stroke-dasharray="565.5 565.5"
-                stroke-dashoffset="565.5"
-                stroke-linecap="round"
-                transform="rotate(-90,128,128)"
-              />
-            </g>
-            <!-- Minutes of Hour -->
-            <g data-units="m">
-              <circle
-                class="progress-clock__ring"
-                cx="128"
-                cy="128"
-                r="106"
-                fill="none"
-                opacity="0.1"
-                stroke="url(#pc-blue)"
-                stroke-width="12"
-              />
-              <circle
-                class="progress-clock__ring-fill"
-                data-ring="h"
-                cx="128"
-                cy="128"
-                r="106"
-                fill="none"
-                stroke="url(#pc-blue)"
-                stroke-width="12"
-                stroke-dasharray="666 666"
-                stroke-dashoffset="666"
-                stroke-linecap="round"
-                transform="rotate(-90,128,128)"
-              />
-            </g>
-            <!-- Seconds of Minute -->
-            <g data-units="s">
-              <circle
-                class="progress-clock__ring"
-                cx="128"
-                cy="128"
-                r="122"
-                fill="none"
-                opacity="0.1"
-                stroke="url(#pc-purple)"
-                stroke-width="12"
-              />
-              <circle
-                class="progress-clock__ring-fill"
-                data-ring="m"
-                cx="128"
-                cy="128"
-                r="122"
-                fill="none"
-                stroke="url(#pc-purple)"
-                stroke-width="12"
-                stroke-dasharray="766.5 766.5"
-                stroke-dashoffset="766.5"
-                stroke-linecap="round"
-                transform="rotate(-90,128,128)"
-              />
-            </g>
-          </svg>
-        </div>
+      <nav class="links">
+        <ul>
+          <li>
+            <a href="#about" aria-label="navigate to about me page"> About</a>
+          </li>
+          <li>
+            <a href="#projects" aria-label="navigate to my project page">
+              Projects</a
+            >
+          </li>
+          <li>
+            <a href="#contact" aria-label="navigate to my contact page">
+              Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <!--Progress clock from https://speckyboy.com/progress-bars-css-javascript/ by Jon Kantner -->
+      <div id="clock" class="progress-clock">
+        <button class="progress-clock__time-date" data-group="d" type="button">
+          <small data-unit="w">Sunday</small><br />
+          <span data-unit="mo">January</span>
+          <span data-unit="d">1</span>
+        </button>
+        <button
+          class="progress-clock__time-digit"
+          data-unit="h"
+          data-group="h"
+          type="button"
+        >
+          12</button
+        ><span class="progress-clock__time-colon">:</span
+        ><button
+          class="progress-clock__time-digit"
+          data-unit="m"
+          data-group="m"
+          type="button"
+        >
+          00</button
+        ><span class="progress-clock__time-colon">:</span
+        ><button
+          class="progress-clock__time-digit"
+          data-unit="s"
+          data-group="s"
+          type="button"
+        >
+          00
+        </button>
+        <span class="progress-clock__time-ampm" data-unit="ap">AM</span>
+        <svg
+          class="progress-clock__rings"
+          width="256"
+          height="256"
+          viewBox="0 0 256 256"
+        >
+          <defs>
+            <linearGradient id="pc-red" x1="1" y1="0.5" x2="0" y2="0.5">
+              <stop offset="0%" stop-color="hsl(343,90%,55%)" />
+              <stop offset="100%" stop-color="hsl(323,90%,55%)" />
+            </linearGradient>
+            <linearGradient id="pc-yellow" x1="1" y1="0.5" x2="0" y2="0.5">
+              <stop offset="0%" stop-color="hsl(43,90%,55%)" />
+              <stop offset="100%" stop-color="hsl(23,90%,55%)" />
+            </linearGradient>
+            <linearGradient id="pc-blue" x1="1" y1="0.5" x2="0" y2="0.5">
+              <stop offset="0%" stop-color="hsl(223,90%,55%)" />
+              <stop offset="100%" stop-color="hsl(203,90%,55%)" />
+            </linearGradient>
+            <linearGradient id="pc-purple" x1="1" y1="0.5" x2="0" y2="0.5">
+              <stop offset="0%" stop-color="hsl(283,90%,55%)" />
+              <stop offset="100%" stop-color="hsl(263,90%,55%)" />
+            </linearGradient>
+          </defs>
+          <!-- Days of Month -->
+          <g data-units="d">
+            <circle
+              class="progress-clock__ring"
+              cx="128"
+              cy="128"
+              r="74"
+              fill="none"
+              opacity="0.1"
+              stroke="url(#pc-red)"
+              stroke-width="12"
+            />
+            <circle
+              class="progress-clock__ring-fill"
+              data-ring="mo"
+              cx="128"
+              cy="128"
+              r="74"
+              fill="none"
+              stroke="url(#pc-red)"
+              stroke-width="12"
+              stroke-dasharray="465 465"
+              stroke-dashoffset="465"
+              stroke-linecap="round"
+              transform="rotate(-90,128,128)"
+            />
+          </g>
+          <!-- Hours of Day -->
+          <g data-units="h">
+            <circle
+              class="progress-clock__ring"
+              cx="128"
+              cy="128"
+              r="90"
+              fill="none"
+              opacity="0.1"
+              stroke="url(#pc-yellow)"
+              stroke-width="12"
+            />
+            <circle
+              class="progress-clock__ring-fill"
+              data-ring="d"
+              cx="128"
+              cy="128"
+              r="90"
+              fill="none"
+              stroke="url(#pc-yellow)"
+              stroke-width="12"
+              stroke-dasharray="565.5 565.5"
+              stroke-dashoffset="565.5"
+              stroke-linecap="round"
+              transform="rotate(-90,128,128)"
+            />
+          </g>
+          <!-- Minutes of Hour -->
+          <g data-units="m">
+            <circle
+              class="progress-clock__ring"
+              cx="128"
+              cy="128"
+              r="106"
+              fill="none"
+              opacity="0.1"
+              stroke="url(#pc-blue)"
+              stroke-width="12"
+            />
+            <circle
+              class="progress-clock__ring-fill"
+              data-ring="h"
+              cx="128"
+              cy="128"
+              r="106"
+              fill="none"
+              stroke="url(#pc-blue)"
+              stroke-width="12"
+              stroke-dasharray="666 666"
+              stroke-dashoffset="666"
+              stroke-linecap="round"
+              transform="rotate(-90,128,128)"
+            />
+          </g>
+          <!-- Seconds of Minute -->
+          <g data-units="s">
+            <circle
+              class="progress-clock__ring"
+              cx="128"
+              cy="128"
+              r="122"
+              fill="none"
+              opacity="0.1"
+              stroke="url(#pc-purple)"
+              stroke-width="12"
+            />
+            <circle
+              class="progress-clock__ring-fill"
+              data-ring="m"
+              cx="128"
+              cy="128"
+              r="122"
+              fill="none"
+              stroke="url(#pc-purple)"
+              stroke-width="12"
+              stroke-dasharray="766.5 766.5"
+              stroke-dashoffset="766.5"
+              stroke-linecap="round"
+              transform="rotate(-90,128,128)"
+            />
+          </g>
+        </svg>
       </div>
-         
-        <div class="welcome" id="welcome-link">
-          <a href="index.html" title="Welcome page" class="no-underline">
-            <span class="letter">W</span>
-            <span class="letter">e</span>
-            <span class="letter">l</span>
-            <span class="letter">c</span>
-            <span class="letter">o</span>
-            <span class="letter">m</span>
-            <span class="letter">e</span>
-          </a>
-        </div>
-        
-       <div class="main-content">
-    <section id="welcome-page" class="landing ai">
+    </div>
+    <!-- Add a hyperlink to the welcome page -->
+    <div class="welcome" id="welcome-link">
+      <a href="index.html" title="Welcome page" class="no-underline">
+        <span class="letter">W</span>
+        <span class="letter">e</span>
+        <span class="letter">l</span>
+        <span class="letter">c</span>
+        <span class="letter">o</span>
+        <span class="letter">m</span>
+        <span class="letter">e</span>
+      </a>
+    </div>
+
+    <div class="main-content">
+      <section id="welcome-page">
         <div class="header-container">
-          <div class="text-container">
-            <h1 class="welcome-text"> I'm Onyebuchi <br>Anizoba-Nwota </h1> 
-              <h2>web applications & front-end developer</h2>
-                            
-            <p class="welcome-subtext1">
-              here creativity & innovations embrace functionality.
-            </p>
-        
+          <h1 class="welcome-text">I'm Onyebuchi <br />Anizoba-Nwota</h1>
+          <h2>web applications & front-end developer</h2>
+
+          <p class="welcome-subtext1">
+            here creativity & innovations embrace functionality.
+          </p>
+
           <div class="social-media">
             <a
               href="https://twitter.com/oanizobanwota"
               target="_blank"
               class="twitter"
-              aria-label="link to twitter"><i class="fab fa-twitter"></i
+              aria-label="link to twitter"
+              ><i class="fab fa-twitter"></i
             ></a>
             <a
               href="https://linkedin.com//in/onyebuchi-anizoba-nwota"
               target="_blank"
-              class="linkedin" aria-label="link to linkedin"
+              class="linkedin"
+              aria-label="link to linkedin"
               ><i class="fab fa-linkedin"></i
             ></a>
             <a
               href="https://facebook.com/oanizobanwota"
               target="_blank"
-              class="facebook" aria-label="link to facebook"
+              class="facebook"
+              aria-label="link to facebook"
               ><i class="fab fa-facebook"></i
             ></a>
             <a
               href="https://instagram.com/anizobanwota"
               target="_blank"
-              class="instagram" aria-label="link to instagram"
+              class="instagram"
+              aria-label="link to instagram"
               ><i class="fab fa-instagram"></i
             ></a>
             <a
               href="https://github.com/oanizobanwota"
               target="_blank"
-              class="github" aria-label="link to github"
+              class="github"
+              aria-label="link to github"
               ><i class="fab fa-github"></i
             ></a>
-         </div>
+          </div>
         </div>
-       
-
-        <!-- Add a hyperlink to the welcome page -->
-      
-        <!-- Typewriter effect from https://blog.logrocket.com/creating-typewriter-animation-css -->
-
-        <!-- Galaxy particles from https://codepen.io/iangonza/pen/PvYvLv ian gonza @iangonza -->
-
-        <!--Progress clock from https://speckyboy.com/progress-bars-css-javascript/ by Jon Kantner -->
-
-       
-      
-             <div class="container" id="arrow">
-          <a href="#about" aria-label="navigate to about me page" >
-          <div class="arrow"></div>
-      <div class="arrow"></div>
+        <div class="container" id="arrow">
+          <a href="#about" aria-label="navigate to about me page">
+            <div class="arrow"></div>
+            <div class="arrow"></div>
           </a>
-    </div>
-   
-</section>
-        
-        
-     
- <div class="other-pages">
-     
-      <!-- About Section -->
-      <section id="about" class="landing bi">
-        <div>
-          <h3 class="sub-headings">Meet Me</h3>
-          <div class="profile">
-            <img
-              class="profile-pic"
-              src="assets/imgs/my-profile-img.webp"
-              alt="Profile Picture"
-            />
-          </div>
-        
-          <p style="text-align: justify">
-            Thank you for taking out time out of your busy schedules to visit my website today, my names are Onyebuchi Anizoba-Nwota, my acquaintances call me e-fresh!, from family of Mr. & Mrs. Reuben Anizoba Nwota of Umuokpu Awka Anambra state. I am a graduate of Educational Management & Policy from the Nnamdi Azikiwe University (NAU) Awka and  the managing Director of FreshSHOP Supermaket, a retail outlet for groceries and other household needs. I have a strong passion for software development, data structures, algorithms, and object-oriented programming and now building a strong foundation in creating interactive and visually-appealing web applications. I enrolled into full stack development program with Learning People Global and have acquired some outstanding skills in developing web applications using ReactJS, Redux, and CSS Grid Layouts, and I am proficient in JavaScript, HTML, and CSS. I am also skilled in Python, Java, Kotlin, and SQL, and have also acquired some experience in developing mobile applications using Android Studio. I am now a member of the British Computer Society (BCS), I am a very adventurous, creative, a team player, and also passionate about learning new technologies and tools, and always looking for opportunities to grow and develop my skills. i am always ready to work beyond your expectations in order to achieve your company set goals, also bear in mind that we are work in progress and we are always ready to learn new things and adapt to your company's culture and values.
-          </p>
-          <br />
-          <h4 class="sub-headings">WebDev, Tools, Languages & Skills</h4>
-          <div class="skills-logos">
-            <div class="skill">
-              <img
-                src="assets/imgs/javascript_logo.webp"
-                alt="JavaScript Logo"
-              />
-              <p>JavaScript</p>
-            </div>
-            <div class="skill">
-              <img src="assets/imgs/html_logo.webp" alt="HTML Logo" />
-              <p>HTML</p>
-            </div>
-            <div class="skill">
-              <img src="assets/imgs/react_logo.webp" alt="React Logo" />
-              <p>React</p>
-            </div>
-            <div class="skill">
-              <img src="assets/imgs/redux_logo.webp" alt="Redux Logo" />
-              <p>Redux</p>
-            </div>
-            <div class="skill">
-              <img src="assets/imgs/css_logo.webp" alt="CSS Logo" />
-              <p>CSS</p>
-            </div>
-            <div class="skill">
-              <img src="assets/imgs/python_logo.webp" alt="Python Logo" />
-              <p>Python</p>
-            </div>
-            <div class="skill">
-              <img src="assets/imgs/kotlin_logo.webp" alt="Python Logo" />
-              <p>Kotlin</p>
-            </div>
-            <div class="skill">
-              <img src="assets/imgs/typescript_logo.webp" alt="Python Logo" />
-              <p>Typescript</p>
-            </div>
-            <div class="skill">
-              <img src="assets/imgs/sql_logo.webp" alt="Python Logo" />
-              <p>SQL</p>
-            </div>
-            <div class="skill">
-              <img src="assets/imgs/java_logo.webp" alt="Python Logo" />
-              <p>Java</p>
-            </div>
-            <div class="skill">
-              <img
-                src="assets/imgs/android_studio_logo.webp"
-                alt="Python Logo"
-              />
-              <p>Android Studio</p>
-            </div>
-            <div class="skill">
-              <img src="assets/imgs/github_logo.webp" alt="Python Logo" />
-              <p>GitHub</p>
-            </div>
-            <div class="skill">
-              <img src="assets/imgs/Bootstrap_logo.svg" alt="Python Logo" />
-              <p>Bootstrap</p>
-            </div>
-            <div class="skill">
-              <img src="assets/imgs/cpp_logo.webp" alt="Python Logo" />
-              <p>C++</p>
-            </div>
-            <div class="skill">
-              <img src="assets/imgs/microsoft_azure.webp" alt="Python Logo" />
-              <p>Microsoft Azure</p>
-            </div>
-            <div class="skill">
-              <img src="assets/imgs/aws_logo.webp" alt="Python Logo" />
-              <p>AWS</p>
-            </div>
-          </div>
         </div>
-        <hr class="horizontal-line">
       </section>
-      <!-- Projects Section -->
-      <section id="projects" class="landing ci">
-        <div class="user-details">
-          <h3 class="sub-headings">Projects</h3>
-        </div>
 
-        <!-- Project #1: Personal  Website -->
-        <div class="user-projects project-left">
-          <div class="images-left">
-            <picture>
+      <div class="other-pages">
+        <!-- About Section -->
+        <section id="about">
+          <div>
+            <h3 class="sub-headings">Meet Me</h3>
+            <div class="profile">
               <img
-                alt="Personal Website"
+                class="profile-pic"
                 src="assets/imgs/my-profile-img.webp"
+                alt="Profile Picture"
               />
-            </picture>
+            </div>
+
+            <p style="text-align: justify">
+              Thank you for taking out time out of your busy schedules to visit
+              my website today, my names are Onyebuchi Anizoba-Nwota, my
+              acquaintances call me e-fresh!, from family of Mr. & Mrs. Reuben
+              Anizoba Nwota of Umuokpu Awka Anambra state. I am a graduate of
+              Educational Management & Policy from the Nnamdi Azikiwe University
+              (NAU) Awka and the managing Director of FreshSHOP Supermaket, a
+              retail outlet for groceries and other household needs. I have a
+              strong passion for software development, data structures,
+              algorithms, and object-oriented programming and now building a
+              strong foundation in creating interactive and visually-appealing
+              web applications. I enrolled into full stack development program
+              with Learning People Global and have acquired some outstanding
+              skills in developing web applications using ReactJS, Redux, and
+              CSS Grid Layouts, and I am proficient in JavaScript, HTML, and
+              CSS. I am also skilled in Python, Java, Kotlin, and SQL, and have
+              also acquired some experience in developing mobile applications
+              using Android Studio. I am now a member of the British Computer
+              Society (BCS), I am a very adventurous, creative, a team player,
+              and also passionate about learning new technologies and tools, and
+              always looking for opportunities to grow and develop my skills. i
+              am always ready to work beyond your expectations in order to
+              achieve your company set goals, also bear in mind that we are work
+              in progress and we are always ready to learn new things and adapt
+              to your company's culture and values.
+            </p>
+            <br />
+            <h4 class="sub-headings">WebDev, Tools, Languages & Skills</h4>
+            <div class="skills-logos">
+              <div class="skill">
+                <img
+                  src="assets/imgs/javascript_logo.webp"
+                  alt="JavaScript Logo"
+                />
+                <p>JavaScript</p>
+              </div>
+              <div class="skill">
+                <img src="assets/imgs/html_logo.webp" alt="HTML Logo" />
+                <p>HTML</p>
+              </div>
+              <div class="skill">
+                <img src="assets/imgs/react_logo.webp" alt="React Logo" />
+                <p>React</p>
+              </div>
+              <div class="skill">
+                <img src="assets/imgs/redux_logo.webp" alt="Redux Logo" />
+                <p>Redux</p>
+              </div>
+              <div class="skill">
+                <img src="assets/imgs/css_logo.webp" alt="CSS Logo" />
+                <p>CSS</p>
+              </div>
+              <div class="skill">
+                <img src="assets/imgs/python_logo.webp" alt="Python Logo" />
+                <p>Python</p>
+              </div>
+              <div class="skill">
+                <img src="assets/imgs/kotlin_logo.webp" alt="Python Logo" />
+                <p>Kotlin</p>
+              </div>
+              <div class="skill">
+                <img src="assets/imgs/typescript_logo.webp" alt="Python Logo" />
+                <p>Typescript</p>
+              </div>
+              <div class="skill">
+                <img src="assets/imgs/sql_logo.webp" alt="Python Logo" />
+                <p>SQL</p>
+              </div>
+              <div class="skill">
+                <img src="assets/imgs/java_logo.webp" alt="Python Logo" />
+                <p>Java</p>
+              </div>
+              <div class="skill">
+                <img
+                  src="assets/imgs/android_studio_logo.webp"
+                  alt="Python Logo"
+                />
+                <p>Android Studio</p>
+              </div>
+              <div class="skill">
+                <img src="assets/imgs/github_logo.webp" alt="Python Logo" />
+                <p>GitHub</p>
+              </div>
+              <div class="skill">
+                <img src="assets/imgs/Bootstrap_logo.svg" alt="Python Logo" />
+                <p>Bootstrap</p>
+              </div>
+              <div class="skill">
+                <img src="assets/imgs/cpp_logo.webp" alt="Python Logo" />
+                <p>C++</p>
+              </div>
+              <div class="skill">
+                <img src="assets/imgs/microsoft_azure.webp" alt="Python Logo" />
+                <p>Microsoft Azure</p>
+              </div>
+              <div class="skill">
+                <img src="assets/imgs/aws_logo.webp" alt="Python Logo" />
+                <p>AWS</p>
+              </div>
+            </div>
           </div>
-          <div class="contents-right" style="text-align: justify">
-            <h4>Personal Website</h4>
+          <hr class="horizontal-line" />
+        </section>
+        <!-- Projects Section -->
+        <section id="projects">
+          <div class="user-details">
+            <h3 class="sub-headings">Projects</h3>
+          </div>
+
+          <!-- Project #1: Personal  Website -->
+          <div class="user-projects project-left">
+            <div class="images-left">
+              <picture>
+                <img
+                  alt="Personal Website"
+                  src="assets/imgs/my-profile-img.webp"
+                />
+              </picture>
+            </div>
+            <div class="contents-right" style="text-align: justify">
+              <h4>Personal Website</h4>
+              <p>
+                I developed my portfolio website with HTML, CSS, and JavaScript
+                where, I showcase my personality, experience, skills, projects,
+                education, and contact details. The website is interactive,
+                engaging, accessible, and easy to navigate. I will ensure the
+                website is being updated from time to time to make current
+                information my progress available.
+              </p>
+            </div>
+          </div>
+
+          <!-- Project #2: GoCom Taxi App -->
+          <div class="user-projects project-right">
+            <div class="images-right">
+              <picture>
+                <img src="assets/imgs/project1.webp" alt="gocom taxi" />
+              </picture>
+            </div>
+            <div class="contents-left" style="text-align: justify">
+              <h4>GoCom Taxi</h4>
+              <p>
+                This is an e-hailing taxi mobile phone application developed
+                with Kotlin in the Android studio, it is currently under
+                development and will be published soon, the application when
+                published will improve employment, cut down travel delay time,
+                reduce costs in the transportation system, and ensure
+                comfortability in booking and traveling.
+              </p>
+            </div>
+          </div>
+
+          <!-- Project #3: FreshSHOP Supermarket Website -->
+          <div class="user-projects project-left">
+            <div class="images-left">
+              <picture>
+                <img
+                  src="assets/imgs/project2.webp"
+                  alt="FreshSHOP Supermarket"
+                />
+              </picture>
+            </div>
+            <div class="contents-right" style="text-align: justify">
+              <h4>FreshSHOP Supermarket</h4>
+              <p>
+                The website of FreshSHOP Supermarket is an interactive platform
+                providing information about the retail outlet to the public,
+                including the availability of products and promotional
+                information. I developed it with HTML, ReactJS, and JavaScript,
+                and now I am working to publish the online store where users can
+                register to have an account with the retail outlet and make
+                purchases on the online platform.
+              </p>
+            </div>
+          </div>
+          <hr class="horizontal-line" />
+        </section>
+        <!-- Contact Section -->
+        <section id="contact">
+          <div class="details">
+            <h3>Connect with me</h3>
+            <p>If you have any questions, feel free to reach out!</p>
+          </div>
+          <div class="hero">
+            <form action="https://formspree.io/f/xldrljko" method="POST">
+              <div class="message-icon">
+                <i class="fas fa-envelope"></i>
+                <span>Message</span>
+              </div>
+              <div class="input-field">
+                <i class="fas fa-user"></i>
+                <input
+                  type="text"
+                  placeholder="Name"
+                  name="Name"
+                  autocomplete="family-name"
+                />
+              </div>
+              <div class="input-field">
+                <i class="fas fa-phone"></i>
+                <input
+                  type="text"
+                  placeholder="Phone No."
+                  name="Phone"
+                  autocomplete="on"
+                />
+              </div>
+              <div class="input-field">
+                <i class="fas fa-envelope"></i>
+                <input
+                  type="text"
+                  placeholder="Email Address"
+                  name="Email"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="input-field">
+                <i class="fas fa-comments"></i>
+                <textarea
+                  name="Message"
+                  placeholder="Message"
+                  rows="10"
+                ></textarea>
+              </div>
+
+              <input type="submit" value="Submit" class="send-btn" />
+            </form>
+          </div>
+
+          <div class="address">
+            <h3>Address</h3>
             <p>
-             I developed my portfolio website with HTML, CSS, and JavaScript where, I showcase my personality, experience, skills, projects, education, and contact details. The website is interactive, engaging, accessible, and easy to navigate. I will ensure the website is being updated from time to time to make current information my progress available.
+              Birmingham, West Midlands<br />
+              United Kingdom
+            </p>
+            <p>
+              Email:
+              <a href="mailto:buchi-n@msn.com" class="no-underline">
+                buchi-n@msn.com</a
+              >
+            </p>
+            <p>
+              Call:
+              <a href="tel:+447405508523" class="no-underline"> 07405508523</a>
             </p>
           </div>
-        </div>
-
-        <!-- Project #2: GoCom Taxi App -->
-        <div class="user-projects project-right">
-          <div class="images-right">
-            <picture>
-              <img src="assets/imgs/project1.webp" alt="gocom taxi" />
-            </picture>
-          </div>
-          <div class="contents-left" style="text-align: justify">
-            <h4>GoCom Taxi</h4>
-            <p>
-              This is an e-hailing taxi mobile phone application developed with Kotlin in the Android studio, it is currently under development and will be published soon, the application when published will improve employment, cut down travel delay time, reduce costs in the transportation system, and ensure comfortability in booking and traveling.  
-            </p>
-          </div>
-        </div>
-
-        <!-- Project #3: FreshSHOP Supermarket Website -->
-        <div class="user-projects project-left">
-          <div class="images-left">
-            <picture>
-              <img src="assets/imgs/project2.webp" alt="FreshSHOP Supermarket" />
-            </picture>
-          </div>
-          <div class="contents-right" style="text-align: justify">
-            <h4>FreshSHOP Supermarket</h4>
-            <p>
-              The website of FreshSHOP Supermarket is an interactive platform providing information about the retail outlet to the public, including the availability of products and promotional information. I developed it with HTML, ReactJS, and JavaScript, and now I am working to publish the online store where users can register to have an account with the retail outlet and make purchases on the online platform.
-            </p>
-          </div>
-        </div>
-        <hr class="horizontal-line">
- </section>
-  
-     
-     
-
-      <section id="contact" class="landing di">
-        <div class="details">
-          <h3>Connect with me </h3>
-          <p>If you have any questions, feel free to reach out!</p>
-       </div>
-  <div class="hero">
-  <form action="https://formspree.io/f/xldrljko" method="POST">
-    <div class="message-icon">
-      <i class="fas fa-envelope"></i>
-      <span>Message</span>
+        </section>
+      </div>
     </div>
-    <div class="input-field">
-      <i class="fas fa-user"></i>
-      <input type="text" placeholder="Name" name="Name" autocomplete="family-name">
-    </div>
-    <div class="input-field">
-      <i class="fas fa-phone"></i>
-      <input type="text" placeholder="Phone No." name="Phone" autocomplete="on">
-    </div>
-    <div class="input-field">
-      <i class="fas fa-envelope"></i>
-      <input type="text" placeholder="Email Address" name="Email" autocomplete="off">
-    </div>
-    <div class="input-field">
-      <i class="fas fa-comments"></i>
-      <textarea name="Message" placeholder="Message" rows="10"></textarea>
-    </div>
-       
-    <input type="submit" value="Submit" class="send-btn">
-    </div>
-  </form>
-
-        <div class="address">
-          <h3>Address</h3>
-          <p>Birmingham, West Midlands United Kingdom</p>
-          <p>
-            Email:
-            <a href="mailto:buchi-n@msn.com" class="no-underline">
-              buchi-n@msn.com</a
-            >
-          </p>
-          <p>
-            Call:
-            <a href="tel:+447405508523" class="no-underline"> 07405508523</a>
-          </p>
-        </div>
-        </div>
-      </section>
-    </div>
-       <!-- Footer Section -->
+    <!-- Footer Section -->
     <footer>
       <div class="footer-content">
-        <p>
-          &copy; 2024 OtaWIZ & GeoCE. All rights reserved.
-        </p>
+        <p>&copy; 2024 OtaWIZ & GeoCE. All rights reserved.</p>
       </div>
+      <p></p>
     </footer>
+
+    <div id="css-validator">
+      <p>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer">
+          <img
+            style="border: 0; width: 88px; height: 31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+            alt="Valid CSS!"
+          />
+        </a>
+      </p>
+    </div>
 
     <!-- Link to the JavaScript file -->
     <script src="script.js"></script>

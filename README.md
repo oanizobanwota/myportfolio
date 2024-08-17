@@ -45,6 +45,8 @@ My acknowlegement and appreciations to,
 
 - [Codepen](https://codepen.io/)
 - [Google](https://www.google.com/)
+- [Jon Kantner](https://speckyboy.com/progress-bars-css-javascript/)
+- [Formspree](https://formspree.io/)
 
 for inspiration, materials and tutorials i got from searching through their websites.
 
