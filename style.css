@@ -673,11 +673,7 @@ footer p {
   font-style: normal;
   font-size: 12px;
 }
-#css-validator {
-  position: relative;
-  bottom: 0;
-  left: 600px;
- }
+
 /* Media query for screens with a width of 600px or less */
 @media only screen and (max-width: 600px) {
   .header-container {

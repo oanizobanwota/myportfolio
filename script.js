@@ -161,6 +161,8 @@ class ProgressClock {
   }
 }
 
+// Function for the sidebar navigation.
+
 document.addEventListener("DOMContentLoaded", function () {
   const listItems = document.querySelectorAll(".sidebar ul li");
   const sections = document.querySelectorAll("section");

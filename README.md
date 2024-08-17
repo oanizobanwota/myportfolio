@@ -1,4 +1,4 @@
-# Personal/Portfolio website 
+# Personal Portfolio website 
 
 I built this website as point of contact to display my personality, education background, experience, skills as front-end development, projects and contact details.
 
@@ -51,7 +51,7 @@ My acknowlegement and appreciations to,
 for inspiration, materials and tutorials i got from searching through their websites.
 
 ### Tips
-Buy me a coffee, if you like my efforts. 
+Buy me a coffee, if you appreciate my efforts. 
 Thank you. :thumbsup:
 
 
