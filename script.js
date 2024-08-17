@@ -158,3 +158,26 @@ class ProgressClock {
     this.updateTimeout = setTimeout(this.update.bind(this), 1e3);
   }
 }
+document.addEventListener("DOMContentLoaded", function () {
+  const listItems = document.querySelectorAll(".sidebar ul li");
+  const arrow = document.getElementById("arrow");
+  const aboutLink = document.querySelector(".sidebar ul li a[href='#about']");
+
+  listItems.forEach((item) => {
+    item.addEventListener("click", function () {
+      // Remove the 'clicked' class from all items
+      listItems.forEach((li) => li.classList.remove("clicked"));
+      // Add the 'clicked' class to the clicked item
+      item.classList.add("clicked");
+    });
+  });
+
+  arrow.addEventListener("click", () => {
+    // Remove the 'clicked' class from all items
+    listItems.forEach((li) => li.classList.remove("clicked"));
+    // Add the 'clicked' class to the about link's parent li
+    aboutLink.parentElement.classList.add("clicked");
+    // Trigger the click event on the about link
+    aboutLink.click();
+  });
+});
