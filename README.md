@@ -31,18 +31,20 @@ The website will provide youthe necessary information about me, my skills, exper
 
 ## Contact
 
-[X]https://x.com/oanizobanwota
-[Facebook]https://www.facebook.com/oanizobanwota
-[GitHub]https://github.com/oanizobanwota
-[Linkedin]https://www.linkedin.com/in/onyebuchi-anizoba-nwota
-[Instagram]https://www.instagram.com/anizobanwota
+Here are my social media handle to easily reach me.
+
+- [X](https://x.com/oanizobanwota)
+- [Facebook](https://www.facebook.com/oanizobanwota)
+- [GitHub](https://github.com/oanizobanwota)
+- [Linkedin](https://www.linkedin.com/in/onyebuchi-anizoba-nwota)
+- [Instagram](https://www.instagram.com/anizobanwota)
 
 ## Acknowledgements
 
 My acknowlegement and appreciations to,
 
-[Codepen]https://codepen.io/
-[Google]https://www.google.com/
+- [Codepen](https://codepen.io/)
+- [Google](https://www.google.com/)
 
 for inspiration, materials and tutorials i got from searching through their websites.
 
