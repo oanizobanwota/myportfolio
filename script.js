@@ -158,26 +158,69 @@ class ProgressClock {
     this.updateTimeout = setTimeout(this.update.bind(this), 1e3);
   }
 }
+
 document.addEventListener("DOMContentLoaded", function () {
   const listItems = document.querySelectorAll(".sidebar ul li");
-  const arrow = document.getElementById("arrow");
+  const sections = document.querySelectorAll("section");
+  const arrow = document.getElementById('arrow');
   const aboutLink = document.querySelector(".sidebar ul li a[href='#about']");
+  const welcomeSection = document.querySelector("#welcome-page"); // Assuming the welcome section has an ID of 'welcome-page'
 
+  // Function to remove 'clicked' class from all items
+  function removeClickedClass() {
+    listItems.forEach((li) => li.classList.remove("clicked"));
+  }
+
+  // Function to add 'clicked' class to the corresponding nav link
+  function highlightNavLink() {
+    let index = sections.length;
+
+    // Check if the welcome section is in view
+    if (window.scrollY + 50 >= welcomeSection.offsetTop && window.scrollY < welcomeSection.offsetTop + welcomeSection.offsetHeight) {
+      removeClickedClass();
+      return;
+    }
+
+    // Iterate through sections to find the one currently in view
+    while (--index && window.scrollY + 50 < sections[index].offsetTop + sections[index].offsetHeight / 2) {}
+
+    removeClickedClass();
+
+    if (index >= 0) {
+      listItems[index].classList.add("clicked");
+    }
+  }
+
+  // Add scroll event listener
+  window.addEventListener("scroll", highlightNavLink);
+
+  // Add hover event listener to each nav link
   listItems.forEach((item) => {
-    item.addEventListener("click", function () {
-      // Remove the 'clicked' class from all items
-      listItems.forEach((li) => li.classList.remove("clicked"));
-      // Add the 'clicked' class to the clicked item
+    item.addEventListener("mouseenter", function (event) {
+      removeClickedClass();
       item.classList.add("clicked");
+
+      const targetId = item.querySelector('a').getAttribute('href').substring(1);
+      const targetSection = document.getElementById(targetId);
+
+      if (targetSection) {
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+      }
     });
   });
 
-  arrow.addEventListener("click", () => {
-    // Remove the 'clicked' class from all items
-    listItems.forEach((li) => li.classList.remove("clicked"));
-    // Add the 'clicked' class to the about link's parent li
+  // Add click event listener to the arrow
+  arrow.addEventListener('click', (event) => {
+    event.preventDefault(); // Prevent default anchor click behavior
+    removeClickedClass();
     aboutLink.parentElement.classList.add("clicked");
-    // Trigger the click event on the about link
-    aboutLink.click();
+
+    const targetSection = document.getElementById('about');
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: 'smooth' });
+    }
   });
+
+  // Initial highlight based on scroll position
+  highlightNavLink();
 });
