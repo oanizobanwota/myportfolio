@@ -695,7 +695,7 @@ footer p {
     flex-direction: column;
     align-items: stretch;
     padding: 0; /* Remove any padding to avoid extra space */
-     display: inline-block;
+  
   }
 
   .sidebar ul li {
@@ -736,9 +736,7 @@ footer p {
     align-items: stretch;
   }
 
-  .content > * {
-    margin-bottom: 10px; /* Space out child elements */
-  }
+ 
   .other-pages {
   justify-content: center;
   align-items: center;
@@ -761,6 +759,8 @@ h1 {
   font-weight: 800;
   font-style: normal;
   font-size: 80px;
+  color: #fff;
+  z-index: 1000;
 }
 
 }
