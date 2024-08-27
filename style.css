@@ -679,7 +679,7 @@ footer p {
 @media (max-width: 600px) {
 
   .sidebar {
-    width: 20%; /* Occupy full width */
+    width: 0; /* Occupy full width */
   display: inline;
    
   } 
