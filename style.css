@@ -75,12 +75,6 @@ section {
   height: 100vh;
 
 }
-
-
- #contact, #projects {
-
-  border-top: 1px solid #ffcc00;
-}
 html {
   scroll-behavior: smooth;
   background: black;
@@ -106,7 +100,7 @@ p.welcome-subtext1 {
   justify-content: center;
   align-items: center;
   padding-left: 40%;
-  padding-top: 10%;
+  padding-top: 8%;
 }
 .arrow:nth-child(2),
 .arrow:nth-child(3) {
@@ -445,9 +439,8 @@ body {
 /* CSS for the skills section */
 .skills-logos {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Create two equal columns */
+  grid-template-columns: repeat(8, 1fr); /* Create two equal columns */
   gap: 10px; /* Adjust the gap between logos as needed */
-  margin-top: 20px; /* Add some space above the logos */
   justify-items: center; /* Center the logos within each column */
   align-items: center; /* Center the logos vertically */
 }
