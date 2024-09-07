@@ -654,6 +654,7 @@ textarea {
   padding-top: 10px;
   border-radius: 10px;
   background: #14213D;
+  box-shadow: 0 0 20px #283e6d; /* Neon glow effect */
   
 }
 .address {
