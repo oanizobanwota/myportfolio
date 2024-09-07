@@ -549,7 +549,7 @@ form {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
-  box-shadow: 0 0 15px #0105f0; /* Neon glow effect */
+  border: #ffffff;
 }
 .message-icon {
   display: flex;
@@ -576,11 +576,10 @@ textarea {
   border-top: none;
   border-right: none;
   border-left: none;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #fff;
   outline: none;
   color: #fff;
   background: transparent;
-  box-shadow: 0 0 15px #0105f0; /* Neon glow effect */
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -608,14 +607,14 @@ textarea {
   box-sizing: border-box;
 }
 .send-btn {
-  background: #000;
+  background: #14213D;
   color: #fff;
   border: none;
   font-size: 16px;
   padding: 6px 0;
   width: 100px;
   border-radius: 50px;
-  box-shadow: 0 0 15px #0105f0; /* Neon glow effect */
+  box-shadow: 0 0 15px #E5E5E5; /* Neon glow effect */
   transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for background color and transform */
 }
 
@@ -647,7 +646,8 @@ h4 {
   padding: 20px;
   padding-top: 10px;
   border-radius: 10px;
-  box-shadow: 0 0 15px #0105f0; /* Neon glow effect */
+  background: #14213D;
+  
 }
 .address {
   align-items: center;
