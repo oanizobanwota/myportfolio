@@ -75,12 +75,6 @@ section {
   height: 100vh;
 
 }
-
-
- #contact, #projects {
-
-  border-top: 1px solid #ffcc00;
-}
 html {
   scroll-behavior: smooth;
   background: black;
@@ -177,13 +171,13 @@ p.welcome-subtext1 {
   color: #ffffff;
 }
 .profile-pic {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   border-radius: 50%;
   width: 200px;
   height: 200px;
   left: 50px;
   top: 200px;
-  box-shadow: 0 0 15px #0105f0; /* Neon glow effect */
+  box-shadow: 0 0 15px #E5E5E5; /* Neon glow effect */
   transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for background color and transform */
 }
 .sub-headings {
@@ -503,6 +497,7 @@ body {
   display: flex;
   align-items: center;
   width: 100%;
+  padding: 1em;
 }
 
 .project-left {
@@ -526,7 +521,7 @@ body {
   height: 150px; /* Set a fixed height to make it a square */
   object-fit: cover; /* Ensure the image covers the entire area */
   border-radius: 10px;
-  box-shadow: 0 0 15px #0105f0; /* Neon glow effect */
+  box-shadow: 0 0 15px #E5E5E5; /* Neon glow effect */
   transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for background color and transform */
 }
 
@@ -635,7 +630,7 @@ textarea {
   font-size: 16px;
   padding: 6px 0;
   width: 100px;
-  border-radius: 50px;
+  border-radius: 10px;
   box-shadow: 0 0 15px #E5E5E5; /* Neon glow effect */
   transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for background color and transform */
 }
@@ -680,10 +675,9 @@ footer {
 }
 footer p {
   margin: 0;
-  font-family: "Fjalla One", sans-serif;
   font-weight: 100;
   font-style: normal;
-  font-size: 12px;
+  font-size: 10px;
 }
 /* Media query for screens with a width of 600px or less */
 @media (max-width:600px) {
@@ -767,7 +761,7 @@ h1 {
 }
  #contact, #projects {
 
-  border-top: 1px solid #ffcc00;
+ 
   margin-bottom: 40px;
 }
 
