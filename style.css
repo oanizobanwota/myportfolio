@@ -301,6 +301,8 @@ body {
 .progress-clock__time-ampm {
   cursor: default;
   grid-row: 3;
+  font-size: 0.5em;
+  font-weight: 400;
 }
 .progress-clock__rings {
   display: block;
