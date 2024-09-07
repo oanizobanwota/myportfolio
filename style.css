@@ -75,6 +75,12 @@ section {
   height: 100vh;
 
 }
+
+
+ #contact, #projects {
+
+  border-top: 1px solid #ffcc00;
+}
 html {
   scroll-behavior: smooth;
   background: black;
@@ -171,6 +177,7 @@ p.welcome-subtext1 {
   color: #ffffff;
 }
 .profile-pic {
+  margin-bottom: 10px;
   border-radius: 50%;
   width: 200px;
   height: 200px;
@@ -187,6 +194,7 @@ h1 {
   font-weight: 500;
   font-style: normal;
   font-size: 80px;
+  z-index: 1000;
 }
 p {
   font-size: 15px;
@@ -201,6 +209,19 @@ h2 {
   font-style: normal;
   font-size: 2rem;
   color: #fff;
+}
+h3 {
+  margin-bottom: 20px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  z-index: 1000;
+}
+h4 {
+  margin-bottom: 20px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 @keyframes dissolveIn {
   0% {
@@ -443,6 +464,7 @@ body {
   gap: 10px; /* Adjust the gap between logos as needed */
   justify-items: center; /* Center the logos within each column */
   align-items: center; /* Center the logos vertically */
+ 
 }
 
 .skill {
@@ -626,18 +648,6 @@ textarea {
   margin-bottom: 80px;
   padding: 10px;
 }
-h3 {
-  margin-bottom: 20px;
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-h4 {
-  margin-bottom: 20px;
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
 .other-pages {
   margin-left: 65px;
   justify-content: center;
@@ -676,7 +686,7 @@ footer p {
   font-size: 12px;
 }
 /* Media query for screens with a width of 600px or less */
-@media (max-width: 600px) {
+@media (max-width:600px) {
 
   .sidebar {
     width: 0; /* Occupy full width */
@@ -749,11 +759,16 @@ footer p {
 }
 h1 {
   font-family: "Rubik Maze", system-ui;
-  font-weight: 800;
+  font-weight: 600;
   font-style: normal;
   font-size: 80px;
   color: #fff;
   z-index: 1000;
+}
+ #contact, #projects {
+
+  border-top: 1px solid #ffcc00;
+  margin-bottom: 40px;
 }
 
 }
