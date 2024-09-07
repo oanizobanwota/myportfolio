@@ -177,7 +177,7 @@ p.welcome-subtext1 {
   height: 200px;
   left: 50px;
   top: 200px;
-  box-shadow: 0 0 15px #E5E5E5; /* Neon glow effect */
+  box-shadow: 0 0 15px #7198eb; /* Neon glow effect */
   transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for background color and transform */
 }
 .sub-headings {
@@ -523,7 +523,7 @@ body {
   height: 150px; /* Set a fixed height to make it a square */
   object-fit: cover; /* Ensure the image covers the entire area */
   border-radius: 10px;
-  box-shadow: 0 0 15px #E5E5E5; /* Neon glow effect */
+  box-shadow: 0 0 15px #7198eb; /* Neon glow effect */
   transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for background color and transform */
 }
 
@@ -633,7 +633,7 @@ textarea {
   padding: 6px 0;
   width: 100px;
   border-radius: 10px;
-  box-shadow: 0 0 15px #E5E5E5; /* Neon glow effect */
+  box-shadow: 0 0 15px #7198eb; /* Neon glow effect */
   transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for background color and transform */
 }
 
@@ -654,7 +654,7 @@ textarea {
   padding-top: 10px;
   border-radius: 10px;
   background: #14213D;
-  box-shadow: 0 0 20px #5b89ec; /* Neon glow effect */
+  box-shadow: 0 0 15px #7198eb; /* Neon glow effect */
   
 }
 .address {
