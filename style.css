@@ -348,7 +348,7 @@ body {
 }
 [data-group]:focus ~ .progress-clock__rings [data-units],
 [data-group]:hover ~ .progress-clock__rings [data-units] {
-  opacity: 0.1;
+  opacity: 0.2;
 }
 [data-group="d"]:focus ~ .progress-clock__rings [data-units="d"],
 [data-group="d"]:hover ~ .progress-clock__rings [data-units="d"],
@@ -358,7 +358,7 @@ body {
 [data-group="m"]:hover ~ .progress-clock__rings [data-units="m"],
 [data-group="s"]:focus ~ .progress-clock__rings [data-units="s"],
 [data-group="s"]:hover ~ .progress-clock__rings [data-units="s"] {
-  opacity: 0;
+  opacity: 1;
 }
 
 /* Dark theme */
@@ -368,7 +368,7 @@ body {
     --fg: hsl(var(--hue), 10%, 90%);
   }
   .progress-clock__ring {
-    opacity: 0.01;
+    opacity: 0.2;
   }
 }
 
