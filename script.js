@@ -1,4 +1,4 @@
- /* Progress clock from https://speckyboy.com/progress-bars-css-javascript/ by Jon Kantner */
+/* Progress clock from https://speckyboy.com/progress-bars-css-javascript/ by Jon Kantner */
 
 window.addEventListener("DOMContentLoaded", () => {
   const clock = new ProgressClock("#clock");
@@ -166,7 +166,7 @@ class ProgressClock {
 document.addEventListener("DOMContentLoaded", function () {
   const listItems = document.querySelectorAll(".sidebar ul li");
   const sections = document.querySelectorAll("section");
-  const arrow = document.getElementById('arrow');
+  const arrow = document.getElementById("arrow");
   const aboutLink = document.querySelector(".sidebar ul li a[href='#about']");
   const welcomeSection = document.querySelector("#welcome-page"); // Assuming the welcome section has an ID of 'welcome-page'
 
@@ -180,13 +180,20 @@ document.addEventListener("DOMContentLoaded", function () {
     let index = sections.length;
 
     // Check if the welcome section is in view
-    if (window.scrollY + 50 >= welcomeSection.offsetTop && window.scrollY < welcomeSection.offsetTop + welcomeSection.offsetHeight) {
+    if (
+      window.scrollY + 50 >= welcomeSection.offsetTop &&
+      window.scrollY < welcomeSection.offsetTop + welcomeSection.offsetHeight
+    ) {
       removeClickedClass();
       return;
     }
 
     // Iterate through sections to find the one currently in view
-    while (--index && window.scrollY + 50 < sections[index].offsetTop + sections[index].offsetHeight / 2) {}
+    while (
+      --index &&
+      window.scrollY + 50 <
+        sections[index].offsetTop + sections[index].offsetHeight / 2
+    ) {}
 
     removeClickedClass();
 
@@ -204,24 +211,27 @@ document.addEventListener("DOMContentLoaded", function () {
       removeClickedClass();
       item.classList.add("clicked");
 
-      const targetId = item.querySelector('a').getAttribute('href').substring(1);
+      const targetId = item
+        .querySelector("a")
+        .getAttribute("href")
+        .substring(1);
       const targetSection = document.getElementById(targetId);
 
       if (targetSection) {
-        targetSection.scrollIntoView({ behavior: 'smooth' });
+        targetSection.scrollIntoView({ behavior: "smooth" });
       }
     });
   });
 
   // Add click event listener to the arrow
-  arrow.addEventListener('click', (event) => {
+  arrow.addEventListener("click", (event) => {
     event.preventDefault(); // Prevent default anchor click behavior
     removeClickedClass();
     aboutLink.parentElement.classList.add("clicked");
 
-    const targetSection = document.getElementById('about');
+    const targetSection = document.getElementById("about");
     if (targetSection) {
-      targetSection.scrollIntoView({ behavior: 'smooth' });
+      targetSection.scrollIntoView({ behavior: "smooth" });
     }
   });
 
