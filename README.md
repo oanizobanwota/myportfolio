@@ -12,10 +12,10 @@ I built this website as point of contact to display my personality, education ba
 
 ## Overview
 
-![welcome page](assets/imgs/welcomepag.jpg)
-![about me section](assets/imgs/aboutpag.jpg)
-![project section](assets/imgs/projectpag.jpg)
-![contact details](assets/imgs/contactpag.jpg)
+![welcome page](assets/imgs/welcomepag.jpg)<br/>
+![about me section](assets/imgs/aboutpag.jpg)<br/>
+![project section](assets/imgs/projectpag.jpg)<br/>
+![contact details](assets/imgs/contactpag.jpg)<br/>
 
 ### Built With
 
