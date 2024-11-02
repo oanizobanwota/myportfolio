@@ -12,10 +12,8 @@ I built this website as point of contact to display my personality, education ba
 
 ## Overview
 
-![welcome page](assets/imgs/welcomepag.jpg)<br/><br/><br/>
-![about me section](assets/imgs/aboutpag.jpg)<br/><br/><br/>
-![project section](assets/imgs/projectpag.jpg)<br/><br/><br/>
-![contact details](assets/imgs/contactpag.jpg)<br/><br/><br/>
+*[Link to My Portolio](https://oanizobanwota.github.io/myportfolio)
+
 
 ### Built With
 
