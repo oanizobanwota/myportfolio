@@ -28,24 +28,44 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   </head>
   <body>
-    <div class="sidebar">
-      <nav class="links">
-        <ul>
-          <li>
-            <a href="#about" aria-label="navigate to about me page"> About</a>
-          </li>
-          <li>
-            <a href="#projects" aria-label="navigate to my project page">
-              Projects</a
-            >
-          </li>
-          <li>
-            <a href="#contact" aria-label="navigate to my contact page">
-              Contact</a
-            >
-          </li>
-        </ul>
-      </nav>
+    <div class="navbar">
+      <!-- Add a hyperlink to the welcome page -->
+      <div class="active welcome" id="welcome-link">
+        <a href="#welcome-page" title="Welcome page" class="no-underline">
+          <span class="letter">W</span>
+          <span class="letter">e</span>
+          <span class="letter">l</span>
+          <span class="letter">c</span>
+          <span class="letter">o</span>
+          <span class="letter">m</span>
+          <span class="letter">e</span>
+        </a>
+      </div>
+      <div class="nav__links">
+        <a
+          href="#about"
+          class="nav__link"
+          aria-label="navigate to about me page"
+        >
+          About</a
+        >
+
+        <a
+          href="#projects"
+          class="nav__link"
+          aria-label="navigate to my project page"
+        >
+          Projects</a
+        >
+
+        <a
+          href="#contact"
+          class="nav__link"
+          aria-label="navigate to my contact page"
+        >
+          Contact</a
+        >
+      </div>
 
       <!--Progress clock from https://speckyboy.com/progress-bars-css-javascript/ by Jon Kantner -->
       <div id="clock" class="progress-clock">
@@ -214,21 +234,9 @@
         </svg>
       </div>
     </div>
-    <!-- Add a hyperlink to the welcome page -->
-    <div class="welcome" id="welcome-link">
-      <a href="index.html" title="Welcome page" class="no-underline">
-        <span class="letter">W</span>
-        <span class="letter">e</span>
-        <span class="letter">l</span>
-        <span class="letter">c</span>
-        <span class="letter">o</span>
-        <span class="letter">m</span>
-        <span class="letter">e</span>
-      </a>
-    </div>
 
     <div class="main-content">
-      <section id="welcome-page">
+      <div id="welcome-page" class="section">
         <div class="header-container">
           <h1 class="welcome-text">I'm Onyebuchi <br />Anizoba-Nwota</h1>
           <h2>web applications & front-end developer</h2>
@@ -281,308 +289,258 @@
             <div class="arrow"></div>
           </a>
         </div>
-      </section>
+      </div>
 
-      <div class="other-pages">
-        <!-- About Section -->
-        <section id="about">
-          <div>
-            <h3 class="sub-headings">About Me</h3>
+      <!-- About Section -->
+      <div id="about" class="section">
+        <div>
+          <h3 class="sub-headings">About Me</h3>
+        </div>
+        <div class="profile">
+          <img
+            class="profile-pic"
+            src="assets/imgs/my-profile-img.webp"
+            alt="Profile Picture"
+          />
+        </div>
+
+        <div style="text-align: justify; line-height: 1.6">
+          <h4>Welcome!</h4>
+          <p>
+            Hello, I'm Onyebuchi Anizoba-Nwota. While I currently serve as the
+            Managing Director of FreshSHOP Supermarket, a retail outlet for
+            groceries and household needs, my passion lies in the transformative
+            power of technology. With a Bachelor's degree in Educational
+            Management & Policy, I've recently embarked on a journey into
+            full-stack web development. Through a comprehensive program with
+            Learning People Global, I've gained proficiency in JavaScript, HTML,
+            CSS, Bootstrap, and React, along with practical experience in
+            Python, SQL, and Git/GitHub for version control. Driven by the
+            desire to create technological solutions that benefit humanity, I'm
+            excited to apply my new skills. I'm also a proud member of the
+            British Computer Society (BCS).
+          </p>
+        </div>
+        <div class="tools">
+          <h4 class="sub-headings">WebDev, Tools, Languages & Skills</h4>
+        </div>
+        <div class="skills-logos">
+          <div class="skill">
+            <img src="assets/imgs/html_logo.webp" alt="HTML Logo" />
+            <p>HTML</p>
           </div>
-          <div class="profile">
-            <img
-              class="profile-pic"
-              src="assets/imgs/my-profile-img.webp"
-              alt="Profile Picture"
-            />
+          <div class="skill">
+            <img src="assets/imgs/css_logo.webp" alt="CSS Logo" />
+            <p>CSS</p>
+          </div>
+          <div class="skill">
+            <img src="assets/imgs/javascript_logo.webp" alt="JavaScript Logo" />
+            <p>JavaScript</p>
           </div>
 
-          <div style="text-align: justify; line-height: 1.6">
-            <h4>Welcome!</h4>
-            <p>
-              Hello, I'm Onyebuchi Anizoba-Nwota. While I currently serve as the
-              Managing Director of FreshSHOP Supermarket, a retail outlet for
-              groceries and household needs, my passion lies in the
-              transformative power of technology. With a Bachelor's degree in
-              Educational Management & Policy, I've recently embarked on a
-              journey into full-stack web development. Through a comprehensive
-              program with Learning People Global, I've gained proficiency in
-              JavaScript, HTML, CSS, Bootstrap, and React, along with practical
-              experience in Python, SQL, and Git/GitHub for version control.
-              Driven by the desire to create technological solutions that
-              benefit humanity, I'm excited to apply my new skills. I'm also a
-              proud member of the British Computer Society (BCS).
-            </p>
+          <div class="skill">
+            <img src="assets/imgs/Bootstrap_logo.svg" alt="Bootstrap Logo" />
+            <p>Bootstrap</p>
           </div>
-          <div class="tools">
-            <h4 class="sub-headings">WebDev, Tools, Languages & Skills</h4>
+          <div class="skill">
+            <img src="assets/imgs/react_logo.webp" alt="React Logo" />
+            <p>React</p>
           </div>
-          <div class="skills-logos">
-            <div class="skill">
-              <img src="assets/imgs/html_logo.webp" alt="HTML Logo" />
-              <p>HTML</p>
-            </div>
-            <div class="skill">
-              <img src="assets/imgs/css_logo.webp" alt="CSS Logo" />
-              <p>CSS</p>
-            </div>
-            <div class="skill">
+
+          <div class="skill">
+            <img src="assets/imgs/python_logo.webp" alt="Python Logo" />
+            <p>Python</p>
+          </div>
+          <div class="skill">
+            <img src="assets/imgs/sql_logo.webp" alt="SQL logo" />
+            <p>SQL</p>
+          </div>
+          <div class="skill">
+            <img src="assets/imgs/github_logo.webp" alt="GitHub logo" />
+            <p>GitHub</p>
+          </div>
+          <div class="skill">
+            <img src="assets/imgs/wordpress.png" alt="WordPress logo" />
+            <p>WordPress</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projects Section -->
+      <div id="projects" class="section">
+        <div class="user-details">
+          <h3 class="sub-headings">Projects</h3>
+        </div>
+
+        <!-- Project #1: Personal  Website -->
+        <div class="user-projects project-left">
+          <div class="images-left">
+            <a
+              href="https://oanizobanwota.github.io/myportfolio/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Portfolio website, opens in a new tab"
+            >
               <img
-                src="assets/imgs/javascript_logo.webp"
-                alt="JavaScript Logo"
+                src="assets/imgs/my-profile-img.webp"
+                alt="portfolio Website"
               />
-              <p>JavaScript</p>
-            </div>
-
-            <div class="skill">
-              <img src="assets/imgs/Bootstrap_logo.svg" alt="Bootstrap Logo" />
-              <p>Bootstrap</p>
-            </div>
-            <div class="skill">
-              <img src="assets/imgs/react_logo.webp" alt="React Logo" />
-              <p>React</p>
-            </div>
-
-            <div class="skill">
-              <img src="assets/imgs/python_logo.webp" alt="Python Logo" />
-              <p>Python</p>
-            </div>
-            <div class="skill">
-              <img src="assets/imgs/sql_logo.webp" alt="SQL logo" />
-              <p>SQL</p>
-            </div>
-            <div class="skill">
-              <img src="assets/imgs/github_logo.webp" alt="GitHub logo" />
-              <p>GitHub</p>
-            </div>
-            <div class="skill">
-              <img src="assets/imgs/wordpress.png" alt="WordPress logo" />
-              <p>WordPress</p>
-            </div>
+            </a>
           </div>
-        </section>
-
-        <!--  <div class="skill">
-               <img src="assets/imgs/redux_logo.webp" alt="Redux Logo" />
-                <p>Redux</p>
-              </div> -->
-        <!--<div class="skill">
-                <img src="assets/imgs/kotlin_logo.webp" alt="Python Logo" />
-                <p>Kotlin</p>
-              </div>
-              <div class="skill">
-                <img src="assets/imgs/typescript_logo.webp" alt="Python Logo" />
-                <p>Typescript</p>
-              </div>
-             
-              <div class="skill">
-                <img src="assets/imgs/java_logo.webp" alt="Python Logo" />
-                <p>Java</p>
-              </div>
-              <div class="skill">
-                <img
-                  src="assets/imgs/android_studio_logo.webp"
-                  alt="Python Logo"
-                />
-                <p>Android Studio</p>
-              </div>
-            
-              <div class="skill">
-                <img src="assets/imgs/cpp_logo.webp" alt="Python Logo" />
-                <p>C++</p>
-              </div>
-              <div class="skill">
-                <img src="assets/imgs/microsoft_azure.webp" alt="Python Logo" />
-                <p>Microsoft Azure</p>
-              </div>
-              <div class="skill">
-                <img src="assets/imgs/aws_logo.webp" alt="Python Logo" />
-                <p>AWS</p>
-              </div>
-            </div>
-          </div>
-          <hr class="horizontal-line" /> -->
-
-        <!-- Projects Section -->
-        <section id="projects">
-          <div class="user-details">
-            <h3 class="sub-headings">Projects</h3>
-          </div>
-
-          <!-- Project #1: Personal  Website -->
-          <div class="user-projects project-left">
-            <div class="images-left">
-              <a
-                href="https://oanizobanwota.github.io/myportfolio/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Portfolio website, opens in a new tab"
-              >
-                <img
-                  src="assets/imgs/my-profile-img.webp"
-                  alt="portfolio Website"
-                />
-              </a>
-            </div>
-            <div class="contents-right" style="text-align: justify">
-              <h4>Portfolio Website</h4>
-              <p>
-                Crafted with HTML, CSS, and JavaScript, this portfolio website
-                is designed to effectively communicate my skills, experience,
-                and personality. Here, you'll find details on my projects,
-                education, and how to contact me. I've prioritized an
-                interactive and accessible design, and I plan to maintain the
-                site with regular updates to reflect my latest achievements.
-              </p>
-            </div>
-          </div>
-
-          <!-- Project #2: Online Quiz -->
-          <div class="user-projects project-right">
-            <div class="images-right">
-              <a
-                href="http://oanizobanwota.github.io/online-quiz/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Online quiz, opens in a new tab"
-              >
-                <img src="assets/imgs/online_quiz.png" alt="online quiz" />
-              </a>
-            </div>
-            <div class="contents-left" style="text-align: justify">
-              <h4>Online Quiz</h4>
-              <p>
-                This interactive online quiz platform, built with JavaScript,
-                HTML, and CSS, offers a dynamic learning experience. Features
-                include multiple question types, randomized questions, saved
-                progress, instant scoring, and a responsive design. Each new
-                session presents a unique set of questions. Click the "Start"
-                button to begin the quiz and test your knowledge.
-              </p>
-            </div>
-          </div>
-
-          <!-- Project #3: FreshSHOP Supermarket Website -->
-          <div class="user-projects project-left">
-            <div class="images-left">
-              <a
-                href="https://freshshop.com.ng/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="FreshSHOP Supermarket website, opens in a new tab"
-              >
-                <img
-                  src="assets/imgs/project2.png"
-                  alt="FreshSHOP Supermarket"
-                />
-              </a>
-            </div>
-            <div class="contents-right" style="text-align: justify">
-              <h4>FreshSHOP Supermarket</h4>
-              <p>
-                FreshSHOP Supermarket's WordPress-powered website offers an
-                engaging online experience. Customers can easily access product
-                details and promotional updates, while also enjoying the
-                convenience of an integrated online store. Features include user
-                registration, secure online purchasing, and reliable home
-                delivery.
-              </p>
-            </div>
-          </div>
-          <!-- Project #4: Fresh Bite website-->
-          <div class="user-projects project-right">
-            <div class="images-right">
-              <a
-                href="https://oanizobanwota.github.io/fresh/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Fresh Bite website, opens in a new tab"
-              >
-                <img src="assets/imgs/freshbite.png" alt="fresh bite" />
-              </a>
-            </div>
-            <div class="contents-left" style="text-align: justify">
-              <h4>Fresh Bite Website</h4>
-              <p>
-                Developed with HTML, CSS, and JavaScript, the FreshBITE website
-                serves as an informative and interactive platform for the Fresh
-                Bite coffee, snacks, and drinks outlet. The site is designed to
-                be accessible and easy to navigate, ensuring all essential
-                information is readily available to visitors.
-              </p>
-            </div>
-          </div>
-        </section>
-        <!-- Contact Section -->
-        <section id="contact">
-          <div class="details">
-            <h3>Contact</h3>
-            <p>If you have any questions, feel free to reach out!</p>
-          </div>
-          <div class="hero">
-            <form action="https://formspree.io/f/xldrljko" method="POST">
-              <div class="message-icon">
-                <i class="fas fa-envelope"></i>
-                <span>Message</span>
-              </div>
-              <div class="input-field">
-                <i class="fas fa-user"></i>
-                <input
-                  type="text"
-                  placeholder="Name"
-                  name="Name"
-                  autocomplete="family-name"
-                />
-              </div>
-              <div class="input-field">
-                <i class="fas fa-phone"></i>
-                <input
-                  type="text"
-                  placeholder="Phone No."
-                  name="Phone"
-                  autocomplete="on"
-                />
-              </div>
-              <div class="input-field">
-                <i class="fas fa-envelope"></i>
-                <input
-                  type="text"
-                  placeholder="Email Address"
-                  name="Email"
-                  autocomplete="off"
-                />
-              </div>
-              <div class="input-field">
-                <i class="fas fa-comments"></i>
-                <textarea
-                  name="Message"
-                  placeholder="Message"
-                  rows="10"
-                ></textarea>
-              </div>
-
-              <input type="submit" value="Send" class="send-btn" />
-            </form>
-          </div>
-
-          <div class="address">
-            <p>Birmingham, West Midlands United Kingdom</p>
+          <div class="contents-right" style="text-align: justify">
+            <h4>Portfolio Website</h4>
             <p>
-              Email:
-              <a href="mailto:buchi-n@msn.com" class="no-underline">
-                buchi-n@msn.com</a
-              >
-            </p>
-            <p>
-              WhatsApp:
-              <a href="tel:+447405508523" class="no-underline">
-                +447762783447</a
-              >
+              Crafted with HTML, CSS, and JavaScript, this portfolio website is
+              designed to effectively communicate my skills, experience, and
+              personality. Here, you'll find details on my projects, education,
+              and how to contact me. I've prioritized an interactive and
+              accessible design, and I plan to maintain the site with regular
+              updates to reflect my latest achievements.
             </p>
           </div>
-        </section>
+        </div>
+
+        <!-- Project #2: Online Quiz -->
+        <div class="user-projects project-right">
+          <div class="images-right">
+            <a
+              href="http://oanizobanwota.github.io/online-quiz/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Online quiz, opens in a new tab"
+            >
+              <img src="assets/imgs/online_quiz.png" alt="online quiz" />
+            </a>
+          </div>
+          <div class="contents-left" style="text-align: justify">
+            <h4>Online Quiz</h4>
+            <p>
+              This interactive online quiz platform, built with JavaScript,
+              HTML, and CSS, offers a dynamic learning experience. Features
+              include multiple question types, randomized questions, saved
+              progress, instant scoring, and a responsive design. Each new
+              session presents a unique set of questions. Click the "Start"
+              button to begin the quiz and test your knowledge.
+            </p>
+          </div>
+        </div>
+
+        <!-- Project #3: FreshSHOP Supermarket Website -->
+        <div class="user-projects project-left">
+          <div class="images-left">
+            <a
+              href="https://freshshop.com.ng/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="FreshSHOP Supermarket website, opens in a new tab"
+            >
+              <img src="assets/imgs/project2.png" alt="FreshSHOP Supermarket" />
+            </a>
+          </div>
+          <div class="contents-right" style="text-align: justify">
+            <h4>FreshSHOP Supermarket</h4>
+            <p>
+              FreshSHOP Supermarket's WordPress-powered website offers an
+              engaging online experience. Customers can easily access product
+              details and promotional updates, while also enjoying the
+              convenience of an integrated online store. Features include user
+              registration, secure online purchasing, and reliable home
+              delivery.
+            </p>
+          </div>
+        </div>
+        <!-- Project #4: Fresh Bite website-->
+        <div class="user-projects project-right">
+          <div class="images-right">
+            <a
+              href="https://oanizobanwota.github.io/fresh/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Fresh Bite website, opens in a new tab"
+            >
+              <img src="assets/imgs/freshbite.png" alt="fresh bite" />
+            </a>
+          </div>
+          <div class="contents-left" style="text-align: justify">
+            <h4>Fresh Bite Website</h4>
+            <p>
+              Developed with HTML, CSS, and JavaScript, the FreshBITE website
+              serves as an informative and interactive platform for the Fresh
+              Bite coffee, snacks, and drinks outlet. The site is designed to be
+              accessible and easy to navigate, ensuring all essential
+              information is readily available to visitors.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Contact Section -->
+      <div id="contact" class="section">
+        <div class="details">
+          <h3>Contact</h3>
+          <p>If you have any questions, feel free to reach out!</p>
+        </div>
+        <div class="hero">
+          <form action="https://formspree.io/f/xldrljko" method="POST">
+            <div class="message-icon">
+              <i class="fas fa-envelope"></i>
+              <span>Message</span>
+            </div>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input
+                type="text"
+                placeholder="Name"
+                name="Name"
+                autocomplete="family-name"
+              />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-phone"></i>
+              <input
+                type="text"
+                placeholder="Phone No."
+                name="Phone"
+                autocomplete="on"
+              />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input
+                type="text"
+                placeholder="Email Address"
+                name="Email"
+                autocomplete="off"
+              />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-comments"></i>
+              <textarea
+                name="Message"
+                placeholder="Message"
+                rows="10"
+              ></textarea>
+            </div>
+
+            <input type="submit" value="Send" class="send-btn" />
+          </form>
+        </div>
+
+        <div class="address">
+          <p>Birmingham, West Midlands United Kingdom</p>
+          <p>
+            Email:
+            <a href="mailto:buchi-n@msn.com" class="no-underline">
+              buchi-n@msn.com</a
+            >
+          </p>
+          <p>
+            WhatsApp:
+            <a href="tel:+447405508523" class="no-underline"> +447762783447</a>
+          </p>
+        </div>
       </div>
     </div>
+
     <!-- Footer Section -->
     <footer>
       <div class="footer-content">

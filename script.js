@@ -161,98 +161,84 @@ class ProgressClock {
   }
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  const listItems = document.querySelectorAll(".sidebar ul li");
-  const sections = document.querySelectorAll("section");
-  const arrow = document.getElementById("arrow");
-  const aboutLink = document.querySelector(".sidebar ul li a[href='#about']");
-  const welcomeSection = document.querySelector("#welcome-page");
+document.addEventListener("DOMContentLoaded", () => {
+  const welcomeLink = document.querySelector(".welcome");
+  const navLinks = document.querySelectorAll(".nav__link");
+  const sections = document.querySelectorAll(".section");
+  const arrowContainer = document.querySelector("#arrow a");
 
-  // Function to remove 'clicked' class from all items
-  function removeClickedClass() {
-    listItems.forEach((li) => li.classList.remove("clicked"));
-  }
+  // Click handler for nav__link elements
+  navLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      navLinks.forEach((l) => l.classList.remove("active"));
+      link.classList.add("active");
 
-  // Debounce function to limit scroll event frequency
-  function debounce(func, wait) {
-    let timeout;
-    return function (...args) {
-      clearTimeout(timeout);
-      timeout = setTimeout(() => func.apply(this, args), wait);
-    };
-  }
-
-  // Function to highlight the corresponding nav link based on scroll position
-  function highlightNavLink() {
-    let currentSection = null;
-
-    // Check each section to find the one currently in view
-    sections.forEach((section, index) => {
-      const rect = section.getBoundingClientRect();
-      const viewportHeight = window.innerHeight;
-
-      // Check if the section is at least 50% visible in the viewport
-      if (
-        rect.top <= viewportHeight * 0.5 &&
-        rect.bottom >= viewportHeight * 0.5
-      ) {
-        currentSection = section;
-      }
-    });
-
-    removeClickedClass();
-
-    // If a section is in view, highlight the corresponding nav link
-    if (currentSection) {
-      const sectionId = currentSection.id;
-      const matchingLink = Array.from(listItems).find((li) =>
-        li.querySelector("a").getAttribute("href").includes(sectionId)
-      );
-      if (matchingLink) {
-        matchingLink.classList.add("clicked");
-      }
-    }
-  }
-
-  // Add scroll event listener with debounce
-  window.addEventListener("scroll", debounce(highlightNavLink, 100));
-
-  // Add hover event listener to each nav link
-  listItems.forEach((item) => {
-    item.addEventListener("mouseenter", function () {
-      removeClickedClass();
-      item.classList.add("clicked");
-
-      const targetId = item
-        .querySelector("a")
-        .getAttribute("href")
-        .substring(1);
+      const targetId = link.getAttribute("href").substring(1);
       const targetSection = document.getElementById(targetId);
-
-      if (targetSection) {
-        targetSection.scrollIntoView({ behavior: "smooth" });
-      }
-    });
-
-    // Remove 'clicked' class on mouseleave to allow scroll-based highlighting to resume
-    item.addEventListener("mouseleave", function () {
-      removeClickedClass();
-      highlightNavLink(); // Re-run scroll-based highlighting
+      targetSection.scrollIntoView({ behavior: "smooth" });
     });
   });
 
-  // Add click event listener to the arrow
-  arrow.addEventListener("click", (event) => {
-    event.preventDefault();
-    removeClickedClass();
-    aboutLink.parentElement.classList.add("clicked");
+  // Welcome link click handler
+  welcomeLink.querySelector("a").addEventListener("click", (e) => {
+    e.preventDefault();
+    const targetSection = document.getElementById("welcome-page");
+    targetSection.scrollIntoView({ behavior: "smooth" });
+  });
 
-    const targetSection = document.getElementById("about");
-    if (targetSection) {
+  // Arrow click handler - scroll without changing URL
+  arrowContainer.addEventListener("click", (e) => {
+    e.preventDefault();
+    const aboutSection = document.getElementById("about");
+    aboutSection.scrollIntoView({ behavior: "smooth" });
+    // Optionally, update nav link state
+    navLinks.forEach((l) => l.classList.remove("active"));
+    const aboutLink = document.querySelector('.nav__link[href="#about"]');
+    if (aboutLink) aboutLink.classList.add("active");
+  });
+
+  // Intersection Observer
+  const options = {
+    root: null,
+    threshold: 0.3,
+    rootMargin: "-100px 0px -100px 0px",
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const sectionId = entry.target.id;
+        navLinks.forEach((link) => link.classList.remove("active"));
+
+        if (sectionId !== "welcome-page") {
+          const activeLink = document.querySelector(
+            `.nav__link[href="#${sectionId}"]`
+          );
+          if (activeLink) {
+            activeLink.classList.add("active");
+          }
+        }
+      }
+    });
+  }, options);
+
+  sections.forEach((section) => {
+    observer.observe(section);
+  });
+
+  // Handle initial load and refresh
+  const hash = window.location.hash;
+  if (hash && hash !== "#welcome-page") {
+    navLinks.forEach((link) => link.classList.remove("active"));
+    const activeLink = document.querySelector(`.nav__link[href="${hash}"]`);
+    if (activeLink) {
+      activeLink.classList.add("active");
+      const targetSection = document.querySelector(hash);
       targetSection.scrollIntoView({ behavior: "smooth" });
     }
-  });
-
-  // Initial highlight based on scroll position
-  highlightNavLink();
+  } else {
+    // On refresh or initial load without hash, scroll to top
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
 });

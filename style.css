@@ -17,17 +17,69 @@ body {
   background: #0b090a;
 }
 
-.sidebar {
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  width: 90vw;
+  position: sticky;
+  background-color: transparent;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav__link {
+  position: relative;
+  margin: 0 10px;
+  color: #333;
+  padding: 5px 10px;
+  text-decoration: none;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 25px;
+  transition: all 0.3s ease;
+}
+
+.nav__links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav__link:hover {
+  color: yellow;
+  transform: translateX(5px);
+}
+
+.nav__link.active {
+  color: yellow;
+  transform: translateX(5px);
+}
+
+/*.nav__link::before {
+  content: "";
+  position: absolute;
+  left: -70px; /* Adjust the position as needed */
+/*transform: translateY(-50%);
+  width: 50px; /* Length of the horizontal line */
+/*height: 2px; /* Thickness of the horizontal line */
+/*background-color: #d3d3d3; /* Color of the horizontal line */
+/*transition: width 0.3s ease, left 0.3s ease; /* Smooth transition for width and position */
+/*}
+/* .sidebar {
   width: 300px;
   background-color: #0b090a;
   padding: 20px;
   height: 100vh; /* Full height */
-  position: fixed; /* Fixed position */
-  left: 0; /* Place the sidebar on the left side */
-  display: flex;
+/*position: fixed; /* Fixed position */
+/*left: 0; /* Place the sidebar on the left side */
+/*display: flex;
   flex-direction: column;
   justify-content: center; /* Center items vertically */
-  animation: dissolveIn 1s ease-in-out forwards;
+/*animation: dissolveIn 1s ease-in-out forwards;
   margin: 0;
 }
 
@@ -35,11 +87,11 @@ body {
   list-style-type: none;
   padding: 0;
   margin: 130px; /* Remove default margin */
-  height: 50%; /* Occupy half of the sidebar height */
-  display: flex;
+/*height: 50%; /* Occupy half of the sidebar height */
+/*display: flex;
   flex-direction: column;
   justify-content: space-around; /* Distribute space evenly */
-}
+/*}
 .sidebar ul li {
   margin: 20px 0;
   position: relative;
@@ -48,13 +100,13 @@ body {
   content: "";
   position: absolute;
   left: -70px; /* Adjust the position as needed */
-  top: 50%;
+/*top: 50%;
   transform: translateY(-50%);
   width: 50px; /* Length of the horizontal line */
-  height: 2px; /* Thickness of the horizontal line */
-  background-color: #d3d3d3; /* Color of the horizontal line */
-  transition: width 0.3s ease, left 0.3s ease; /* Smooth transition for width and position */
-}
+/*height: 2px; /* Thickness of the horizontal line */
+/*background-color: #d3d3d3; /* Color of the horizontal line */
+/*transition: width 0.3s ease, left 0.3s ease; /* Smooth transition for width and position */
+/*}
 
 .sidebar ul li a {
   font-family: "Bebas Neue", sans-serif;
@@ -64,27 +116,27 @@ body {
   color: #d3d3d3;
   font-size: 25px;
   transition: color 0.3s ease, padding-left 0.3s ease; /* Smooth transition for color and padding */
-}
+/*}
 
 .sidebar ul li.clicked::before {
   width: 100px; /* New length of the horizontal line on click */
-  left: -60px; /* Adjust the position as needed */
-  background-color: #ffcc00; /* Change color to yellow */
-}
+/*left: -60px; /* Adjust the position as needed */
+/*background-color: #ffcc00; /* Change color to yellow */
+/*}
 
 .sidebar ul li.clicked a {
   color: #ffcc00; /* New color of the link on click */
-  padding-left: 60px; /* Move the link to the right */
+/* padding-left: 60px; /* Move the link to the right */
+/*}*/
+
+.section {
+  background-color: transparent;
+  min-height: 100vh;
+  padding: 20px;
 }
 
-.main-content {
-  margin-left: 220px; /* Adjust based on sidebar width */
-  padding: 20px;
-  flex-grow: 1;
-}
-section {
-  width: 100%;
-  height: 100vh;
+.section:nth-child(odd) {
+  background-color: rgb(235, 235, 235);
 }
 
 p.welcome-subtext1 {
@@ -107,8 +159,8 @@ p.welcome-subtext1 {
   display: block;
   justify-content: center;
   align-items: center;
-  padding-left: 40%;
-  padding-top: 8%;
+  padding-left: 43%;
+  padding-top: 4%;
 }
 .arrow:nth-child(2),
 .arrow:nth-child(3) {
@@ -240,9 +292,6 @@ h4 {
   }
 }
 
-#welcome-page {
-  animation: dissolveIn 2s ease-in-out forwards;
-}
 /* CSS Styles for the progress clock  https://speckyboy.com/progress-bars-css-javascript/  Progress Clock by Jon Kantner */
 
 * {
@@ -277,7 +326,7 @@ body {
   text-align: center;
   width: 5em;
   height: 5em;
-  top: 40px;
+  top: 150px;
   left: 80px;
 }
 .progress-clock__time-date,
@@ -384,30 +433,61 @@ body {
   }
 }
 
+.main-content {
+  margin-left: 5%; /* Adjust based on sidebar width */
+  padding: 20px;
+  flex-grow: 1;
+  width: 65%;
+}
+#welcome-page {
+  animation: dissolveIn 2s ease-in-out forwards;
+  padding: 1em 0 0 3em;
+  margin-bottom: 2em;
+  width: 100%;
+  min-height: 95vh;
+  position: relative;
+  background-color: transparent;
+}
+#about {
+  width: 100%;
+  max-height: 100vh;
+  padding: 0 1em 2em;
+  margin: 0 0 5em;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: transparent;
+}
+#projects {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1em 1em 2em;
+  margin: 0 0 5em;
+  justify-content: center;
+  background-color: transparent;
+  margin-bottom: 5rem;
+  max-height: 100vh;
+}
+
 #contact {
+  width: 100%;
   padding-top: 3rem;
   justify-content: center;
   align-items: center;
   text-align: center;
+  background-color: transparent;
 }
-#about {
-  padding: 2em;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
+
 /* CSS for the welcome link */
 .welcome {
-  position: fixed;
-  top: 70px;
-  right: 80px;
-  z-index: 1;
-  font-size: 0.8em;
+  font-size: 25px;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
   animation: dissolveIn 1s ease-in-out forwards;
 }
+
 .no-underline {
   text-decoration: none;
   color: #d3d3d3;
@@ -499,14 +579,7 @@ body {
 }
 
 /* CSS for the projects section */
-#projects {
-  display: flex;
-  flex-direction: column;
-  padding: 2em;
-  margin-top: 5em;
-  margin-bottom: 100px;
-  justify-content: center;
-}
+
 .user-projects {
   display: flex;
   align-items: center;
@@ -576,7 +649,7 @@ img:hover {
 
 form {
   padding: 20px;
-  width: 750px;
+  width: 700px;
   border-radius: 10px;
   font-size: 18px;
   font-family: "Bebas Neue", sans-serif;
@@ -663,7 +736,7 @@ textarea {
   margin-left: 65px;
   justify-content: center;
   align-items: center;
-  width: 80%;
+
   padding: 20px;
   border-radius: 10px;
 }
