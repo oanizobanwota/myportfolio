@@ -180,11 +180,6 @@ p.welcome-subtext1 {
   }
 }
 
-.clicked {
-  background-color: yellow; /* Example highlight color */
-  /* Add any other styles needed for the clicked state */
-}
-
 .header-container {
   z-index: 1000;
   text-align: center;
@@ -766,295 +761,246 @@ footer p {
   font-style: normal;
   font-size: 10px;
 }
-@media (max-width: 1280px) {
-  #projects {
-    padding-top: 20%; /* Adjust top padding */
-    margin-top: 20%; /* Adjust top margin */
-    height: 100%;
-    width: 110%;
+
+/* Mobile devices (up to 767px) */
+@media (max-width: 767px) {
+  .main-content {
+    margin-left: 0; /* Remove left margin on mobile */
+    padding: 10px;
+    width: 100%; /* Full width on mobile */
   }
-  .sidebar {
-    width: 50px;
+
+  .navbar {
+    flex-direction: column; /* Stack navbar items vertically */
+    padding: 10px;
+    width: 100vw;
   }
-  .sidebar ul {
-    margin: 50px; /* Remove default margin */
+
+  .nav__links {
+    flex-direction: column; /* Stack nav links vertically */
+    gap: 10px;
+    width: 100%;
+    text-align: center;
   }
-  .other-pages {
-    margin-left: 10px;
+
+  .nav__link {
+    font-size: 20px; /* Slightly smaller font */
+    margin: 5px 0;
   }
-  .images-left img,
-  .images-right img {
-    width: 220px; /* Set a fixed width */
-    height: 250px; /* Set a fixed height to make it a square */
+
+  #welcome-page {
+    padding: 1em;
+    margin-bottom: 1em;
+    min-height: 80vh; /* Reduced height for mobile */
   }
-  footer {
-    margin-left: 45px; /* Adjust left margin */
-  }
-}
-@media (max-width: 1024px) {
+
   #about {
-    padding-top: 20%; /* Adjust top padding */
-    margin-top: 20%; /* Adjust top margin */
-    padding-bottom: 50%; /* Adjust top padding */
-    margin-bottom: 60%; /* Adjust top margin */
+    padding: 0 0.5em 1em;
+    margin: 0 0 2em;
+    max-height: none; /* Remove max-height restriction */
   }
-  .address {
-    padding-top: 30%;
-    margin-bottom: 10px;
-    padding-bottom: 10px;
+
+  #projects {
+    padding: 0.5em;
+    margin: 0 0 2em;
+    max-height: none;
   }
-  footer {
-    margin-top: 30%; /* Adjust left margin */
-  }
-  .details {
-    margin-bottom: 40%;
-  }
-}
-@media (max-width: 950px) {
-  body {
-    display: block; /* Change to block layout */
-    width: 100%; /* Adjust width */
-  }
-  .sidebar {
-    width: 100%; /* Take up the full width on smaller screens */
-    position: relative; /* Remove fixed positioning */
-    left: 0; /* Reset left position */
-    height: auto; /* Adjust height dynamically */
-  }
-  .clicked {
-    background-color: black;
-  }
-  .sidebar ul li.clicked a {
-    color: #d3d3d3;
+
+  #contact {
+    padding-top: 1rem;
   }
 
   .welcome {
-    position: relative;
-    top: -180px;
-    left: 300px;
-  }
-  .progress-clock {
-    top: 150px;
-    left: 420px;
-  }
-  section {
-    height: auto;
-  }
-  .main-content {
-    margin-left: 0; /* Remove sidebar margin */
-    align-items: center; /* Center items horizontally */
-    justify-content: center; /* Center items vertically */
-  }
-  .sidebar ul {
-    margin: 0; /* Remove margin */
-    height: auto; /* Adjust height dynamically */
-  }
-  .sidebar ul li::before {
-    display: none; /* Hide the horizontal lines on smaller screens */
-  }
-  .sidebar ul li.clicked::before {
-    display: none; /* Hide the horizontal lines on smaller screens */
-  }
-  .sidebar ul li.clicked a {
-    padding-left: 0; /* Remove padding on smaller screens */
-  }
-  .header-container {
-    padding-right: 0;
-    padding-top: 60px;
-    margin-left: 30px;
-    margin-top: 70px;
-    width: 90%;
-  }
-  .arrow-container {
-    padding-left: 47%;
-    padding-top: 23%;
-  }
-  .address {
-    padding-top: 5px;
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-  }
-  .social-media {
-    margin-bottom: 0;
-  }
-  .social-media a {
-    margin-right: 5px;
-    font-size: 20px;
+    font-size: 20px; /* Smaller font for mobile */
   }
 
-  .profile-pic {
-    width: 250px;
-    height: 250px;
-    left: 0;
-    top: 0;
-  }
-
-  h1 {
-    font-size: 2.2rem;
-  }
-  h2 {
-    font-size: 1.2rem;
-  }
-  h3 {
-    margin-bottom: 5px;
-  }
-  .user-projects h4 {
-    padding-top: 10px;
-  }
   .skills-logos {
-    grid-template-columns: repeat(4, 1fr); /* Adjust the number of columns */
+    flex-wrap: wrap; /* Allow skills to wrap */
+    gap: 1rem;
+    justify-content: center;
   }
-  #about {
-    padding-top: 20%; /* Adjust top padding */
-    margin-top: 20%; /* Adjust top margin */
-    padding-bottom: 5%; /* Adjust top padding */
-    margin-bottom: 10%; /* Adjust top margin */
+
+  .skills-logos img {
+    width: 25px; /* Smaller logos */
+    height: 25px;
   }
-  #projects {
-    padding-top: 10%; /* Adjust top padding */
-    margin-top: 10%; /* Adjust top margin */
-    height: 100%;
-    width: 90%;
+
+  .skill p {
+    font-size: 12px;
   }
-  #contact {
-    padding-top: 5%; /* Adjust top padding */
-    margin-top: 5%; /* Adjust top margin */
-    height: 100%;
-  }
+
   .user-projects {
-    align-items: center; /* Center items horizontally */
+    flex-direction: column; /* Stack project content */
+    padding: 0.5em;
   }
+
   .project-left,
   .project-right {
-    flex-direction: column; /* Stack items within each project */
+    flex-direction: column; /* Consistent stacking */
   }
 
   .images-left,
   .images-right {
-    padding-left: 5%; /* Adjust padding */
-  }
-  .images-left img,
-  .images-right img {
-    width: 300px; /* Set a fixed width */
-    height: 200px; /* Set a fixed height to make it a square */
-  }
-  .contents-right,
-  .contents-left {
-    padding: 0; /* Reduce padding */
-  }
-  .hero {
-    height: auto;
-  }
-  form {
+    padding: 5px;
     width: 100%;
   }
-  .input-field input {
-    font-size: 14px;
-    padding: 10px;
-    height: 35px;
+
+  .images-left img,
+  .images-right img {
+    width: 100%; /* Full width images */
+    height: auto;
+    max-width: 200px; /* Cap max width */
   }
-  .other-pages {
-    margin: 0; /* Remove margin */
-    width: 100%; /* Increase width */
-    padding: 0; /* Remove padding */
+
+  .contents-right,
+  .contents-left {
+    padding: 5px;
   }
-  footer {
-    margin-left: 20px; /* Adjust left margin */
-  }
-}
-@media (max-width: 700px) {
-  .progress-clock {
-    top: 150px;
-    left: 320px;
-  }
-  .welcome {
-    position: relative;
-    top: -180px;
-    left: 250px;
-  }
-}
-@media (max-width: 600px) {
-  .progress-clock {
-    top: 150px;
-    left: 280px;
-  }
-  .welcome {
-    position: relative;
-    top: -180px;
-    left: 200px;
-  }
-}
-@media (max-width: 500px) {
-  .progress-clock {
-    top: 150px;
-    left: 200px;
-  }
-  .welcome {
-    position: relative;
-    top: -180px;
-    left: 160px;
-  }
-  #projects {
-    padding-bottom: 1rem; /* Adjust top padding */
-    margin-bottom: 3rem; /* Adjust top margin */
-  }
-}
-@media (max-width: 430px) {
+
   .hero {
-    width: 80%;
-    margin-left: 10%;
+    height: auto; /* Flexible height */
   }
-}
 
-@media (max-width: 400px) {
-  .progress-clock {
-    top: 150px;
-    left: 150px;
+  form {
+    width: 100%; /* Full width form */
+    padding: 10px;
+    font-size: 16px;
   }
-  footer {
-    margin-left: 40px; /* Adjust left margin */
-  }
-}
 
-@media (max-width: 375px) {
-  #about {
-    width: 90%;
-    margin-left: 5%;
+  .input-field input {
+    font-size: 10px;
+    padding: 8px;
+    height: 25px;
   }
-  #projects {
-    margin-left: 5%;
+
+  .send-btn {
+    width: 100px;
+    font-size: 14px;
   }
-  .welcome {
-    position: relative;
-    top: -180px;
-    left: 130px;
+
+  .details {
+    margin-bottom: 40px;
   }
-  .progress-clock {
-    top: 150px;
-    left: 150px;
-  }
+
   .address {
-    margin-top: 20%;
+    margin-top: 50px;
   }
+
   footer {
-    margin-left: 20px; /* Adjust left margin */
+    margin-left: 0;
+    padding: 10px;
+    text-align: center;
   }
 }
-@media (max-width: 344px) {
+
+/* Tablet devices (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .main-content {
+    margin-left: 2%; /* Reduced margin */
+    padding: 15px;
+    width: 80%;
+  }
+
+  .navbar {
+    padding: 15px;
+    width: 95vw;
+  }
+
+  .nav__links {
+    gap: 15px;
+  }
+
+  .nav__link {
+    font-size: 22px;
+  }
+
+  #welcome-page {
+    padding: 1em 2em;
+    min-height: 90vh;
+  }
+
   #about {
-    width: 90%;
-    margin-left: 5%;
+    padding: 0 1em 1.5em;
+    margin: 0 0 3em;
   }
-  .progress-clock {
-    top: 150px;
-    left: 140px;
+
+  #projects {
+    padding: 1em;
+    margin: 0 0 3em;
   }
+
+  #contact {
+    padding-top: 2rem;
+  }
+
   .welcome {
-    position: relative;
-    top: -180px;
-    left: 130px;
+    font-size: 22px;
   }
-  footer {
-    margin-left: 40px; /* Adjust left margin */
+
+  .skills-logos {
+    gap: 1.5rem;
+  }
+
+  .skills-logos img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .user-projects {
+    flex-direction: row; /* Keep horizontal layout */
+  }
+
+  .images-left img,
+  .images-right img {
+    width: 200px;
+    height: 120px;
+  }
+
+  form {
+    width: 500px;
+  }
+
+  .input-field input {
+    font-size: 11px;
+    padding: 10px;
+  }
+
+  .send-btn {
+    width: 120px;
+  }
+}
+
+/* Large screens (1024px and up) */
+@media (min-width: 1024px) {
+  /* Default styles from your original CSS are suitable for desktop */
+  /* Add specific tweaks if needed */
+  .main-content {
+    margin-left: 5%;
+    padding: 20px;
+    width: 65%;
+  }
+
+  .navbar {
+    width: 90vw;
+  }
+
+  .nav__links {
+    gap: 20px;
+  }
+
+  .nav__link {
+    font-size: 25px;
+  }
+
+  #welcome-page {
+    padding: 1em 0 0 3em;
+  }
+
+  .skills-logos {
+    gap: 2rem;
+  }
+
+  form {
+    width: 700px;
   }
 }
