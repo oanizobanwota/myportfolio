@@ -161,53 +161,65 @@ class ProgressClock {
   }
 }
 
-// Function for the sidebar navigation.
-
 document.addEventListener("DOMContentLoaded", function () {
   const listItems = document.querySelectorAll(".sidebar ul li");
   const sections = document.querySelectorAll("section");
   const arrow = document.getElementById("arrow");
   const aboutLink = document.querySelector(".sidebar ul li a[href='#about']");
-  const welcomeSection = document.querySelector("#welcome-page"); // Assuming the welcome section has an ID of 'welcome-page'
+  const welcomeSection = document.querySelector("#welcome-page");
 
   // Function to remove 'clicked' class from all items
   function removeClickedClass() {
     listItems.forEach((li) => li.classList.remove("clicked"));
   }
 
-  // Function to add 'clicked' class to the corresponding nav link
+  // Debounce function to limit scroll event frequency
+  function debounce(func, wait) {
+    let timeout;
+    return function (...args) {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => func.apply(this, args), wait);
+    };
+  }
+
+  // Function to highlight the corresponding nav link based on scroll position
   function highlightNavLink() {
-    let index = sections.length;
+    let currentSection = null;
 
-    // Check if the welcome section is in view
-    if (
-      window.scrollY + 50 >= welcomeSection.offsetTop &&
-      window.scrollY < welcomeSection.offsetTop + welcomeSection.offsetHeight
-    ) {
-      removeClickedClass();
-      return;
-    }
+    // Check each section to find the one currently in view
+    sections.forEach((section, index) => {
+      const rect = section.getBoundingClientRect();
+      const viewportHeight = window.innerHeight;
 
-    // Iterate through sections to find the one currently in view
-    while (
-      --index &&
-      window.scrollY + 50 <
-        sections[index].offsetTop + sections[index].offsetHeight / 2
-    ) {}
+      // Check if the section is at least 50% visible in the viewport
+      if (
+        rect.top <= viewportHeight * 0.5 &&
+        rect.bottom >= viewportHeight * 0.5
+      ) {
+        currentSection = section;
+      }
+    });
 
     removeClickedClass();
 
-    if (index >= 0) {
-      listItems[index].classList.add("clicked");
+    // If a section is in view, highlight the corresponding nav link
+    if (currentSection) {
+      const sectionId = currentSection.id;
+      const matchingLink = Array.from(listItems).find((li) =>
+        li.querySelector("a").getAttribute("href").includes(sectionId)
+      );
+      if (matchingLink) {
+        matchingLink.classList.add("clicked");
+      }
     }
   }
 
-  // Add scroll event listener
-  window.addEventListener("scroll", highlightNavLink);
+  // Add scroll event listener with debounce
+  window.addEventListener("scroll", debounce(highlightNavLink, 100));
 
   // Add hover event listener to each nav link
   listItems.forEach((item) => {
-    item.addEventListener("mouseenter", function (event) {
+    item.addEventListener("mouseenter", function () {
       removeClickedClass();
       item.classList.add("clicked");
 
@@ -221,11 +233,17 @@ document.addEventListener("DOMContentLoaded", function () {
         targetSection.scrollIntoView({ behavior: "smooth" });
       }
     });
+
+    // Remove 'clicked' class on mouseleave to allow scroll-based highlighting to resume
+    item.addEventListener("mouseleave", function () {
+      removeClickedClass();
+      highlightNavLink(); // Re-run scroll-based highlighting
+    });
   });
 
   // Add click event listener to the arrow
   arrow.addEventListener("click", (event) => {
-    event.preventDefault(); // Prevent default anchor click behavior
+    event.preventDefault();
     removeClickedClass();
     aboutLink.parentElement.classList.add("clicked");
 
