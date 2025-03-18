@@ -762,6 +762,29 @@ footer p {
   font-size: 10px;
 }
 
+@media (max-width: 430px) {
+  .progress-clock {
+    top: 30px;
+    left: 20px;
+  }
+
+  .main-content {
+    width: 100%;
+  }
+  #welcome-page {
+    width: 75%;
+  }
+  #about {
+    width: 75%;
+  }
+  #projects {
+    width: 75%;
+  }
+
+  #contact {
+    width: 75%;
+  }
+}
 /* Mobile devices (up to 767px) */
 @media (max-width: 767px) {
   .main-content {
