@@ -753,6 +753,11 @@ footer p {
 }
 
 @media (max-width: 430px) {
+  .main-content {
+    margin-left: 0; /* Remove left margin on mobile */
+    padding: 10px;
+    width: 100%; /* Full width on mobile */
+  }
   .progress-clock {
     top: 30px;
     left: 20px;
@@ -760,37 +765,134 @@ footer p {
 
   .navbar {
     position: absolute;
-    flex-direction: column !important; /* Stack navbar items vertically */
-    top: 0;
+    flex-direction: column; /* Stack navbar items vertically */
     right: 0;
-    width: 150px;
+    top: 0;
+    width: 200px;
+  }
+
+  .nav__links {
+    flex-direction: column; /* Stack nav links vertically */
+    gap: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav__link {
+    font-size: 20px; /* Slightly smaller font */
+    margin: 5px 0;
   }
 
   #welcome-page {
-    padding: 0;
+    padding: 1em;
     margin-top: 12em;
     margin-bottom: 2em;
-    margin-left: 0;
+    margin-left: 3rem;
     min-height: 80vh; /* Reduced height for mobile */
     width: 100%;
-    z-index: 1000;
-    color: white !important;
   }
+
   #about {
-    max-width: 50vh !important;
-  }
-  #projects {
+    padding: 0 0.5em 1em;
+    margin: 0 0 2em;
+    max-height: none; /* Remove max-height restriction */
     width: 100%;
+  }
+
+  #projects {
+    padding: 0.5em;
+    margin: 0 0 2em;
+    max-height: none;
+    width: 100%;
+    margin-bottom: 5rem;
   }
 
   #contact {
+    padding: 0;
     width: 100%;
+    margin: 3rem 0;
     min-height: 60vh;
   }
 
-  /* Footer Styles */
+  .welcome {
+    font-size: 20px; /* Smaller font for mobile */
+  }
+
+  .skills-logos {
+    flex-wrap: wrap; /* Allow skills to wrap */
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .skills-logos img {
+    width: 25px; /* Smaller logos */
+    height: 25px;
+  }
+
+  .skill p {
+    font-size: 12px;
+  }
+
+  .user-projects {
+    flex-direction: column; /* Stack project content */
+    padding: 0.5em;
+  }
+
+  .project-left,
+  .project-right {
+    flex-direction: column; /* Consistent stacking */
+  }
+
+  .images-left,
+  .images-right {
+    padding: 5px;
+    width: 100%;
+  }
+
+  .images-left img,
+  .images-right img {
+    width: 100%; /* Full width images */
+    height: auto;
+    max-width: 200px; /* Cap max width */
+  }
+
+  .contents-right,
+  .contents-left {
+    padding: 5px;
+  }
+
+  .hero {
+    height: auto; /* Flexible height */
+  }
+
+  form {
+    width: 100%; /* Full width form */
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .input-field input {
+    font-size: 10px;
+    padding: 8px;
+    height: 25px;
+  }
+
+  .send-btn {
+    width: 100px;
+    font-size: 14px;
+  }
+
+  .details {
+    margin-bottom: 40px;
+  }
+
+  .address {
+    margin-top: 50px;
+  }
+
   footer {
-    margin-left: 10px;
+    text-align: center;
+    margin-left: 5px;
     width: 100%;
   }
 }
