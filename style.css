@@ -767,22 +767,32 @@ footer p {
     top: 30px;
     left: 20px;
   }
+  h1 {
+    font-size: 50px;
+  }
+
+  .navbar {
+    position: absolute;
+    flex-direction: column; /* Stack navbar items vertically */
+    padding: 10p;
+    right: -250px;
+  }
 
   .main-content {
     width: 100%;
   }
   #welcome-page {
-    width: 75%;
+    width: 80%;
   }
   #about {
-    width: 75%;
+    width: 80%;
   }
   #projects {
-    width: 75%;
+    width: 80%;
   }
 
   #contact {
-    width: 75%;
+    width: 80%;
   }
 }
 /* Mobile devices (up to 767px) */
@@ -792,11 +802,16 @@ footer p {
     padding: 10px;
     width: 100%; /* Full width on mobile */
   }
+  .progress-clock {
+    top: 30px;
+    left: 20px;
+  }
 
   .navbar {
+    position: absolute;
     flex-direction: column; /* Stack navbar items vertically */
-    padding: 10px;
-    width: 100vw;
+    padding: 10p;
+    right: -250px;
   }
 
   .nav__links {
@@ -922,6 +937,10 @@ footer p {
     margin-left: 2%; /* Reduced margin */
     padding: 15px;
     width: 80%;
+  }
+  .progress-clock {
+    top: 70px;
+    left: 30px;
   }
 
   .navbar {
