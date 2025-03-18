@@ -784,32 +784,32 @@ footer p {
   }
 
   #welcome-page {
-    padding: 1em;
+    padding: 0;
     margin-top: 12em;
     margin-bottom: 2em;
-    margin-left: 3rem;
+    margin-left: 0;
     min-height: 80vh; /* Reduced height for mobile */
-    width: 100%;
+    width: 90%;
   }
 
   #about {
     padding: 0 0.5em 1em;
     margin: 0 0 2em;
     max-height: none; /* Remove max-height restriction */
-    width: 100%;
+    width: 90%;
   }
 
   #projects {
     padding: 0.5em;
     margin: 0 0 2em;
     max-height: none;
-    width: 100%;
+    width: 90%;
     margin-bottom: 5rem;
   }
 
   #contact {
     padding: 0;
-    width: 100%;
+    width: 90%;
     margin: 3rem 0;
     min-height: 60vh;
   }
