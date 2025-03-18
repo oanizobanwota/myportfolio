@@ -727,14 +727,7 @@ textarea {
   margin-bottom: 80px;
   padding: 10px;
 }
-.other-pages {
-  margin-left: 65px;
-  justify-content: center;
-  align-items: center;
 
-  padding: 20px;
-  border-radius: 10px;
-}
 .address {
   align-items: center;
   justify-content: center;
@@ -745,14 +738,11 @@ textarea {
 
 /* Footer Styles */
 footer {
-  margin-left: 100px;
+  margin-left: 50px;
   text-decoration: none;
-  position: relative; /* Fixed position */
   bottom: 0; /* Align to the bottom */
-  right: 0; /* Align to the right */
   z-index: 1000;
   font-size: 0.7em;
-  padding: 20px;
   text-align: right;
 }
 footer p {
@@ -767,36 +757,45 @@ footer p {
     top: 30px;
     left: 20px;
   }
-  h1 {
-    font-size: 50px;
-  }
 
   .navbar {
     position: absolute;
-    flex-direction: column; /* Stack navbar items vertically */
-    padding: 10p;
+    flex-direction: column !important; /* Stack navbar items vertically */
+    top: 0;
     right: 0;
+    width: 150px;
   }
 
-  .main-content {
-    width: 100%;
-  }
   #welcome-page {
+    padding: 0;
+    margin-top: 12em;
+    margin-bottom: 2em;
+    margin-left: 0;
+    min-height: 80vh; /* Reduced height for mobile */
     width: 100%;
+    z-index: 1000;
+    color: white !important;
   }
   #about {
-    width: 90%;
+    max-width: 50vh !important;
   }
   #projects {
-    width: 90%;
+    width: 100%;
   }
 
   #contact {
-    width: 90%;
+    width: 100%;
+    min-height: 60vh;
+  }
+
+  /* Footer Styles */
+  footer {
+    margin-left: 10px;
+    width: 100%;
   }
 }
 /* Mobile devices (up to 767px) */
-@media (max-width: 767px) {
+@media (min-width: 431px) and (max-width: 767px) {
   .main-content {
     margin-left: 0; /* Remove left margin on mobile */
     padding: 10px;
@@ -810,8 +809,9 @@ footer p {
   .navbar {
     position: absolute;
     flex-direction: column; /* Stack navbar items vertically */
-    padding: 10p;
-    right: -120px;
+    right: 0;
+    top: 0;
+    width: 200px;
   }
 
   .nav__links {
@@ -828,28 +828,33 @@ footer p {
 
   #welcome-page {
     padding: 1em;
-    margin-bottom: 1em;
+    margin-top: 12em;
+    margin-bottom: 2em;
+    margin-left: 3rem;
     min-height: 80vh; /* Reduced height for mobile */
-    max-width: 80vh;
+    width: 100%;
   }
 
   #about {
     padding: 0 0.5em 1em;
     margin: 0 0 2em;
     max-height: none; /* Remove max-height restriction */
-    max-width: 60vh;
+    width: 100%;
   }
 
   #projects {
     padding: 0.5em;
     margin: 0 0 2em;
     max-height: none;
-    max-width: 60vh;
+    width: 100%;
+    margin-bottom: 5rem;
   }
 
   #contact {
-    padding-top: 1rem;
-    max-width: 60vh;
+    padding: 0;
+    width: 100%;
+    margin: 3rem 0;
+    min-height: 60vh;
   }
 
   .welcome {
@@ -930,21 +935,22 @@ footer p {
 
   footer {
     text-align: center;
+    margin-left: 5px;
+    width: 100%;
   }
 }
 
 /* Tablet devices (768px to 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
   .main-content {
-    margin-left: 2%; /* Reduced margin */
+    margin-left: 1rem; /* Reduced margin */
     padding: 15px;
-    width: 80%;
+    width: 100%;
   }
   .progress-clock {
     top: 70px;
     left: 30px;
   }
-
   .navbar {
     padding: 15px;
     width: 95vw;
@@ -961,6 +967,7 @@ footer p {
   #welcome-page {
     padding: 1em 2em;
     min-height: 90vh;
+    width: 100%;
   }
 
   #about {
