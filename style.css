@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Maze&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -59,76 +61,6 @@ body {
   transform: translateX(5px);
 }
 
-/*.nav__link::before {
-  content: "";
-  position: absolute;
-  left: -70px; /* Adjust the position as needed */
-/*transform: translateY(-50%);
-  width: 50px; /* Length of the horizontal line */
-/*height: 2px; /* Thickness of the horizontal line */
-/*background-color: #d3d3d3; /* Color of the horizontal line */
-/*transition: width 0.3s ease, left 0.3s ease; /* Smooth transition for width and position */
-/*}
-/* .sidebar {
-  width: 300px;
-  background-color: #0b090a;
-  padding: 20px;
-  height: 100vh; /* Full height */
-/*position: fixed; /* Fixed position */
-/*left: 0; /* Place the sidebar on the left side */
-/*display: flex;
-  flex-direction: column;
-  justify-content: center; /* Center items vertically */
-/*animation: dissolveIn 1s ease-in-out forwards;
-  margin: 0;
-}
-
-.sidebar ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 130px; /* Remove default margin */
-/*height: 50%; /* Occupy half of the sidebar height */
-/*display: flex;
-  flex-direction: column;
-  justify-content: space-around; /* Distribute space evenly */
-/*}
-.sidebar ul li {
-  margin: 20px 0;
-  position: relative;
-}
-.sidebar ul li::before {
-  content: "";
-  position: absolute;
-  left: -70px; /* Adjust the position as needed */
-/*top: 50%;
-  transform: translateY(-50%);
-  width: 50px; /* Length of the horizontal line */
-/*height: 2px; /* Thickness of the horizontal line */
-/*background-color: #d3d3d3; /* Color of the horizontal line */
-/*transition: width 0.3s ease, left 0.3s ease; /* Smooth transition for width and position */
-/*}
-
-.sidebar ul li a {
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  text-decoration: none;
-  color: #d3d3d3;
-  font-size: 25px;
-  transition: color 0.3s ease, padding-left 0.3s ease; /* Smooth transition for color and padding */
-/*}
-
-.sidebar ul li.clicked::before {
-  width: 100px; /* New length of the horizontal line on click */
-/*left: -60px; /* Adjust the position as needed */
-/*background-color: #ffcc00; /* Change color to yellow */
-/*}
-
-.sidebar ul li.clicked a {
-  color: #ffcc00; /* New color of the link on click */
-/* padding-left: 60px; /* Move the link to the right */
-/*}*/
-
 .section {
   background-color: transparent;
   min-height: 100vh;
@@ -144,7 +76,7 @@ p.welcome-subtext1 {
   font-weight: 400;
   font-style: normal;
   padding: 10px;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
 }
 
 .arrow {
@@ -159,8 +91,8 @@ p.welcome-subtext1 {
   display: block;
   justify-content: center;
   align-items: center;
-  padding-left: 43%;
-  padding-top: 4%;
+  padding-left: 41%;
+  padding-top: 10%;
 }
 .arrow:nth-child(2),
 .arrow:nth-child(3) {
@@ -244,9 +176,9 @@ p.welcome-subtext1 {
 
 h1 {
   font-family: "Rubik Maze", system-ui;
-  font-weight: 500;
+  font-weight: 400;
   font-style: normal;
-  font-size: 80px;
+  font-size: 60px;
   z-index: 1000;
 }
 p {
@@ -260,7 +192,7 @@ h2 {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #d3d3d3;
 }
 h3 {
@@ -787,7 +719,7 @@ footer p {
     padding: 0;
     margin-top: 12em;
     margin-bottom: 2em;
-    margin-left: 0;
+    margin-left: 2rem;
     min-height: 80vh; /* Reduced height for mobile */
     width: 90%;
   }
