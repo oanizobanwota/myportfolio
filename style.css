@@ -726,14 +726,14 @@ footer p {
 
   #about {
     padding: 0 0.5em 1em;
-    margin: 0 0 2em;
+    margin: 1em 1em;
     max-height: none; /* Remove max-height restriction */
     width: 90%;
   }
 
   #projects {
     padding: 0.5em;
-    margin: 0 0 2em;
+    margin: 1em 1em;
     max-height: none;
     width: 90%;
     margin-bottom: 5rem;
@@ -742,7 +742,7 @@ footer p {
   #contact {
     padding: 0;
     width: 90%;
-    margin: 3rem 0;
+    margin: 1em 1em;
     min-height: 60vh;
   }
 
@@ -777,15 +777,13 @@ footer p {
 
   .images-left,
   .images-right {
-    padding: 5px;
-    width: 100%;
+    padding: 10px;
   }
 
   .images-left img,
   .images-right img {
-    width: 100%; /* Full width images */
-    height: auto;
-    max-width: 200px; /* Cap max width */
+    height: 150px;
+    max-width: 250px; /* Cap max width */
   }
 
   .contents-right,
