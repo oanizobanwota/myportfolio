@@ -775,24 +775,24 @@ footer p {
     position: absolute;
     flex-direction: column; /* Stack navbar items vertically */
     padding: 10p;
-    right: -250px;
+    right: 0;
   }
 
   .main-content {
     width: 100%;
   }
   #welcome-page {
-    width: 80%;
+    width: 100%;
   }
   #about {
-    width: 80%;
+    width: 90%;
   }
   #projects {
-    width: 80%;
+    width: 90%;
   }
 
   #contact {
-    width: 80%;
+    width: 90%;
   }
 }
 /* Mobile devices (up to 767px) */
@@ -811,7 +811,7 @@ footer p {
     position: absolute;
     flex-direction: column; /* Stack navbar items vertically */
     padding: 10p;
-    right: -250px;
+    right: -120px;
   }
 
   .nav__links {
@@ -830,22 +830,26 @@ footer p {
     padding: 1em;
     margin-bottom: 1em;
     min-height: 80vh; /* Reduced height for mobile */
+    max-width: 80vh;
   }
 
   #about {
     padding: 0 0.5em 1em;
     margin: 0 0 2em;
     max-height: none; /* Remove max-height restriction */
+    max-width: 60vh;
   }
 
   #projects {
     padding: 0.5em;
     margin: 0 0 2em;
     max-height: none;
+    max-width: 60vh;
   }
 
   #contact {
     padding-top: 1rem;
+    max-width: 60vh;
   }
 
   .welcome {
@@ -925,8 +929,6 @@ footer p {
   }
 
   footer {
-    margin-left: 0;
-    padding: 10px;
     text-align: center;
   }
 }
