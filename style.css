@@ -405,6 +405,9 @@ body {
   text-align: center;
   background-color: transparent;
 }
+.sub {
+  background-color: transparent;
+}
 
 /* CSS for the welcome link */
 .welcome {
@@ -1080,7 +1083,7 @@ footer p {
   }
 
   .skills-logos {
-    gap: 0.9rem;
+    gap: 2rem;
   }
 
   form {
