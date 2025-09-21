@@ -1,47 +1,48 @@
-@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Maze&display=swap");
-
+/* =======================
+   Global base & reset
+   ======================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html,
-body {
-  display: flex;
-  margin: 0;
-  font-family: "Bebas Neue", sans-serif;
-  width: 100%; /* Adjust width */
-  padding: 0; /* Remove padding */
+html {
+  width: 100%;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  scroll-padding-top: 7rem;
-  background: #0b090a;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  background: #0b090a;
+  font-family: "Bebas Neue", sans-serif;
+  scroll-padding-top: 7rem;
+}
+
+/* =======================
+     Root vars (for clock colors, etc.)
+     ======================= */
+:root {
+  --hue: 223;
+  --bg: hsl(var(--hue), 10%, 90%);
+  --fg: hsl(var(--hue), 10%, 10%);
+}
+
+/* =======================
+     Navbar
+     ======================= */
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
-  width: 90vw;
   position: sticky;
-  background-color: transparent;
   top: 0;
   z-index: 1000;
-}
-
-.nav__link {
-  position: relative;
-  margin: 0 10px;
-  color: #333;
-  padding: 5px 10px;
-  text-decoration: none;
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 25px;
-  transition: all 0.3s ease;
+  padding: 20px;
+  width: 100%;
+  background-color: transparent;
 }
 
 .nav__links {
@@ -51,24 +52,43 @@ body {
   justify-content: center;
 }
 
-.nav__link:hover {
-  color: yellow;
-  transform: translateX(5px);
+.nav__link {
+  position: relative;
+  margin: 0 10px;
+  color: #cfcfcf; /* better contrast on dark bg */
+  padding: 5px 10px;
+  text-decoration: none;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 25px;
+  transition: all 0.3s ease;
 }
 
+.nav__link:hover,
 .nav__link.active {
-  color: yellow;
+  color: #ffd800;
   transform: translateX(5px);
 }
 
+/* =======================
+     Sections
+     ======================= */
 .section {
-  background-color: transparent;
+  background-color: transparent; /* keep consistent dark theme */
   min-height: 100vh;
   padding: 20px;
 }
 
-.section:nth-child(odd) {
-  background-color: rgb(235, 235, 235);
+/* =======================
+     Hero / welcome
+     ======================= */
+.header-container {
+  position: relative; /* make z-index effective */
+  z-index: 1;
+  text-align: center;
+  padding-right: 15%;
+  padding-top: 22%;
 }
 
 p.welcome-subtext1 {
@@ -88,10 +108,9 @@ p.welcome-subtext1 {
   animation: move 1.3s infinite;
 }
 .arrow-container {
-  display: block;
+  display: flex; /* center with flex (was block) */
   justify-content: center;
   align-items: center;
-  padding-left: 42%;
   padding-top: 10%;
 }
 .arrow:nth-child(2),
@@ -112,35 +131,28 @@ p.welcome-subtext1 {
   }
 }
 
-.header-container {
-  z-index: 1000;
-  text-align: center;
-  padding-right: 15%;
-  padding-top: 22%;
-}
-
+/* =======================
+     Social links
+     ======================= */
 .social-media {
-  margin-bottom: 10px; /* Add some space above the icons */
+  margin-bottom: 10px;
 }
 .social-media a {
-  margin-right: 15px; /* Adjust the value as needed */
-  margin: 0 15px;
-  font-size: 24px; /* Increase the size of the icons */
-  transition: transform 0.3s; /* Smooth transition for hover effect */
-  color: inherit; /* Ensure the icons inherit the color */
-  text-decoration: none; /* Remove underline from the icons */
+  margin: 0 15px; /* one margin rule (removed duplicate) */
+  font-size: 24px;
+  transition: transform 0.3s;
+  color: inherit;
+  text-decoration: none;
 }
-
 .social-media a:last-child {
-  margin-right: 0; /* Remove margin from the last item */
-}
-.social-media i:hover {
-  transform: scale(1.4); /* Enlarge the icon on hover */
+  margin-right: 0;
 }
 .social-media i {
-  transition: transform 0.3s; /* Smooth transition for hover effect */
+  transition: transform 0.3s;
 }
-/* Specific colors for different platforms */
+.social-media i:hover {
+  transform: scale(1.4);
+}
 .social-media a.facebook {
   color: #0a399e;
 }
@@ -156,24 +168,10 @@ p.welcome-subtext1 {
 .social-media a.github {
   color: #d3d3d3;
 }
-.profile-pic {
-  margin-bottom: 20px;
-  border-radius: 50%;
-  width: 250px;
-  height: 250px;
-  left: 50px;
-  top: 200px;
-  box-shadow: 0 0 15px #7198eb; /* Neon glow effect */
-  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for background color and transform */
-}
-.sub-headings {
-  text-align: left;
-}
 
-.tools {
-  padding-top: 50px;
-}
-
+/* =======================
+     Typography
+     ======================= */
 h1 {
   font-family: "Rubik Maze", system-ui;
   font-weight: 400;
@@ -195,19 +193,20 @@ h2 {
   font-size: 1.5rem;
   color: #d3d3d3;
 }
-h3 {
-  margin-bottom: 20px;
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  z-index: 1000;
-}
+h3,
 h4 {
   margin-bottom: 20px;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
+.sub-headings {
+  text-align: left;
+}
+.tools {
+  padding-top: 50px;
+}
+
 @keyframes dissolveIn {
   0% {
     opacity: 0;
@@ -219,30 +218,14 @@ h4 {
   }
 }
 
-/* CSS Styles for the progress clock  https://speckyboy.com/progress-bars-css-javascript/  Progress Clock by Jon Kantner */
-
-* {
-  border: 0;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-:root {
-  --hue: 223;
-  --bg: hsl(var(--hue), 10%, 90%);
-  --fg: hsl(var(--hue), 10%, 10%);
-  font-size: calc(16px + (24 - 16) * (100vw - 320px) / (1280 - 320));
-}
-body,
-button {
+/* =======================
+     Progress Clock (SCOPED)
+     ======================= */
+.progress-clock,
+.progress-clock button {
   color: var(--fg);
   font: 1em/1.1 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif;
-}
-body {
-  height: 100vh;
-  display: grid;
-  place-items: center;
 }
 
 .progress-clock {
@@ -255,7 +238,9 @@ body {
   height: 5em;
   top: 150px;
   left: 80px;
+  z-index: 1000;
 }
+
 .progress-clock__time-date,
 .progress-clock__time-digit,
 .progress-clock__time-colon,
@@ -349,7 +334,6 @@ body {
   opacity: 1;
 }
 
-/* Dark theme */
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: hsl(var(--hue), 10%, 10%);
@@ -360,12 +344,16 @@ body {
   }
 }
 
+/* =======================
+     Layout containers
+     ======================= */
 .main-content {
-  margin-left: 5%; /* Adjust based on sidebar width */
+  margin-left: 5%;
   padding: 20px;
   flex-grow: 1;
   width: 65%;
 }
+
 #welcome-page {
   animation: dissolveIn 2s ease-in-out forwards;
   padding: 1em 0 0 3em;
@@ -375,16 +363,18 @@ body {
   position: relative;
   background-color: transparent;
 }
+
 #about {
   width: 100%;
-  max-height: 100vh;
   padding: 0 1em 2em;
   margin: 0 0 5em;
   justify-content: center;
   align-items: center;
   text-align: center;
   background-color: transparent;
+  /* max-height removed to avoid clipping */
 }
+
 #projects {
   width: 100%;
   display: flex;
@@ -394,7 +384,7 @@ body {
   justify-content: center;
   background-color: transparent;
   margin-bottom: 5rem;
-  max-height: 100vh;
+  /* max-height removed to avoid clipping */
 }
 
 #contact {
@@ -405,11 +395,12 @@ body {
   text-align: center;
   background-color: transparent;
 }
+
 .sub {
   background-color: transparent;
 }
 
-/* CSS for the welcome link */
+/* Welcome link */
 .welcome {
   font-size: 25px;
   font-family: "Bebas Neue", sans-serif;
@@ -423,11 +414,11 @@ body {
   color: #d3d3d3;
 }
 
+/* animated "Welcome" letters */
 .letter {
   display: inline-block;
   animation: colorChange 3s infinite;
 }
-
 .letter:nth-child(1) {
   animation-delay: 0s;
 }
@@ -449,6 +440,7 @@ body {
 .letter:nth-child(7) {
   animation-delay: 3s;
 }
+
 @keyframes colorChange {
   0% {
     color: #ff0000;
@@ -476,94 +468,101 @@ body {
   }
 }
 
-/* CSS for the skills section */
+/* =======================
+     Skills
+     ======================= */
 .skills-logos {
   display: flex;
-  flex-direction: row;
-  gap: 2rem; /* Adjust the gap between logos as needed */
-  justify-items: center; /* Center the logos within each column */
-  align-items: center; /* Center the logos vertically */
+  flex-wrap: wrap; /* allow wrap */
+  gap: 2rem;
+  justify-content: center; /* was justify-items (ineffective) */
+  align-items: center;
 }
-
 .skill {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
-
 .skills-logos img {
-  transition: transform 0.3s ease; /* Smooth transition for hover effect */
-  width: 30px; /* Increase the width of the logos */
-  height: 30px; /* Increase the height of the logos */
+  transition: transform 0.3s ease;
+  width: 30px;
+  height: 30px;
 }
-
 .skills-logos img:hover {
-  transform: scale(1.2); /* Slightly enlarge the logo on hover */
+  transform: scale(1.2);
 }
-
 .skill p {
-  margin-top: 10px; /* Add some space between the logo and the text */
-  font-size: 14px; /* Adjust the font size as needed */
-  color: #d3d3d3; /* Adjust the text color as needed */
+  margin-top: 10px;
+  font-size: 14px;
+  color: #d3d3d3;
 }
 
-/* CSS for the projects section */
-
+/* =======================
+     Projects
+     ======================= */
 .user-projects {
   display: flex;
   align-items: center;
   width: 100%;
   padding: 1em;
 }
-
 .project-left {
   flex-direction: row;
 }
-
 .project-right {
   flex-direction: row-reverse;
 }
 
-.images-left {
-  flex: 1;
+.images-left,
+.images-right {
+  flex: 1; /* ensure both sides balance */
   padding: 10px;
+}
+.images-left {
   padding-right: 20px;
 }
 .images-right {
   padding-left: 20px;
 }
+
 .images-left img,
 .images-right img {
-  width: 250px; /* Set a fixed width */
-  height: 150px; /* Set a fixed height to make it a square */
-  object-fit: cover; /* Ensure the image covers the entire area */
+  width: 280px;
+  aspect-ratio: 16 / 9; /* consistent shape without hard height */
+  height: auto;
+  object-fit: cover;
   border-radius: 10px;
-  box-shadow: 0 0 15px #7198eb; /* Neon glow effect */
-  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for background color and transform */
+  box-shadow: 0 0 15px #7198eb;
+  transition: transform 0.3s ease;
 }
 
-img:hover {
-  transform: scale(1.1); /* Slightly enlarge the button on hover */
+/* Scope hover to project images only */
+.images-left img:hover,
+.images-right img:hover {
+  transform: scale(1.05);
 }
+
+/* Global img hover removed to avoid zooming icons/logos */
+
+/* Project text columns */
 .contents-right,
 .contents-left {
   flex: 2;
   padding: 10px;
 }
-
 .contents-right h3,
 .contents-left h3 {
   margin-top: 0;
 }
-
 .contents-right p,
 .contents-left p {
   margin: 0;
 }
 
-/* CSS for the contact form */
-
+/* =======================
+     Contact form
+     ======================= */
 .hero {
   display: flex;
   flex-direction: column;
@@ -585,19 +584,18 @@ form {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
-  border: 1px solid #d3d3d3;
+  border: 1px solid #6b6b6b; /* darker for contrast on dark bg */
 }
+
 .message-icon {
   display: flex;
   flex-direction: row-reverse;
   align-items: flex-end;
   margin-bottom: 10px;
 }
-
 .message-icon i {
   font-size: 20px;
 }
-
 .message-icon span {
   font-size: 20px;
   font-weight: bold;
@@ -606,20 +604,22 @@ form {
   font-weight: 400;
   font-style: normal;
 }
+
 form input,
 textarea {
   width: 100%;
   border-top: none;
   border-right: none;
   border-left: none;
-  border-bottom: 1px solid #d3d3d3;
+  border-bottom: 1px solid #6b6b6b; /* improved contrast */
   outline: none;
-  color: #d3d3d3;
+  color: #e8e8e8; /* improved contrast */
   background: transparent;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
+
 .input-field {
   position: relative;
   display: flex;
@@ -631,9 +631,9 @@ textarea {
   font-size: 15px;
 }
 .input-field input {
-  font-size: 12px; /* Increase font size */
-  padding: 12px; /* Increase padding */
-  height: 30px; /* Set a specific height */
+  font-size: 12px;
+  padding: 12px;
+  height: 30px;
 }
 .input-field input,
 .input-field textarea {
@@ -641,6 +641,7 @@ textarea {
   width: 100%;
   box-sizing: border-box;
 }
+
 .send-btn {
   background: #1c2541;
   color: #d3d3d3;
@@ -649,12 +650,11 @@ textarea {
   padding: 6px 0;
   width: 130px;
   border-radius: 10px;
-  box-shadow: 0 0 15px #7198eb; /* Neon glow effect */
-  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for background color and transform */
+  box-shadow: 0 0 15px #7198eb;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
-
 .send-btn:hover {
-  transform: scale(1.1); /* Slightly enlarge the button on hover */
+  transform: scale(1.1);
 }
 
 .details {
@@ -662,7 +662,6 @@ textarea {
   margin-bottom: 80px;
   padding: 10px;
 }
-
 .address {
   align-items: center;
   justify-content: center;
@@ -671,11 +670,13 @@ textarea {
   margin-bottom: 20px;
 }
 
-/* Footer Styles */
+/* =======================
+     Footer
+     ======================= */
 footer {
   margin-left: 50px;
   text-decoration: none;
-  bottom: 0; /* Align to the bottom */
+  bottom: 0;
   z-index: 1000;
   font-size: 0.7em;
   text-align: right;
@@ -687,11 +688,14 @@ footer p {
   font-size: 10px;
 }
 
+/* =======================
+     Responsive
+     ======================= */
 @media (max-width: 430px) {
   .main-content {
-    margin-left: 0; /* Remove left margin on mobile */
+    margin-left: 0;
     padding: 10px;
-    width: 100%; /* Full width on mobile */
+    width: 100%;
   }
   .progress-clock {
     top: 30px;
@@ -700,21 +704,20 @@ footer p {
 
   .navbar {
     position: absolute;
-    flex-direction: column; /* Stack navbar items vertically */
+    flex-direction: column;
     right: 0;
     top: 0;
     width: 200px;
   }
 
   .nav__links {
-    flex-direction: column; /* Stack nav links vertically */
+    flex-direction: column;
     gap: 10px;
     width: 100%;
     text-align: center;
   }
-
   .nav__link {
-    font-size: 20px; /* Slightly smaller font */
+    font-size: 20px;
     margin: 5px 0;
   }
 
@@ -723,23 +726,20 @@ footer p {
     margin-top: 12em;
     margin-bottom: 2em;
     margin-left: 2rem;
-    min-height: 80vh; /* Reduced height for mobile */
+    min-height: 80vh;
     width: 90%;
   }
 
   #about {
     padding: 0 0.5em 1em;
     margin: 1em 1em;
-    max-height: none; /* Remove max-height restriction */
     width: 90%;
   }
 
   #projects {
     padding: 0.5em;
-    margin: 1em 1em;
-    max-height: none;
+    margin: 1em 1em 5rem;
     width: 90%;
-    margin-bottom: 5rem;
   }
 
   #contact {
@@ -750,43 +750,36 @@ footer p {
   }
 
   .welcome {
-    font-size: 20px; /* Smaller font for mobile */
+    font-size: 20px;
   }
 
   .skills-logos {
-    flex-wrap: wrap; /* Allow skills to wrap */
     gap: 1rem;
     justify-content: center;
   }
-
   .skills-logos img {
-    width: 25px; /* Smaller logos */
+    width: 25px;
     height: 25px;
   }
-
   .skill p {
     font-size: 12px;
   }
 
-  .user-projects {
-    flex-direction: column; /* Stack project content */
-    padding: 0.5em;
-  }
-
+  .user-projects,
   .project-left,
   .project-right {
-    flex-direction: column; /* Consistent stacking */
+    flex-direction: column;
   }
 
   .images-left,
   .images-right {
     padding: 10px;
   }
-
   .images-left img,
   .images-right img {
-    height: 150px;
-    max-width: 250px; /* Cap max width */
+    width: 100%;
+    max-width: 250px;
+    height: auto; /* maintain aspect ratio */
   }
 
   .contents-right,
@@ -795,21 +788,18 @@ footer p {
   }
 
   .hero {
-    height: auto; /* Flexible height */
+    height: auto;
   }
-
   form {
-    width: 100%; /* Full width form */
+    width: 100%;
     padding: 10px;
     font-size: 16px;
   }
-
   .input-field input {
     font-size: 10px;
     padding: 8px;
     height: 25px;
   }
-
   .send-btn {
     width: 100px;
     font-size: 14px;
@@ -818,7 +808,6 @@ footer p {
   .details {
     margin-bottom: 40px;
   }
-
   .address {
     margin-top: 50px;
   }
@@ -829,12 +818,13 @@ footer p {
     width: 100%;
   }
 }
-/* Mobile devices (up to 767px) */
+
+/* Mobile (431px–767px) */
 @media (min-width: 431px) and (max-width: 767px) {
   .main-content {
-    margin-left: 0; /* Remove left margin on mobile */
+    margin-left: 0;
     padding: 10px;
-    width: 100%; /* Full width on mobile */
+    width: 100%;
   }
   .progress-clock {
     top: 30px;
@@ -843,21 +833,20 @@ footer p {
 
   .navbar {
     position: absolute;
-    flex-direction: column; /* Stack navbar items vertically */
+    flex-direction: column;
     right: 0;
     top: 0;
     width: 200px;
   }
 
   .nav__links {
-    flex-direction: column; /* Stack nav links vertically */
+    flex-direction: column;
     gap: 10px;
     width: 100%;
     text-align: center;
   }
-
   .nav__link {
-    font-size: 20px; /* Slightly smaller font */
+    font-size: 20px;
     margin: 5px 0;
   }
 
@@ -866,25 +855,21 @@ footer p {
     margin-top: 12em;
     margin-bottom: 2em;
     margin-left: 3rem;
-    min-height: 80vh; /* Reduced height for mobile */
+    min-height: 80vh;
     width: 100%;
   }
 
   #about {
     padding: 0 0.5em 1em;
     margin: 0 0 2em;
-    max-height: none; /* Remove max-height restriction */
     width: 100%;
   }
-
   #projects {
     padding: 0.5em;
-    margin: 0 0 2em;
-    max-height: none;
+    margin: 0 0 2em 0;
     width: 100%;
     margin-bottom: 5rem;
   }
-
   #contact {
     padding: 0;
     width: 100%;
@@ -893,68 +878,57 @@ footer p {
   }
 
   .welcome {
-    font-size: 20px; /* Smaller font for mobile */
+    font-size: 20px;
   }
-
   .skills-logos {
-    flex-wrap: wrap; /* Allow skills to wrap */
     gap: 1rem;
     justify-content: center;
   }
-
   .skills-logos img {
-    width: 25px; /* Smaller logos */
+    width: 25px;
     height: 25px;
   }
-
   .skill p {
     font-size: 12px;
   }
 
   .user-projects {
-    flex-direction: column; /* Stack project content */
+    flex-direction: column;
     padding: 0.5em;
   }
-
   .project-left,
   .project-right {
-    flex-direction: column; /* Consistent stacking */
+    flex-direction: column;
   }
-
   .images-left,
   .images-right {
     padding: 5px;
     width: 100%;
   }
-
   .images-left img,
   .images-right img {
-    width: 100%; /* Full width images */
+    width: 100%;
     height: auto;
-    max-width: 200px; /* Cap max width */
+    max-width: 200px;
   }
 
   .contents-right,
   .contents-left {
     padding: 5px;
   }
-
   .hero {
-    height: auto; /* Flexible height */
+    height: auto;
   }
-
   form {
-    width: 100%; /* Full width form */
+    width: 100%;
     padding: 10px;
     font-size: 16px;
   }
-
   .input-field input {
     font-size: 10px;
     padding: 8px;
     height: 25px;
   }
-
   .send-btn {
     width: 100px;
     font-size: 14px;
@@ -963,11 +937,9 @@ footer p {
   .details {
     margin-bottom: 40px;
   }
-
   .address {
     margin-top: 50px;
   }
-
   footer {
     text-align: center;
     margin-left: 5px;
@@ -975,10 +947,10 @@ footer p {
   }
 }
 
-/* Tablet devices (768px to 1023px) */
+/* Tablet (768px–1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
   .main-content {
-    margin-left: 1rem; /* Reduced margin */
+    margin-left: 1rem;
     padding: 15px;
     width: 100%;
   }
@@ -988,13 +960,12 @@ footer p {
   }
   .navbar {
     padding: 15px;
-    width: 95vw;
+    width: 100%;
   }
 
   .nav__links {
     gap: 15px;
   }
-
   .nav__link {
     font-size: 22px;
   }
@@ -1004,17 +975,14 @@ footer p {
     min-height: 90vh;
     width: 100%;
   }
-
   #about {
     padding: 0 1em 1.5em;
     margin: 0 0 3em;
   }
-
   #projects {
     padding: 1em;
     margin: 0 0 3em;
   }
-
   #contact {
     padding-top: 2rem;
   }
@@ -1022,70 +990,58 @@ footer p {
   .welcome {
     font-size: 22px;
   }
-
   .skills-logos {
     gap: 1.5rem;
   }
-
   .skills-logos img {
     width: 28px;
     height: 28px;
   }
 
   .user-projects {
-    flex-direction: row; /* Keep horizontal layout */
+    flex-direction: row;
   }
-
   .images-left img,
   .images-right img {
     width: 200px;
-    height: 120px;
+    height: auto;
+    aspect-ratio: 16 / 9;
   }
 
   form {
     width: 500px;
   }
-
   .input-field input {
     font-size: 11px;
     padding: 10px;
   }
-
   .send-btn {
     width: 120px;
   }
 }
 
-/* Large screens (1024px and up) */
+/* Desktop (>=1024px) */
 @media (min-width: 1024px) {
-  /* Default styles from your original CSS are suitable for desktop */
-  /* Add specific tweaks if needed */
   .main-content {
     margin-left: 5%;
     padding: 20px;
     width: 65%;
   }
-
   .navbar {
-    width: 90vw;
+    width: 100%;
   }
-
   .nav__links {
     gap: 20px;
   }
-
   .nav__link {
     font-size: 25px;
   }
-
   #welcome-page {
     padding: 1em 0 0 3em;
   }
-
   .skills-logos {
     gap: 2rem;
   }
-
   form {
     width: 700px;
   }
